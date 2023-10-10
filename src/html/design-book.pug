@@ -1,0 +1,291 @@
+extends common/layout.pug
+block custom
+	-
+		let pageName = 'Your Place'
+		let pageFileName = path.basename(`${website + string2slug(pageName)}.html`)
+
+block meta-title
+	title #{pageName} | #{projectName}
+
+block content
+	.container.p-t-7.p-t-sm-9
+		.m-b-5
+			nav.breadcrumb-wrapper.breadcrumb-inline.justify-content-center.mb-0
+				.breadcrumb-title.d-inline-block.mx-0= pageName
+		
+		.m-b-3
+			ul.nav.nav-tabs-underline.justify-content-center(id="design-book-tabs").d-md-none
+				li.nav-item
+					a.nav-link.active(data-toggle="tab" href="#lucky-content") Your design(s)
+				li.nav-item
+					a.nav-link(data-toggle="tab" href="#wishlist-content") Collection
+
+	.m-b-12.tab-content
+		.tab-pane.fade(id="lucky-content").show.active
+			.container-fluid
+				h5.text-center.d-md-none-i.m-t-9.mb-0 Your design(s)
+				.design-book-wrapper.p-t-8
+					.row.px-2
+						- for (var x = 1; x <= 9; x++)
+								.col-sm-6.col-lg-4.px-4.py-3
+									.item.is-gallery
+										.decor-bg(style=`background-image: url(assets/images/gallery/gallery-h-${x}.jpg)`)
+										.wrapper
+											a(href="detail-album.html").item-list
+												- for (var k = 1; k <= 4; k++)
+													.item-thumbnail.custom-thumbnail
+														.thumbnail
+															.wrap-thumbnail-tag
+																- if(k === 1)
+																	img(src=`assets/images/gallery/gallery-v-${k}.jpg`)/
+																- else if(k === 4 && x === 1)
+																	img(src=`assets/images/gallery/dummy.jpg`)/
+																- else
+																	img(src=`assets/images/gallery/gallery-h-${k}.jpg`)/
+											.item-content-overlay.d-lg-none-i
+												.content-flex
+													.item-left
+														a(href="detail-album.html").title.d-block Morden Nail Salon
+														a(href="#").category Nail Salon
+													.item-right
+														.btn-list.flex-center-y
+															//- a(href="#" data-toggle="tooltip" title="34").btn.btn-just-icon.btn-white
+															//- 	i.ri-heart-line
+															.dropup.d-inline-flex
+																.wrap-button(data-toggle="dropdown").m-r-3
+																	button.btn.btn-just-icon.btn-white(data-toggle="tooltip" title="1,5k")
+																		i.ri-share-line
+																.dropdown-menu.dropdown-menu-right
+																	a(href="#").dropdown-item.text-body
+																		i.ri-facebook-box-fill
+																		| Facebook
+																	a(href="#").dropdown-item.text-body
+																		i.ri-pinterest-fill
+																		| Pinterest
+																	a(href="#").dropdown-item.text-body
+																		i.ri-mail-fill
+																		| Mail
+															a(href="detail-album.html#comment-container" data-toggle="tooltip" title="32").btn.btn-just-icon.btn-white
+																i.ri-discuss-line
+										//- .item-content-overlay.placement-top.d-lg-none-i
+										//- 	.content-flex.justify-content-end
+										//- 		.item-right
+										//- 			.btn-list.flex-center-y
+										//- 				a(href="assets/images/gallery/gallery-h-1.jpg" data-action="popup-zoom-in").btn.btn-just-icon.btn-white
+										//- 					i.ri-fullscreen-line
+										// Button Action
+										.item-content-overlay.placement-bottom.d-lg-none(style="left: auto;")
+											.content-flex.justify-content-end
+												.item-right
+													.dropup
+														button(data-toggle="dropdown").btn.btn-just-icon.btn-white
+															i.ri-more-line
+														.dropdown-menu.dropdown-menu-right(style="min-width: 1px;").p-0
+															//- a(href=imgFull  data-action="popup-zoom-in").text-body.dropdown-item.text-link.p-2.p-x-4
+															//- 	i.ri-fullscreen-line.mr-0
+															.js-action-mobile
+																a(href="#").text-body.dropdown-item.text-link.p-2.p-x-4
+																	i.ri-heart-fill.mr-0
+																	span.badge.badge-brand.badge-notify 32
+																.dropleft
+																	button(data-toggle="dropdown").text-body.dropdown-item.text-link.p-2.p-x-4
+																		i.ri-share-fill.mr-0
+																		span.badge.badge-brand.badge-notify 1,2k
+																	.dropdown-menu.dropdown-menu-right.p-0.m-0(style="height: 38px;min-width: 1px;").d-flex
+																		a(href="#").dropdown-item.text-body.p-2
+																			i.ri-facebook-box-fill
+																		a(href="#").dropdown-item.text-body.p-2
+																			i.ri-pinterest-fill
+																		a(href="#").dropdown-item.text-body.p-2
+																			i.ri-mail-fill
+																a(href="detail-image.html#comment-container").text-body.dropdown-item.text-link.p-2.p-x-4
+																	i.ri-discuss-line.mr-0
+																	span.badge.badge-brand.badge-notify 106
+									.d-block.text-center.mt-3
+										a(href="detail-album.html").text-body.font-weight-semi Album #{x}
+
+				.pagination
+					span.sum.btn.btn-sm.btn-brand Page 1 of 10
+					a(href="#").arrow.prev.btn.btn-sm Prev
+					span.page.btn.btn-sm.btn-brand 1
+					a(href="#").page.btn.btn-sm 2
+					a(href="#").arrow.next.btn.btn-sm Next
+
+
+		.tab-pane.fade(id="wishlist-content")
+			.container-fluid
+				h5.text-center.d-md-none-i.m-t-12.mb-0 Collection
+				.design-book-wrapper.p-t-8
+					.row.px-2
+						- for (var x = 1; x <= 9; x++)
+								.col-sm-6.col-lg-4.px-4.py-3
+									.item
+										.decor-bg(style="background-image: url(assets/images/gallery/gallery-h-2.jpg)")
+										// Thumbnail
+										.item-thumbnail.custom-thumbnail
+											.thumbnail
+												.wrap-thumbnail-tag
+													a(href="detail-image.html")
+														img(src=`assets/images/gallery/gallery-h-${x}.jpg`)/
+													+tag-popup
+											//- .item-content-overlay.placement-top.d-lg-none-i
+											//- 	.content-flex.justify-content-end
+											//- 		.item-right
+											//- 			.btn-list.flex-center-y
+											//- 				a(href="assets/images/gallery/gallery-h-1.jpg" data-action="popup-zoom-in").btn.btn-just-icon.btn-white
+											//- 					i.ri-fullscreen-line
+
+											.item-content-overlay.d-lg-none-i
+												.content-flex
+													.item-left
+														a(href="detail-image.html").title.d-block Morden Nail Salon
+														a(href="#").category Nail Salon
+													.item-right
+														.btn-list.flex-center-y
+															a(href="#" data-toggle="tooltip" title="34").btn.btn-just-icon.btn-white
+																i.ri-heart-line
+															.dropup.d-inline-flex
+																.wrap-button(data-toggle="dropdown").m-r-3
+																	button.btn.btn-just-icon.btn-white(data-toggle="tooltip" title="1,5k")
+																		i.ri-share-line
+																.dropdown-menu.dropdown-menu-right
+																	a(href="#").dropdown-item.text-body
+																		i.ri-facebook-box-fill
+																		| Facebook
+																	a(href="#").dropdown-item.text-body
+																		i.ri-pinterest-fill
+																		| Pinterest
+																	a(href="#").dropdown-item.text-body
+																		i.ri-mail-fill
+																		| Mail
+															a(href="detail-image.html#comment-container" data-toggle="tooltip" title="32").btn.btn-just-icon.btn-white
+																i.ri-discuss-line
+											
+											// Button Action
+											.item-content-overlay.placement-bottom.d-lg-none(style="left: auto;")
+												.content-flex.justify-content-end
+													.item-right
+														.dropup
+															button(data-toggle="dropdown").btn.btn-just-icon.btn-white
+																i.ri-more-line
+															.dropdown-menu.dropdown-menu-right(style="min-width: 1px;").p-0
+																//- a(href=imgFull  data-action="popup-zoom-in").text-body.dropdown-item.text-link.p-2.p-x-4
+																//- 	i.ri-fullscreen-line.mr-0
+																.js-action-mobile
+																	a(href="#").text-body.dropdown-item.text-link.p-2.p-x-4
+																		i.ri-heart-fill.mr-0
+																		span.badge.badge-brand.badge-notify 32
+																	.dropleft
+																		button(data-toggle="dropdown").text-body.dropdown-item.text-link.p-2.p-x-4
+																			i.ri-share-fill.mr-0
+																			span.badge.badge-brand.badge-notify 1,2k
+																		.dropdown-menu.dropdown-menu-right.p-0.m-0(style="height: 38px;min-width: 1px;").d-flex
+																			a(href="#").dropdown-item.text-body.p-2
+																				i.ri-facebook-box-fill
+																			a(href="#").dropdown-item.text-body.p-2
+																				i.ri-pinterest-fill
+																			a(href="#").dropdown-item.text-body.p-2
+																				i.ri-mail-fill
+																	a(href="detail-image.html#comment-container").text-body.dropdown-item.text-link.p-2.p-x-4
+																		i.ri-discuss-line.mr-0
+																		span.badge.badge-brand.badge-notify 106
+				.pagination
+					span.sum.btn.btn-sm.btn-brand Page 1 of 10
+					a(href="#").arrow.prev.btn.btn-sm Prev
+					span.page.btn.btn-sm.btn-brand 1
+					a(href="#").page.btn.btn-sm 2
+					a(href="#").arrow.next.btn.btn-sm Next
+							
+										
+		
+	//- +pswp-custom
+
+	//- -
+	//- 	let imageDataSrc = [
+	//- 		'assets/images/gallery/gallery-v-1.jpg',
+	//- 		'assets/images/gallery/gallery-h-1.jpg',
+	//- 		'assets/images/gallery/gallery-h-2.jpg',
+	//- 		'assets/images/gallery/gallery-h-3.jpg',
+	//- 		'assets/images/gallery/gallery-h-4.jpg',
+	//- 		'assets/images/gallery/gallery-h-5.jpg',
+	//- 		'assets/images/gallery/gallery-h-6.jpg',
+	//- 		'assets/images/gallery/gallery-h-7.jpg',
+	//- 		'assets/images/gallery/gallery-h-8.jpg',
+	//- 		'assets/images/gallery/gallery-v-2.jpg',
+	//- 		'assets/images/gallery/gallery-v-1.jpg',
+	//- 		'assets/images/gallery/gallery-h-1.jpg',
+	//- 	]
+	//- 	let imageData = []
+	//- each item, index in imageDataSrc
+	//- 	-
+	//- 		//- imageData.push(
+	//- 		//- 	`{
+	//- 		//- 		src: '${item}',
+	//- 		//- 		w: ${getImageSize(item)[0]},
+	//- 		//- 		h: ${getImageSize(item)[1]},
+	//- 		//- 		pid: 'home-gallery-${index}',
+	//- 		//- 		thumbnailTitle: 'Modern Nail Salon ${index+1}',
+	//- 		//- 		galleryTitle: 'Gallery ${index+1}',
+	//- 		//- 		categoryTitle: 'Nail Salon ${index+1}',
+	//- 		//- 		title : {
+	//- 		//- 			thumbnail: 'Modern Nail Salon ${index+1}',
+	//- 		//- 			gallery: 'Gallery ${index+1}',
+	//- 		//- 			category: 'Nail Salon ${index+1}',
+	//- 		//- 		},
+	//- 		//- 		colors: {
+	//- 		//- 			0 : ['assets/images/color/color-1.png', 'assets/images/gallery/gallery-h-${getRandomRangeInt(1,5)}.jpg'],
+	//- 		//- 			1 : ['assets/images/color/color-2.png', 'assets/images/gallery/gallery-h-${getRandomRangeInt(1,5)}.jpg'],
+	//- 		//- 			2 : ['assets/images/color/color-3.png', 'assets/images/gallery/gallery-h-${getRandomRangeInt(1,5)}.jpg'],
+	//- 		//- 			3 : ['assets/images/color/color-4.png', 'assets/images/gallery/gallery-h-${getRandomRangeInt(1,5)}.jpg'],
+	//- 		//- 			4 : ['assets/images/color/color-5.png', 'assets/images/gallery/gallery-h-${getRandomRangeInt(1,5)}.jpg']
+	//- 		//- 		}
+	//- 		//- 	}`
+	//- 		//- )
+	//- 		imageData.push(
+	//- 			`{
+	//- 				src: '${item}',
+	//- 				w: ${getImageSize(item)[0]},
+	//- 				h: ${getImageSize(item)[1]},
+	//- 				pid: 'home-gallery-${index}',
+	//- 				thumbnailTitle: 'Modern Nail Salon ${index+1}',
+	//- 				galleryTitle: 'Gallery ${index+1}',
+	//- 				categoryTitle: 'Nail Salon ${index+1}',
+	//- 				title : {
+	//- 					thumbnail: 'Modern Nail Salon ${index+1}',
+	//- 					gallery: 'Gallery ${index+1}',
+	//- 					category: 'Nail Salon ${index+1}',
+	//- 				}
+	//- 			}`
+	//- 		)
+		
+
+block script
+	script.
+		//- document.querySelectorAll('#wishlist-content .design-book-wrapper .item .item-content-overlay.d-lg-none-i a[data-action="popup-zoom-in"]').forEach((el, i)=> el.setAttribute('data-img-index', i));
+		//- document.querySelectorAll('#wishlist-content .design-book-wrapper .item .item-content-overlay.d-lg-none a[data-action="popup-zoom-in"]').forEach((el, i)=> el.setAttribute('data-img-index', i));
+
+		//- document.querySelectorAll('#lucky-content .design-book-wrapper .item .item-content-overlay.d-lg-none-i a[data-action="popup-zoom-in"]').forEach((el, i)=> el.setAttribute('data-img-index', i));
+		//- document.querySelectorAll('#lucky-content .design-book-wrapper .item .item-content-overlay.d-lg-none a[data-action="popup-zoom-in"]').forEach((el, i)=> el.setAttribute('data-img-index', i));
+
+		let imageData = [!{imageData}];
+		var prev = '<div class="prev-chervon"><i class="ri-arrow-left-s-line"></i></div>',
+			next = '<div class="next-chervon"><i class="ri-arrow-right-s-line"></i></div>';
+			
+		$(document).ready(function(){
+			//- theme.photoswipeInit('#lucky-content .design-book-wrapper', '.item .item-content-overlay a[data-action="popup-zoom-in"]', imageData);
+			//- theme.photoswipeInit('#wishlist-content .design-book-wrapper', '.item .item-content-overlay a[data-action="popup-zoom-in"]', imageData);
+			
+			var hash = location.hash;
+			if ( hash && $('.nav-link[href="'+hash+'"]').length > 0 ) {
+				$('.nav-link[href="'+hash+'"]').trigger('click');
+				$('html,body').animate({ scrollTop: 0 }, 0);
+			}
+
+			$('.design-book-wrapper .item').hover(function() {
+
+			}, function() {
+				if($(this).find('.dropdown-menu').hasClass('show')) {
+					$(this).find('.dropdown-menu.show').removeClass('show');
+				}
+			});
+		});

@@ -1,0 +1,8 @@
+.panel{
+    border-radius: $border-theme;
+    padding: 24px;
+    &.panel-shadow{
+        box-shadow: 0 2px 24px 0 rgba(0, 0, 0, 0.03);
+        background-color: #ffffff;
+    }
+}

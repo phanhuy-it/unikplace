@@ -1,0 +1,201 @@
+mixin float-right-btn(className)
+	.float-right-btn
+		.float-game-btn(class=className)
+			a(href="game-1.html").btn.btn-just-icon.btn-lg.btn-brand.rounded-circle
+				i.ri-vip-crown-2-line
+			.description-text Get your <br> lucky design
+
+//- Tag Popup
+mixin tag-popup
+	//- .tag-popup(style="right: 15%; top: 45%;").d-lg-none-i
+	//- 	i.icon.ri-price-tag-3-fill
+	//- 	.tag-popup-info.tag-sm.align-right(style="position: absolute; right: calc(100% + 11px);")
+	//- 		.d-flex.align-items-center.mb-3
+	//- 			.thumbnail(style="width: 40px")
+	//- 				img.thumbnail(src="assets/images/product-tag/product-1.jpg")
+	//- 			.product-specs.mb-0.ml-2
+	//- 				.title Unikplace Luxury Lamp
+	//- 		each item, index in ['IFoss Inc', 'Odds And Ends', 'Handy Help', 'Knick Knacks', 'Trusted Assortment']
+	//- 			.item-link.mb-3
+	//- 				.content
+	//- 					.title= item
+	//- 					.price $4,300
+	//- 				a(href="#").btn.btn-just-icon.btn-outline-brand
+	//- 					i.ri-shopping-cart-2-line
+	a(href="javascript:void(0)" data-toggle="modal" data-target=".mobile-tag-modal-pc" style="right: 15%; top: 45%;").tag-popup.d-lg-none-i
+		i.icon.ri-price-tag-3-fill
+		
+	.tag-popup-mobile.d-lg-none
+		a(href="javascript:void(0)" data-toggle="modal" data-target=".mobile-tag-modal").tag-popup
+			i.icon.mr-1.mr-sm-2.ri-price-tag-3-fill
+			| 12
+
+mixin tag-popup-desktop(right, top, customStyle)
+	.tag-popup(style=`right: ${right}; top: ${top};`)
+		i.icon.ri-price-tag-3-fill
+		.tag-popup-info.tag-sm.align-right(style=`position: absolute; right: calc(100% + 11px); ${customStyle}`)
+			.d-flex.align-items-center.mb-3
+				.thumbnail(style="width: 40px")
+					img.thumbnail(src="assets/images/product-tag/product-1.jpg")
+				.product-specs.mb-0.ml-2
+					.title Unikplace Luxury Lamp
+			each item, index in ['IFoss Inc', 'Odds And Ends', 'Handy Help', 'Knick Knacks', 'Trusted Assortment']
+				.item-link.mb-3
+					.content
+						.title= item
+						.price $4,300
+					a(href="#").btn.btn-just-icon.btn-outline-brand
+						i.ri-shopping-cart-2-line
+
+
+//- Gallery Content Overylay
+mixin gallery-content-overlay(img, imgFull)
+	// Thumbnail
+	.item-thumbnail
+		a(href="detail-image.html").thumbnail
+			img(src=img)/
+		//- .item-content-overlay.placement-top.d-lg-none-i
+		//- 	.content-flex.justify-content-end
+		//- 		.item-right
+		//- 			.btn-list.flex-center-y
+		//- 				a(href=imgFull data-action="popup-zoom-in").btn.btn-just-icon.btn-white
+		//- 					i.ri-fullscreen-line
+
+		.item-content-overlay.d-lg-none-i
+			.content-flex
+				.item-left
+					a(href="detail-image.html").title.d-block Morden Nail Salon
+					a(href="#").category Nail Salon
+				.item-right
+					.btn-list.flex-center-y
+						a(href="#" data-toggle="tooltip" title="34").btn.btn-just-icon.btn-white
+							i.ri-heart-line
+						.dropup.d-inline-flex
+							button(href="#" data-toggle="dropdown").btn.btn-just-icon.btn-white
+								i.ri-share-line(data-toggle="tooltip" title="1,5k")
+							.dropdown-menu.dropdown-menu-right
+								a(href="#").dropdown-item.text-body
+									i.ri-facebook-box-fill
+									| Facebook
+								a(href="#").dropdown-item.text-body
+									i.ri-pinterest-fill
+									| Pinterest
+								a(href="#").dropdown-item.text-body
+									i.ri-mail-fill
+									| Mail
+						a(href="detail-image.html#comment-container" data-toggle="tooltip" title="32").btn.btn-just-icon.btn-white
+							i.ri-discuss-line
+		+tag-popup
+	// Button Action
+	.item-content-overlay.placement-bottom.d-lg-none(style="left: auto;")
+		.content-flex.justify-content-end
+			.item-right
+				.dropup
+					button(href="#" data-toggle="dropdown").btn.btn-just-icon.btn-white
+						i.ri-more-line
+					.dropdown-menu.dropdown-menu-right(style="min-width: 1px;").p-0
+						//- a(href=imgFull  data-action="popup-zoom-in").text-body.dropdown-item.text-link.p-2.p-x-4
+						//- 	i.ri-fullscreen-line.mr-0
+						.js-action-mobile
+							a(href="#").text-body.dropdown-item.text-link.p-2.p-x-4
+								i.ri-heart-fill.mr-0
+								span.badge.badge-brand.badge-notify 32
+							.dropleft
+								button(data-toggle="dropdown").text-body.dropdown-item.text-link.p-2.p-x-4
+									i.ri-share-fill.mr-0
+									span.badge.badge-brand.badge-notify 1,2k
+								.dropdown-menu.dropdown-menu-right.p-0.m-0(style="height: 38px;min-width: 1px;").d-flex
+									a(href="#").dropdown-item.text-body.p-2
+										i.ri-facebook-box-fill
+									a(href="#").dropdown-item.text-body.p-2
+										i.ri-pinterest-fill
+									a(href="#").dropdown-item.text-body.p-2
+										i.ri-mail-fill
+							a(href="detail-image.html#comment-container").text-body.dropdown-item.text-link.p-2.p-x-4
+								i.ri-discuss-line.mr-0
+								span.badge.badge-brand.badge-notify 106
+
+//- Comment Message
+mixin comment-message(avatar, name, mess, reply, active)
+	-
+		let activeClass = active ? 'active' : ''
+		let replyClass = reply ? 'reply' : ''
+	.item(class=replyClass)
+		.user-box
+			.avatar-img
+				img(src=avatar)/
+			.username=name
+		.comment-content.flex-wrap
+			.w-100.d-flex.flex-wrap
+				.message-box(class=activeClass)=mess
+				a(href="#").reply-link
+					i.ri-reply-fill
+					| Reply
+
+//- Photoswipe Custom
+mixin pswp-custom
+	.pswp(tabindex="-1" role="dialog" aria-hidden="true").pswp-gallery-custom
+		.pswp__bg
+		.pswp__scroll-wrap
+			.pswp__container
+				.pswp__item
+				.pswp__item
+				.pswp__item
+			.pswp__ui.pswp__ui--hidden
+				.pswp__top-bar
+					.pswp__counter
+					//- button.pswp__button.pswp__button--close(title="Close (Esc)")
+					a.btn.btn-just-icon.btn-white.prevent(href="#" data-placement="bottom" title="Close (Esc)" data-action="close").pswp__button--close
+						i.ri-close-line
+					//- a.btn.btn-just-icon.btn-white.prevent(href="#" data-placement="bottom" title="Toggle fullscreen").pswp__button--fs
+						i.ri-fullscreen-line
+					//- a.btn.btn-just-icon.btn-white.prevent(href="#" data-placement="bottom" title="Zoom in/out").pswp__button--zoom
+						i.ri-zoom-in-line
+
+					a.btn.btn-just-icon.btn-white(href="#" data-placement="bottom" title="34")
+						i.ri-heart-line
+						span.badge.badge-brand.badge-notify 32
+					//- a.btn.btn-just-icon.btn-white(href="detail-image.html")
+
+					.dropdown
+						button.btn.btn-just-icon.btn-white.m-x-4(data-placement="bottom" data-toggle="dropdown")
+							i.ri-share-line
+							span.badge.badge-brand.badge-notify 1,2k
+						.dropdown-menu.dropdown-menu-right
+							a(href="#").dropdown-item.text-body
+								i.ri-facebook-box-fill
+								| Facebook
+							a(href="#").dropdown-item.text-body
+								i.ri-pinterest-fill
+								| Pinterest
+							a(href="#").dropdown-item.text-body
+								i.ri-mail-fill
+								| Mail
+
+					a.btn.btn-just-icon.btn-white(href="detail-image.html#comment-container" data-placement="bottom" title="21")
+						i.ri-discuss-line
+						span.badge.badge-brand.badge-notify 106
+					//- button.pswp__button.pswp__button--share(title="Share")
+					//- a.pswp__button.pswp__button--fs(title="Toggle fullscreen" href="javascript:void(0);")
+					//- a.pswp__button.pswp__button--zoom(title="Zoom in/out" href="javascript:void(0);")
+					.pswp__preloader
+						.pswp__preloader__icn
+							.pswp__preloader__cut
+								.pswp__preloader__donut
+				.pswp__share-modal.pswp__share-modal--hidden.pswp__single-tap
+					.pswp__share-tooltip
+				button.pswp__button.pswp__button--arrow--left(title="Previous (arrow left)")
+				button.pswp__button.pswp__button--arrow--right(title="Next (arrow right)")
+				.pswp__caption
+					.pswp__caption__center
+
+			.pswp__caption-custom
+				.container
+					.content-title
+						.gallery-title
+						div
+							a(href="#").thumbnail-title
+							.category-title
+					//- .content-choose-color
+					//- 	.text-white Select Color
+					//- 	.choose-color-wrapper

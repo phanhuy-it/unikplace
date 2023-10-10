@@ -1,0 +1,60 @@
+extends common/layout.pug
+block custom
+	-
+		let pageName = 'Profile'
+		let pageFileName = path.basename(`${website + string2slug(pageName)}.html`)
+
+block meta-title
+	title #{pageName} | #{projectName}
+
+block content
+	.container.p-t-8
+		.row.justify-content-center
+			.col-md-8
+				nav.breadcrumb-wrapper.breadcrumb-inline
+					.breadcrumb-title.d-inline-block Profile
+					ol.breadcrumb
+						li.breadcrumb-item
+							a(href="index.html") Home
+						li.breadcrumb-item.active(aria-current="page") Profile
+
+				.m-b-8
+					.profile-user-box
+						.user-img
+							img(src="assets/images/user/user-4.jpg")/
+						.user-content
+							.m-b-4
+								.username John Blue
+								.text-neutral-1 Silver Member
+							button(type="file").btn.btn-brand.btn-sm Upload Photo
+				.m-b-8
+					.m-b-8
+						.h6.title-heading.m-b-7 Information
+						.row
+							.col-md-6
+								.form-group
+									label(for="") Username
+									input.form-control(type="text")/
+							.w-100.clearfix
+							each label in ['First Name', 'Last Name', 'Email', 'Phone', 'Address 1', 'Address 2', 'City', 'State', 'Business Name (Not Require)']
+								.col-md-6
+									.form-group
+										label(for="")= label
+										input.form-control(type="text")/
+
+					.m-b-8
+						.h6.title-heading.m-b-7 Social
+						.row
+							each label in ['Facebook', 'Pinterest']
+								.col-md-6
+									.form-group
+										label(for="")= label
+										input.form-control(type="text")/
+
+					div
+						button.btn.fix-width.btn-brand Save
+						| 
+						button.btn.fix-width.btn-default Cancel
+
+block script
+	script.

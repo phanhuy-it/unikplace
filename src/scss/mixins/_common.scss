@@ -1,0 +1,51 @@
+// Hide
+@mixin hide{
+	opacity: 0;
+	visibility: hidden;
+}
+
+@mixin show{
+	opacity: 1;
+	visibility: visible;
+}
+
+// Aspect Ratio
+@mixin aspect-ratio($width, $height, $class: content) {
+	position: relative;
+	&:before {
+		display: block;
+		content: "";
+		width: 100%;
+		padding-top: ($height / $width) * 100%;
+	}
+	>.#{$class} {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		text-align: center;
+	}
+}
+
+// Gradient
+@mixin light-bottom-white {
+	background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.93) 76%, white 100%);
+}
+
+// Hide text too long
+@mixin hide-text-v($height: unset, $rows: 2) {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	max-height: $height;
+	-webkit-line-clamp: $rows;
+	-webkit-box-orient: vertical;
+}
+
+// Only show in mobile devide
+// @mixin mobile-content{
+// 	@media (max-width: 991px) {
+// 		@content;
+// 	}
+// }

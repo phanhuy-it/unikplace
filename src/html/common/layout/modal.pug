@@ -1,0 +1,111 @@
+-
+	let furnitureList = [
+		{
+			title: 'Desk',
+			price: '$23.234'
+		},
+		{
+			title: 'Lamp',
+			price: '$23.234'
+		},
+		{
+			title: 'Sofa',
+			price: '$23.234'
+		},
+		{
+			title: 'Wall Painting',
+			price: '$23.234'
+		},
+	]
+.mobile-tag-modal.modal.fade(tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true")
+	.modal-dialog.modal-dialog-centered.modal-md-custom(role="document")
+		.modal-content
+			.modal-header
+				.h5.title-heading.mb-0 Furniture List
+				button.close(type="button" data-dismiss="modal" aria-label="Close")
+					span(aria-hidden="true") ×
+			.modal-body.section-gallery-detail
+				.furniture-list.mb-2
+					.item
+						.item-content
+							.item-info
+								.thumbnail.mr-2
+									img(src="assets/images/furniture-thumbnail/furniture-1.jpg")/
+								.title Mordern Desk
+							.item-info
+								.mr-2 $32,423 ~ $34,432
+								button.btn.btn-outline-brand.btn-sm(data-action="toggle-list").d-lg-none-i
+									i.ri-file-list-line
+									| View List
+								button.btn.btn-outline-brand.btn-sm(data-action="toggle-list").btn-just-icon.d-lg-none
+									i.ri-file-list-line
+
+						.subitem(style="display: none;")
+							each item, index in ['unikkom', 'unikplace', 'amazon', 'bestbuy']
+								.item
+									.item-content
+										.item-info
+											.thumbnail.mr-2
+												img(src="assets/images/furniture-thumbnail/furniture-1.jpg")/
+											.title=item
+										.item-info
+											.mr-2 $32,423
+											a(href="#" target="_blank").btn.btn-outline-brand.btn-sm.d-lg-none-i
+												i.ri-file-list-line
+												| Shop Now
+											a(href="#" target="_blank").btn.btn-outline-brand.btn-sm(data-action="toggle-list").btn-just-icon.d-lg-none
+												i.ri-shopping-cart-2-line
+					
+					each item, index in furnitureList
+						.item
+							.item-content
+								.item-info
+									.thumbnail.mr-2
+										img(src=`assets/images/furniture-thumbnail/furniture-${index+2}.jpg`)/
+									.title=item.title
+								.item-info
+									.mr-2=item.price
+									a(href="#" target="_blank").btn.btn-outline-brand.btn-sm.d-lg-none-i
+										i.ri-file-list-line
+										| Shop Now
+									a(href="#" target="_blank").btn.btn-outline-brand.btn-sm(data-action="toggle-list").btn-just-icon.d-lg-none
+										i.ri-shopping-cart-2-line
+			//- .modal-footer
+			//- 	button.btn.btn-secondary(type="button" data-dismiss="modal") Close
+				//- button.btn.btn-brand(type="button") Save changes
+
+
+.mobile-tag-modal-pc.modal.fade(tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true")
+	.modal-dialog.modal-dialog-centered.modal-md-custom(role="document")
+		.modal-content
+			.modal-header
+				.section-gallery-detail
+					.furniture-list
+						.item
+							.item-content
+								.item-info
+									.thumbnail.medium.mr-3
+										img(src="assets/images/furniture-thumbnail/furniture-1.jpg")/
+									h5.mb-0.title Mordern Desk
+
+				button.close(type="button" data-dismiss="modal" aria-label="Close")
+					span(aria-hidden="true") ×
+			.modal-body.section-gallery-detail
+				.furniture-list.mb-2
+					each item, index in ['unikkom', 'unikplace', 'amazon', 'bestbuy']
+						.item
+							.item-content
+								.item-info
+									.thumbnail.mr-3
+										img(src="assets/images/furniture-thumbnail/furniture-1.jpg")/
+									.title=item
+								.item-info
+									.mr-3 $32,423
+									a(href="#" target="_blank").btn.btn-outline-brand.btn-sm.d-lg-none-i
+										i.ri-file-list-line
+										| Shop Now
+									a(href="#" target="_blank").btn.btn-outline-brand.btn-sm(data-action="toggle-list").btn-just-icon.d-lg-none
+										i.ri-shopping-cart-2-line
+			//- .modal-footer
+			//- 	button.btn.btn-secondary(type="button" data-dismiss="modal") Close
+				//- button.btn.btn-brand(type="button") Save changes

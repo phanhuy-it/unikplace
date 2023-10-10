@@ -1,0 +1,73 @@
+extends common/layout-game.pug
+block custom
+	-
+		let pageName = 'Game 6'
+		let pageFileName = path.basename(`${website + string2slug(pageName)}.html`)
+
+block meta-title
+	title #{pageName} | #{projectName}
+
+block content
+	.section.section-game.mb-0.game-result
+		video.game-bg.no-blur.bg-video#congrat_video(autoplay muted playsinline)
+			source(src="assets/videos/game_result.mp4" type="video/mp4")
+
+block script
+	script.
+		$(document).ready(function() {
+			$('.game-answer-wrapper .item').on('click', function(e){
+				e.preventDefault();
+				$('.game-answer-wrapper .item').removeClass('active');
+				$(this).addClass('active');
+			});
+
+			$(window).bind('load resize', function() {
+		        var _windowWidth = window.innerWidth ? window.innerWidth : $(this).width();
+		        // if(_windowWidth <= 750) {
+		        //  var _browserHeight = _windowWidth > _windowHeight ? _windowWidth : _windowHeight;
+		        //  $('#scene-1, #scene-1 .movie').height(_browserHeight);
+		        // }
+
+
+		        // ---- SIZE OF VISUAL VIDEO ----
+		        var $video = $('#congrat_video');
+		        var _baseWidthVideo = 1280;
+		        var _baseHeightVideo = 720;
+		        var _videoWidth = $video.width();
+		        var _videoheight = $video.height();
+
+		        var $parent = $('.section-game');
+		        var _parentWidth = $parent.outerWidth();
+		        var _parentHeight = $parent.outerHeight();
+
+
+		        var _ratioWidth = _parentWidth / _baseWidthVideo;
+		        var _ratioHeight = _parentHeight / _baseHeightVideo;
+
+		        // console.log(_ratioWidth, _ratioHeight);
+
+		        if (_ratioWidth > _ratioHeight) {
+		            $video.css({
+		                'width': _parentWidth,
+		                'height': _parentWidth / _baseWidthVideo * _baseHeightVideo
+		            });
+		        } else if (_ratioWidth < _ratioHeight) {
+		            $video.css({
+		                'width': _parentHeight / _baseHeightVideo * _baseWidthVideo,
+		                'height': _parentHeight
+		            });
+		        } else {
+		            $video.css({
+		                'width': _parentWidth,
+		                'height': _parentHeight
+		            });
+		        }
+		        // --------- END ---------
+		    });
+
+		    document.getElementById('congrat_video').addEventListener('ended', redirect, false);
+
+		    function redirect(e) {
+		        window.location.assign('./detail-album.html');
+		    }
+		});

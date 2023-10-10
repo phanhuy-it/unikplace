@@ -1,0 +1,242 @@
+.btn{
+    position: relative;
+    padding: 8.5px 17px;
+    border-radius: $border-theme;
+    font-size: $font-size-base;
+    font-weight: $font-weight-medium;
+    > [class*=" ri-"], [class^=ri-]{
+        vertical-align: sub;
+        font-size: 16px;
+    }
+    &:not(.btn-just-icon){
+        > [class*=" ri-"], [class^=ri-]{
+            margin-right: 4px;
+        }
+    }
+    &.btn-sm:not(.btn-just-icon){
+        padding: 6px 12px;
+    }
+    &.btn-lg:not(.btn-just-icon){
+        padding: 13.5px 39px;
+    }
+    &.btn-just-icon{
+        width: $input-height;
+        height: $input-height;
+        padding: 2px;
+        @include flex-center(inline-flex);
+        [class^="ri-"], [class*=" ri-"]{
+            font-size: 20px;
+        }
+        &.btn-sm{
+            width: #{$input-height - 10px};
+            height: #{$input-height - 10px};
+        }
+        &.btn-lg{
+            width: #{$input-height + 10px};
+            height: #{$input-height + 10px};
+        }
+    }
+    &.fix-width{
+        max-width: 100px;
+        width: 100%;
+    }
+}
+
+.btn-list{
+    .btn{
+        &:not(:last-child){
+            margin-right: 8px;
+        }
+    }
+}
+
+@mixin button-variant($array) {
+    @each $name in map-keys($array){
+        $hex: map-get($array, $name);
+        .btn-#{$name}{
+            background-color: $hex;
+            border-color: $hex;
+            @if ($name == 'yellow'){
+                color: $neutral-0;
+            }
+            @else{
+                color: white;
+            }
+            &:hover, &:focus, &:active{
+                background-color: darken($hex, 5%);
+                border-color: darken($hex, 5%);
+                @if ($name == 'yellow'){
+                    color: $neutral-0;
+                }
+                @else{
+                    color: white;
+                }
+            }
+            &:disabled {
+                cursor: no-drop;
+            }
+        }
+        .btn-outline-#{$name}{
+            &:hover, &:focus, &:active{
+                background-color: $hex;
+                border-color: $hex;
+                color: white;
+            }
+        }
+    }
+}
+
+@include button-variant($semantics);
+@include button-variant($socials);
+
+.btn-default{
+    background-color: $neutral-4;
+    color: $neutral-0;
+    &:hover{
+        background-color: $neutral-3;
+        color: $neutral-0;
+    }
+}
+
+
+[class*="btn-outline-"]{
+    border: 1px solid;
+}
+
+.btn-outline-white--transparent{
+    border-color: white;
+    color: white;
+    &:hover{
+        background-color: white;
+        color: $brand;
+    }
+}
+
+.btn-white{
+    background-color: white;
+    color: $neutral-0;
+    &:hover{
+        background-color: $brand;
+        color: white;
+    }
+}
+
+.btn-only-white{
+    background-color: transparent;
+    color: $neutral-0;
+    &:hover{
+        // background-color: transparent;
+        color: $brand;
+    }
+}
+
+.text-link{
+    > [class*=" ri-"], [class^=ri-]{
+        vertical-align: text-top;
+        font-size: 16px;
+        margin-right: 4px;
+    }
+}
+
+.text-body{
+    > [class*=" ri-"], [class^=ri-]{
+        vertical-align: text-top;
+        font-size: 16px;
+        margin-right: 4px;
+    }
+}
+
+// Float Button
+.float-right-btn{
+    position: fixed;
+    right: 8px;
+    bottom: 64px;
+    z-index: 100;
+    transform: .3s cubic-bezier(.6,-.28,.735,.045);
+    @include media-breakpoint-down(md){
+        right: 20px;
+        bottom: 80px;
+        .description-text{
+            display: none;
+        }
+    }
+}
+
+.is-hide + .content-page {
+    .float-right-btn {
+        @include media-breakpoint-down(md){
+            bottom: 40px;
+        }
+    }
+}
+
+// Button game
+.float-game-btn{
+    text-align: center;
+    .btn{
+        position: relative;
+        &::before, &::after{
+            content: '';
+            border: 1px solid rgba($brand, .6);
+            border-radius: 50%;
+            // width: 100%;
+            // height: 100%;
+            @include pos-f;
+            transition: border .3s ease;
+        }
+        &::before{
+            animation: glow-line-1 2s ease infinite;
+        }
+        &::after{
+            animation: glow-line-2 2s ease infinite;
+        }
+    }
+    .description-text{
+        margin-top: 16px;
+        text-align: center;
+        font-size: $h6;
+        font-weight: $font-weight-semi;
+        color: $brand;
+        transition: color .3s ease;
+    }
+    &.is-light{
+        .btn{
+            background-color: white;
+            color: $brand;
+            &::before, &::after{
+                border: 1px solid rgba(white, .6);
+            }
+        }
+        .description-text{
+            color: white;
+        }
+    }
+}
+
+.tooltip {
+    pointer-events: none;
+}
+
+@keyframes glow-line-1{
+    0{
+        @include pos-f;
+    }
+    80%{
+        @include pos-f(-8);
+    }
+    0{
+        @include pos-f;
+    }
+}
+
+@keyframes glow-line-2{
+    0{
+        @include pos-f;
+    }
+    50%{
+        @include pos-f(-16);
+    }
+    0{
+        @include pos-f;
+    }
+}

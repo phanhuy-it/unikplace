@@ -1,0 +1,62 @@
+extends common/layout-game.pug
+block custom
+	-
+		let pageName = 'Game 5'
+		let pageFileName = path.basename(`${website + string2slug(pageName)}.html`)
+
+block meta-title
+	title #{pageName} | #{projectName}
+
+block content
+	.section.section-game.mb-0
+		.game-bg(style="background-image: url(assets/images/gallery/gallery-h-5.jpg)")
+		.container
+			.row
+				.col-lg-5
+					.game-heading
+						.m-b-7
+							.decor-title 05
+							.progress.progress-brand
+								.progress-bar(style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100")
+						.section-title Choose your store's color
+						p.description At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque.
+				.col-lg-6.offset-lg-1
+					.game-answer-wrapper
+						.row
+							each hex, j in ['7EC4FF', 'C3F689', 'FFDEC4', 'FFC4C4', 'FFE783', '7EFFE1', '898AF6', '858585', 'D7D7D7', 'EBEBEB']
+								.col-3
+									.item-color
+										- if (j < 2)
+											input(type="checkbox" name="item-color-section" id=`selection-${j}` checked=false)/
+										- else
+											input(type="checkbox" name="item-color-section" id=`selection-${j}`)/
+										label.selection(for=`#selection-${j}` style=`background-color: #${hex};`)
+										
+						.d-sm-flex.justify-content-between.text-right
+							a(href="game-4.html").btn.btn-default 
+								i.ri-arrow-left-line
+								| Back
+							| 
+							a(href="game-6.html").btn.btn-brand Submit 
+								i.ri-arrow-right-line
+
+block script
+	script.
+		$(document).ready(function() {
+			$('.game-answer-wrapper .item').on('click', function(e){
+				e.preventDefault();
+				$('.game-answer-wrapper .item').removeClass('active');
+				$(this).addClass('active');
+			});
+			var arrCheckedID = [];
+			$('.game-answer-wrapper input[type="checkbox"]:not(:checked)').change(function() {
+				var getID = $(this).attr('id');
+				if(arrCheckedID.length < 2) {
+					arrCheckedID.push(getID);
+				} else {
+					$('.game-answer-wrapper input[type="checkbox"]#'+arrCheckedID[0]+'').prop('checked', false);
+					arrCheckedID.shift();
+					arrCheckedID.push(getID);
+				}
+			});
+		});

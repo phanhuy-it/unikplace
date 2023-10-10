@@ -1,0 +1,13 @@
+@for $i from 0 through 10 {
+    // Breakpoint Loop
+    @each $grid in map-keys($grid-breakpoints){
+        $grid-size: map-get($grid-breakpoints, $grid);
+        @if ($grid-size != 0){
+            @media (max-width: $grid-size) {
+                .order-#{$grid}-#{$i}-i{
+                    order: $i;
+                }
+            }
+        }
+    }
+}

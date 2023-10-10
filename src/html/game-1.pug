@@ -1,0 +1,43 @@
+extends common/layout-game.pug
+block custom
+	-
+		let pageName = 'Game 1'
+		let pageFileName = path.basename(`${website + string2slug(pageName)}.html`)
+
+block meta-title
+	title #{pageName} | #{projectName}
+
+block content
+	.section.section-game.mb-0
+		.game-bg(style="background-image: url(assets/images/gallery/gallery-h-1.jpg)")
+		.container
+			.row
+				.col-lg-5
+					.game-heading
+						.m-b-7
+							.decor-title 01
+							.progress.progress-brand
+								.progress-bar(style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100")
+						.section-title What are you total buget?
+						p.description At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque.
+				.col-lg-6.offset-lg-1
+					.game-answer-wrapper
+						.row.justify-content-center
+							- for (var j = 1; j <= 4; j++)
+								.col-lg-6
+									a(href="#").item
+										.item-thumbnail
+											img.thumbnail(src=`assets/images/gallery/gallery-h-${j}.jpg`)/
+										.text-center.p-y-4.p-x-4
+											.price.font-weight-semi $100,000 - $200,000
+						.text-right
+							a(href="game-2.html").btn.btn-brand Next
+								i.ri-arrow-right-line
+
+block script
+	script.
+		$('.game-answer-wrapper .item').on('click', function(e){
+			e.preventDefault();
+			$('.game-answer-wrapper .item').removeClass('active');
+			$(this).addClass('active');
+		});

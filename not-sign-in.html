@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- CSS-->
+    <link rel="shortcut icon" href="assets/images/logo/logo-shape.png">
+    <link rel="stylesheet" type="text/css" href="assets/plugins/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/plugins/remixicon/fonts/remixicon.css">
+    <link rel="stylesheet" type="text/css" href="assets/plugins/photoswipe/dist/photoswipe.css">
+    <link rel="stylesheet" type="text/css" href="assets/plugins/photoswipe/dist/default-skin/default-skin.css">
+    <link rel="stylesheet" type="text/css" href="assets/plugins/animate.css/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.min.css">
+  </head>
+  <body>
+    <!-- Header-->
+    <header class="header is-sticky is-light">
+      <div class="container-fluid">
+        <div class="main-nav row">
+          <div class="nav-left col-lg-6"><a class="logo" href="index.html"><img class="logo-dark" src="assets/images/logo/logo-w@3x.png"><img class="logo-light" src="assets/images/logo/logo@2x.png"></a>
+            <div class="search-box">
+              <form action="javascript:void(0);">
+                <div class="input-group input-group-custom">
+                  <input class="form-control" type="text" placeholder="Search.."/>
+                  <div class="input-group-append">
+                    <button class="btn"><i class="ri-search-line"></i></button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="search-box-mobile"><a href="#"><i class="ri-search-line"></i></a></div>
+          </div>
+          <div class="nav-right col-lg-6">
+            <ul class="nav-menu not-sign-in">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="gallery.html">Gallery</a></li>
+              <li><a href="design-book.html">Design Book</a></li>
+              <li class="vertical-divide"></li>
+              <li class="no-border-line show-sp"><a class="btn-brand btn btn-sm customize-btn mr-0" href="game-1.html">Start your design</a></li>
+            </ul>
+          </div>
+          <div class="search-box-mobile-content">
+            <div class="input-group input-group-custom">
+              <input class="form-control form-control-lg rounded-0" type="text" placeholder="Search.."/>
+              <div class="input-group-append">
+                <button class="btn close-search-box"><i class="ri-close-line"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="mobile-navigation">
+      <ul>
+        <li class="active"><a href="index.html"><i class="icon ri-home-3-line"></i><span>Home</span></a></li>
+        <li><a href="gallery.html"><i class="icon ri-layout-line"></i><span>Gallery</span></a></li>
+        <li><a href="design-book.html"><i class="icon ri-palette-line"></i><span>Desgin Book</span></a></li>
+      </ul>
+    </div>
+    <!-- Content Page-->
+    <div class="content-page">
+      <!-- Footer-->
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="footer-block">
+                <div class="logo-img"><img src="assets/images/logo/logo@3x.png"></div>
+                <div class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque.</div>
+              </div>
+            </div>
+            <div class="col-lg-6 d-flex">
+              <div class="footer-block mr-5 ml-auto">
+                <div class="footer-block-title">Contact</div>
+                <div class="footer-block-link">
+                  <ul>
+                    <li class="nav-link"><a href="#">About</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="footer-block f-social">
+                <div class="footer-block-title">Social</div>
+                <div class="footer-block-link">
+                  <ul class="d-flex social-icons">
+                    <li><a href="#"><i class="ri-facebook-box-fill"></i></a></li>
+                    <li><a href="#"><i class="ri-linkedin-fill"></i></a></li>
+                    <li><a href="#"><i class="ri-instagram-fill"></i></a></li>
+                    <li><a href="#"><i class="ri-twitter-fill"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <div class="mobile-tag-modal modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-md-custom" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="h5 title-heading mb-0">Furniture List</div>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+          </div>
+          <div class="modal-body section-gallery-detail">
+            <div class="furniture-list mb-2">
+              <div class="item">
+                <div class="item-content">
+                  <div class="item-info">
+                    <div class="thumbnail mr-2"><img src="assets/images/furniture-thumbnail/furniture-1.jpg"/></div>
+                    <div class="title">Mordern Desk</div>
+                  </div>
+                  <div class="item-info">
+                    <div class="mr-2">$32,423 ~ $34,432</div>
+                    <button class="btn btn-outline-brand btn-sm d-lg-none-i" data-action="toggle-list"><i class="ri-file-list-line"></i>View List</button>
+                    <button class="btn btn-outline-brand btn-sm btn-just-icon d-lg-none" data-action="toggle-list"><i class="ri-file-list-line"></i></button>
+                  </div>
+                </div>
+                <div class="subitem" style="display: none;">
+                  <div class="item">
+                    <div class="item-content">
+                      <div class="item-info">
+                        <div class="thumbnail mr-2"><img src="assets/images/furniture-thumbnail/furniture-1.jpg"/></div>
+                        <div class="title">unikkom</div>
+                      </div>
+                      <div class="item-info">
+                        <div class="mr-2">$32,423</div><a class="btn btn-outline-brand btn-sm d-lg-none-i" href="#" target="_blank"><i class="ri-file-list-line"></i>Shop Now</a><a class="btn btn-outline-brand btn-sm btn-just-icon d-lg-none" href="#" target="_blank" data-action="toggle-list"><i class="ri-shopping-cart-2-line"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="item-content">
+                      <div class="item-info">
+                        <div class="thumbnail mr-2"><img src="assets/images/furniture-thumbnail/furniture-1.jpg"/></div>
+                        <div class="title">unikplace</div>
+                      </div>
+                      <div class="item-info">
+                        <div class="mr-2">$32,423</div><a class="btn btn-outline-brand btn-sm d-lg-none-i" href="#" target="_blank"><i class="ri-file-list-line"></i>Shop Now</a><a class="btn btn-outline-brand btn-sm btn-just-icon d-lg-none" href="#" target="_blank" data-action="toggle-list"><i class="ri-shopping-cart-2-line"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="item-content">
+                      <div class="item-info">
+                        <div class="thumbnail mr-2"><img src="assets/images/furniture-thumbnail/furniture-1.jpg"/></div>
+                        <div class="title">amazon</div>
+                      </div>
+                      <div class="item-info">
+                        <div class="mr-2">$32,423</div><a class="btn btn-outline-brand btn-sm d-lg-none-i" href="#" target="_blank"><i class="ri-file-list-line"></i>Shop Now</a><a class="btn btn-outline-brand btn-sm btn-just-icon d-lg-none" href="#" target="_blank" data-action="toggle-list"><i class="ri-shopping-cart-2-line"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="item-content">
+                      <div class="item-info">
+                        <div class="thumbnail mr-2"><img src="assets/images/furniture-thumbnail/furniture-1.jpg"/></div>
+                        <div class="title">bestbuy</div>
+                      </div>
+                      <div class="item-info">
+                        <div class="mr-2">$32,423</div><a class="btn btn-outline-brand btn-sm d-lg-none-i" href="#" target="_blank"><i class="ri-file-list-line"></i>Shop Now</a><a class="btn btn-outline-brand btn-sm btn-just-icon d-lg-none" href="#" target="_blank" data-action="toggle-list"><i class="ri-shopping-cart-2-line"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="item-content">
+                  <div class="item-info">
+                    <div class="thumbnail mr-2"><img src="assets/images/furniture-thumbnail/furniture-2.jpg"/></div>
+                    <div class="title">Desk</div>
+                  </div>
+                  <div class="item-info">
+                    <div class="mr-2">$23.234</div><a class="btn btn-outline-brand btn-sm d-lg-none-i" href="#" target="_blank"><i class="ri-file-list-line"></i>Shop Now</a><a class="btn btn-outline-brand btn-sm btn-just-icon d-lg-none" href="#" target="_blank" data-action="toggle-list"><i class="ri-shopping-cart-2-line"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="item-content">
+                  <div class="item-info">
+                    <div class="thumbnail mr-2"><img src="assets/images/furniture-thumbnail/furniture-3.jpg"/></div>
+                    <div class="title">Lamp</div>
+                  </div>
+                  <div class="item-info">
+                    <div class="mr-2">$23.234</div><a class="btn btn-outline-brand btn-sm d-lg-none-i" href="#" target="_blank"><i class="ri-file-list-line"></i>Shop Now</a><a class="btn btn-outline-brand btn-sm btn-just-icon d-lg-none" href="#" target="_blank" data-action="toggle-list"><i class="ri-shopping-cart-2-line"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="item-content">
+                  <div class="item-info">
+                    <div class="thumbnail mr-2"><img src="assets/images/furniture-thumbnail/furniture-4.jpg"/></div>
+                    <div class="title">Sofa</div>
+                  </div>
+                  <div class="item-info">
+                    <div class="mr-2">$23.234</div><a class="btn btn-outline-brand btn-sm d-lg-none-i" href="#" target="_blank"><i class="ri-file-list-line"></i>Shop Now</a><a class="btn btn-outline-brand btn-sm btn-just-icon d-lg-none" href="#" target="_blank" data-action="toggle-list"><i class="ri-shopping-cart-2-line"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="item-content">
+                  <div class="item-info">
+                    <div class="thumbnail mr-2"><img src="assets/images/furniture-thumbnail/furniture-5.jpg"/></div>
+                    <div class="title">Wall Painting</div>
+                  </div>
+                  <div class="item-info">
+                    <div class="mr-2">$23.234</div><a class="btn btn-outline-brand btn-sm d-lg-none-i" href="#" target="_blank"><i class="ri-file-list-line"></i>Shop Now</a><a class="btn btn-outline-brand btn-sm btn-just-icon d-lg-none" href="#" target="_blank" data-action="toggle-list"><i class="ri-shopping-cart-2-line"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mobile-tag-modal-pc modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-md-custom" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="section-gallery-detail">
+              <div class="furniture-list">
+                <div class="item">
+                  <div class="item-content">
+                    <div class="item-info">
+                      <div class="thumbnail medium mr-3"><img src="assets/images/furniture-thumbnail/furniture-1.jpg"/></div>
+                      <h5 class="mb-0 title">Mordern Desk</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+          </div>
+          <div class="modal-body section-gallery-detail">
+            <div class="furniture-list mb-2">
+              <div class="item">
+                <div class="item-content">
+                  <div class="item-info">
+                    <div class="thumbnail mr-3"><img src="assets/images/furniture-thumbnail/furniture-1.jpg"/></div>
+                    <div class="title">unikkom</div>
+                  </div>
+                  <div class="item-info">
+                    <div class="mr-3">$32,423</div><a class="btn btn-outline-brand btn-sm d-lg-none-i" href="#" target="_blank"><i class="ri-file-list-line"></i>Shop Now</a><a class="btn btn-outline-brand btn-sm btn-just-icon d-lg-none" href="#" target="_blank" data-action="toggle-list"><i class="ri-shopping-cart-2-line"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="item-content">
+                  <div class="item-info">
+                    <div class="thumbnail mr-3"><img src="assets/images/furniture-thumbnail/furniture-1.jpg"/></div>
+                    <div class="title">unikplace</div>
+                  </div>
+                  <div class="item-info">
+                    <div class="mr-3">$32,423</div><a class="btn btn-outline-brand btn-sm d-lg-none-i" href="#" target="_blank"><i class="ri-file-list-line"></i>Shop Now</a><a class="btn btn-outline-brand btn-sm btn-just-icon d-lg-none" href="#" target="_blank" data-action="toggle-list"><i class="ri-shopping-cart-2-line"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="item-content">
+                  <div class="item-info">
+                    <div class="thumbnail mr-3"><img src="assets/images/furniture-thumbnail/furniture-1.jpg"/></div>
+                    <div class="title">amazon</div>
+                  </div>
+                  <div class="item-info">
+                    <div class="mr-3">$32,423</div><a class="btn btn-outline-brand btn-sm d-lg-none-i" href="#" target="_blank"><i class="ri-file-list-line"></i>Shop Now</a><a class="btn btn-outline-brand btn-sm btn-just-icon d-lg-none" href="#" target="_blank" data-action="toggle-list"><i class="ri-shopping-cart-2-line"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="item-content">
+                  <div class="item-info">
+                    <div class="thumbnail mr-3"><img src="assets/images/furniture-thumbnail/furniture-1.jpg"/></div>
+                    <div class="title">bestbuy</div>
+                  </div>
+                  <div class="item-info">
+                    <div class="mr-3">$32,423</div><a class="btn btn-outline-brand btn-sm d-lg-none-i" href="#" target="_blank"><i class="ri-file-list-line"></i>Shop Now</a><a class="btn btn-outline-brand btn-sm btn-just-icon d-lg-none" href="#" target="_blank" data-action="toggle-list"><i class="ri-shopping-cart-2-line"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Javascript-->
+    <script src="assets/plugins/jquery/dist/jquery.min.js"></script>
+    <script src="assets/plugins/popper.js/dist/umd/popper.min.js"></script>
+    <script src="assets/plugins/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="assets/plugins/photoswipe/dist/photoswipe.min.js"></script>
+    <script src="assets/plugins/photoswipe/dist/photoswipe-ui-default.min.js"></script>
+    <script src="assets/js/style.min.js"></script>
+    <script>
+      // On load
+      const theme = new Theme();
+      document.addEventListener('DOMContentLoaded', (event)=> {
+      	theme.init();
+      
+      	window.onresize = (event)=> {
+      		theme.navigationCofig();
+      	};
+      });
+      
+      let sectionBanner = $('.section-banner'),
+      	sectionBannerImg = sectionBanner.find('.banner-img img');
+      $(document).ready(function(){
+      	if (window.innerWidth > 991 && window.innerHeight > 768){
+      		sectionBannerImg.height(window.innerHeight);
+      	}
+      
+      	if (window.innerWidth <= 768){
+      		sectionBannerImg.height(window.innerHeight - mobileNav.outerHeight(true));
+      	}
+      });
+    </script>
+  </body>
+</html>

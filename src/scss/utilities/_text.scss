@@ -1,0 +1,21 @@
+@each $name in map-keys($headings){
+    // Abbreviate Direction
+    $size: map-get($headings, $name);
+    .#{$name}{
+        font-size: $size;
+        &.title-heading{
+            font-weight: $font-weight-semi;
+        }
+    }
+}
+
+@each $name in map-keys($neutral-s){
+    $hex: map-get($neutral-s, $name);
+    .text-#{$name}{
+        color: $hex;
+    }
+}
+
+.font-weight-semi{
+    font-weight: 600;
+}

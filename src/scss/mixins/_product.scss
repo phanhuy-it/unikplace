@@ -1,0 +1,42 @@
+@mixin small-thumbnails {
+    .small-thumbnails {
+        display: flex;
+
+        .thumbnail-item {
+            display: block;
+            width: 32px;
+            height: 32px;
+            padding: 2px;
+            border: 2px solid;
+            border-color: $neutral-4;
+            transition: border .3s ease;
+
+            &:not(:last-child) {
+                margin-right: 3px;
+            }
+
+            img {
+                // display: block;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            &:not(.more-item) {
+                &:hover {
+                    border-color: $brand;
+
+                    img {}
+                }
+            }
+
+            &.more-item {
+                background-color: $neutral-4;
+                color: $neutral-1;
+                font-size: 12px;
+                font-weight: 600;
+                @include flex-center;
+            }
+        }
+    }
+}

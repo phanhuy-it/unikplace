@@ -1,0 +1,25 @@
+// Breakpoint Loop
+@each $grid in map-keys($grid-breakpoints){
+    $grid-size: map-get($grid-breakpoints, $grid);
+    @if ($grid-size != 0){
+        @each $grid-range-type in (max, min){
+            @media (#{$grid-range-type}-width: $grid-size) {
+                // Example: .m-sm-b-1
+                @each $display in [none, inline, block, inline-block, flex, inline-flex]{
+                    @if ($grid-range-type == max){
+                        // Example: .m-sm-b-1-i
+                        .d-#{$grid}-#{$display}-i{
+                            display: $display!important;
+                        }
+                    }
+                    @else{
+                        // Example: .m-sm-b-1
+                        .d-#{$grid}-#{$display}{
+                            display: $display!important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

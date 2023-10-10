@@ -1,0 +1,12 @@
+.dropdown-item{
+    color: $neutral-0;
+    font-size: 14px;
+}
+
+.dropdown-menu{
+    display: block;
+    @include hide;
+    &.show{
+        @include show;
+    }
+}

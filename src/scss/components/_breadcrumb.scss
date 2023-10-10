@@ -1,0 +1,30 @@
+.breadcrumb-wrapper{
+    margin-bottom: 32px;
+    .breadcrumb{
+        background-color: transparent;
+        padding: 0;
+        margin-bottom: 0;
+        &-title{
+            font-size: $h4;
+            font-weight: $font-weight-semi;
+        }
+    }
+    .breadcrumb-item{
+        a{
+            color: $neutral-1;
+        }
+    }
+    .breadcrumb-item+.breadcrumb-item{
+        color: $neutral-1;
+        &::before{
+            content: '|';
+        }
+    }
+    &.breadcrumb-inline{
+        display: flex;
+        align-items: center;
+        .breadcrumb-title{
+            margin-right: 24px;
+        }
+    }
+}

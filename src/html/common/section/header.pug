@@ -1,0 +1,118 @@
+-
+    let headerClassName = pageFileName === 'index.html' ? 'is-dark' : 'is-light'
+    let customizeClassName = pageFileName === 'index.html' ? 'btn-outline-white--transparent' : 'btn-brand'
+header.header.is-sticky(class=headerClassName)
+    .container-fluid
+        .main-nav.row
+            //- .nav-left.px-3
+            .nav-left.col-lg-6
+                div#hambuger
+                    span
+                    span
+                    span
+                    span
+                a(href="index.html").logo
+                    img.logo-dark(src="assets/images/logo/logo-w@3x.png")
+                    img.logo-light(src="assets/images/logo/logo@2x.png")
+                //- .search-box(style="max-width: unset;")
+                .search-box
+                    form(action="javascript:void(0);")
+                        .input-group.input-group-custom
+                            input.form-control(type='text' placeholder="Search..")/
+                            .input-group-append
+                                button.btn
+                                    i.ri-search-line
+                .search-box-mobile
+                    a(href="#")
+                        i.ri-search-line
+
+            //- .nav-right.px-3
+            .nav-right.col-lg-6
+                ul.nav-menu
+                    li
+                        a(href="index.html") Home
+                    li
+                        a(href="gallery.html") Gallery
+                    li
+                        a(href="design-book.html") Your Place
+                    li.vertical-divide
+                    li.no-border-line.show-sp
+                        a(href="game-1.html" class=customizeClassName).btn.btn-sm.customize-btn Start your design
+                ul.profile-box
+                    li.dropdown.notification-list
+                        a(href="#" data-toggle="dropdown").noti-btn
+                            i.ri-notification-2-fill
+                            span.count-noti 99+
+                        .dropdown-menu.dropdown-menu-right.notification-list-box
+                            a.unread
+                                .content You are now a SUPER USER and can see up to 1000 designs
+                            a.unread <b>Neque porro quisquam est </b>
+                                .content Brielle Williamson and 38 people also added your picture to their Wishlist. Neque porro quisquam est qui dolorem ipsum quia dolor Neque porro quisquam est qui dolorem ipsum quia dolor
+                            - for (var x = 0; x < 3; x++)
+                                a
+                                    .content <b>John Due</b> replied on your comment
+                    //- li
+                    //-     a(href="#")
+                    //-         i.ri-message-3-fill
+                    li.dropdown.user-box.hide-sp
+                        a(href="#" data-toggle="dropdown").not-icon
+                            .avatar-img
+                                img(src="assets/images/user/13.jpg")/
+                            //- | Ariana Grande
+                        .dropdown-menu.dropdown-menu-right
+                            a(href="profile.html").dropdown-item Profile
+                            each item, index in ['Log Out']
+                                a(href="index_2.html").dropdown-item= item
+                                - if (index === 1)
+                                    .dropdown-divider
+
+            .search-box-mobile-content
+                .input-group.input-group-custom
+                    input.form-control.form-control-lg.rounded-0(type='text' placeholder="Search..")/
+                    .input-group-append
+                        button.btn.close-search-box
+                            i.ri-close-line
+
+//- script.
+//-     let navLeft = document.querySelector('.header .nav-left'),
+//-         navRight = document.querySelector('.header .nav-right');
+
+//-     navLeft.style.width = `calc(100% - ${navRight.offsetWidth + 16 }px)`
+
+-
+    let mobileNavigation = [
+        {
+            title: 'Home',
+            icon: 'ri-home-3-line',
+            href: 'index.html'
+        },
+        {
+            title: 'Gallery',
+            icon: 'ri-layout-line',
+            href: 'gallery.html'
+        },
+        {
+            title: 'Your Place',
+            icon: 'ri-palette-line',
+            href: 'design-book.html'
+        }
+    ]
+
+.mobile-navigation
+    ul
+        each item, index in mobileNavigation
+            - let active = index == 0 ? 'active' : ''
+            li(class=active)
+                a(href=item.href)
+                    i.icon(class=item.icon)
+                    span= item.title
+        li.dropdown.user-box
+            a(href="#" data-toggle="dropdown")
+                i.icon(class="ri-user-3-fill")
+                span= "Profile"
+            .dropdown-menu.dropdown-menu-right
+                a(href="profile.html").dropdown-item Profile
+                each item, index in ['Log Out']
+                    a(href="index_2.html").dropdown-item= item
+                    - if (index === 1)
+                        .dropdown-divider

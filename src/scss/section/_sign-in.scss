@@ -1,0 +1,23 @@
+.section-sign-in{
+    margin-bottom: 0;
+    .content-bg{
+        padding-left: 0;
+        padding-right: 0;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            @include media-breakpoint-down(md){
+                height: 500px;
+            }
+        }
+    }
+    .content-form{
+        text-align: center;
+        .logo-img{
+            max-width: 160px;
+            width: 100%;
+        }
+    }
+}

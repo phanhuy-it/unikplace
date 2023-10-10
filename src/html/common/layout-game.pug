@@ -1,0 +1,129 @@
+include mixins/mixins.pug
+include var.pug
+
+block custom
+
+- let noHeadFoot = (pageFileName !== 'sign-up.html' && pageFileName !== 'sign-in.html')
+
+doctype html
+html
+	head
+		meta(charset="utf-8")
+		meta(http-equiv="X-UA-Compatible" content="IE=edge")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
+
+		block meta-title
+		
+		// CSS
+		link(rel="shortcut icon" href="assets/images/logo/logo-shape.png")
+		link(rel="stylesheet" type="text/css" href="assets/plugins/bootstrap/dist/css/bootstrap.min.css")
+		//- link(rel="stylesheet" type="text/css" href="assets/plugins/metismenu/dist/metisMenu.min.css")
+		link(rel="stylesheet" type="text/css" href="assets/plugins/remixicon/fonts/remixicon.css")
+
+		link(rel="stylesheet" type="text/css" href="assets/plugins/photoswipe/dist/photoswipe.css")
+		link(rel="stylesheet" type="text/css" href="assets/plugins/photoswipe/dist/default-skin/default-skin.css")
+		
+		- if (pageFileName === 'gallery-detail.html' || pageFileName === 'design-book.html')
+			link(rel="stylesheet" type="text/css" href="assets/plugins/slick-carousel/slick/slick-theme.css")
+			link(rel="stylesheet" type="text/css" href="assets/plugins/slick-carousel/slick/slick.css")
+
+		link(rel="stylesheet" type="text/css" href="assets/plugins/animate.css/animate.min.css")
+
+		block page-script
+		link(rel="stylesheet" type="text/css" href="assets/css/style.min.css")
+
+	
+	body
+		- if (noHeadFoot)
+			// Header
+			-
+				let headerClassName = pageFileName === 'index.html' ? 'is-dark' : 'is-light'
+				let customizeClassName = pageFileName === 'index.html' ? 'btn-outline-white--transparent' : 'btn-brand'
+			header.header.is-sticky(class=headerClassName)
+				.container-fluid
+					.main-nav.row
+						//- .nav-left.px-3
+						.nav-left.col-lg-6
+							a(href="index.html").logo
+								img.logo-dark(src="assets/images/logo/logo-w@3x.png")
+								img.logo-light(src="assets/images/logo/logo@2x.png")
+						.search-box-mobile-content
+							.input-group.input-group-custom
+								input.form-control.form-control-lg.rounded-0(type='text' placeholder="Search..")/
+								.input-group-append
+									button.btn.close-search-box
+										i.ri-close-line
+
+			//- script.
+			//-     let navLeft = document.querySelector('.header .nav-left'),
+			//-         navRight = document.querySelector('.header .nav-right');
+
+			//-     navLeft.style.width = `calc(100% - ${navRight.offsetWidth + 16 }px)`
+			-
+				let mobileNavigation = [
+					{
+						title: 'Home',
+						icon: 'ri-home-3-line',
+						href: ''
+					},
+					{
+						title: 'Gallery',
+						icon: 'ri-layout-line',
+						href: ''
+					},
+					{
+						title: 'Desgin Book',
+						icon: 'ri-palette-line',
+						href: ''
+					}
+				]
+
+			//- .mobile-navigation
+			//- 	ul
+			//- 		each item, index in mobileNavigation
+			//- 			- let active = index == 0 ? 'active' : ''
+			//- 			li(class=active)
+			//- 				a(href=item.href)
+			//- 					i.icon(class=item.icon)
+			//- 					span= item.title
+
+		- let contentPageClassName = (pageFileName === 'index.html' || pageFileName === 'sign-up.html' || pageFileName === 'sign-in.html') ? 'mt-0 pt-0' : ''
+		// Content Page
+		.content-page(class=contentPageClassName)
+			block content
+			
+			- if (pageFileName === 'game-6.html')
+				// Footer
+				include section/footer.pug
+
+		- if (noHeadFoot)
+			include layout/modal.pug
+
+		// Javascript
+		script(src="assets/plugins/jquery/dist/jquery.min.js")
+		script(src="assets/plugins/popper.js/dist/umd/popper.min.js")
+		script(src="assets/plugins/bootstrap/dist/js/bootstrap.min.js")
+
+		script(src="assets/plugins/photoswipe/dist/photoswipe.min.js")
+		script(src="assets/plugins/photoswipe/dist/photoswipe-ui-default.min.js")
+
+		- if (pageFileName === 'gallery-detail.html' || pageFileName === 'design-book.html')
+			script(src="assets/plugins/slick-carousel/slick/slick.min.js")
+		//- script(src="assets/plugins/wowjs/dist/wow.min.js")
+		//- script(src="assets/plugins/metismenu/dist/metisMenu.min.js")
+		block page-script
+
+		script(src="assets/js/style.min.js")
+		script.
+			// On load
+			const theme = new Theme();
+			document.addEventListener('DOMContentLoaded', (event)=> {
+				// $(".page-loader").fadeOut(400, ()=> $(".page-loader").remove());
+
+				theme.init();
+
+				window.onresize = (event)=> {
+					theme.navigationCofig();
+				};
+			});
+		block script

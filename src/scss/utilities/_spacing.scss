@@ -1,0 +1,106 @@
+@for $i from 1 through length($space) {
+    $space-size: #{nth($space, $i) + 'px'};
+    
+    // Directions Loop
+    @each $direction in map-keys($directions){
+        // Abbreviate Direction
+        $direction-abbr: map-get($directions, $direction);
+        
+        // Padding, Margin
+        // Example: .m-b-1
+        @each $type, $type-abbr in $space-types{
+            .#{$type-abbr}-#{$direction-abbr}-#{$i}{
+                #{$type}-#{$direction}: $space-size !important;
+            }
+        }
+    }
+
+    // Axis Loop
+    @each $type, $type-abbr in $space-types{
+        @each $axis in $space-axis{
+            @if ($axis == x){
+                // Example: .m-x-1
+                .#{$type-abbr}-#{$axis}-#{$i}{
+                    #{$type}-left: $space-size !important;
+                    #{$type}-right: $space-size !important;
+                }
+            }
+            @else{
+                // Example: .m-y-1
+                .#{$type-abbr}-#{$axis}-#{$i}{
+                    #{$type}-top: $space-size !important;
+                    #{$type}-bottom: $space-size !important;
+                }
+            }
+        }
+    }
+    // Breakpoint Loop
+    @each $grid in map-keys($grid-breakpoints){
+        $grid-size: map-get($grid-breakpoints, $grid);
+        @if ($grid-size != 0){
+            @each $grid-range-type in (max, min){
+                @media (#{$grid-range-type}-width: $grid-size) {
+                    // Directions Loop
+                    @each $direction in map-keys($directions){
+                        // Abbreviate Direction
+                        $direction-abbr: map-get($directions, $direction);
+                        
+                        // Padding, Margin
+                        // Example: .m-sm-b-1
+                        @each $type, $type-abbr in $space-types{
+                            @if ($grid-range-type == max){
+                                // Example: .m-sm-b-1-i
+                                .#{$type-abbr}-#{$direction-abbr}-#{$grid}-#{$i}-i{
+                                    #{$type}-#{$direction}: $space-size !important;
+                                }
+                            }
+                            @else{
+                                // Example: .m-sm-b-1
+                                .#{$type-abbr}-#{$direction-abbr}-#{$grid}-#{$i}{
+                                    #{$type}-#{$direction}: $space-size !important;
+                                }
+                            }
+                        }
+                    }
+                    // Axis Loop
+                    @each $type, $type-abbr in $space-types{
+                        @each $axis in $space-axis{
+                            @if ($grid-range-type == max){
+                                @if ($axis == x){
+                                    // Example: .m-x-sm-1-i
+                                    .#{$type-abbr}-#{$axis}-#{$grid}-#{$i}-i{
+                                        #{$type}-left: $space-size !important;
+                                        #{$type}-right: $space-size !important;
+                                    }
+                                }
+                                @else{
+                                    // Example: .m-y-sm-1-i
+                                    .#{$type-abbr}-#{$axis}-#{$grid}-#{$i}-i{
+                                        #{$type}-top: $space-size !important;
+                                        #{$type}-bottom: $space-size !important;
+                                    }
+                                }
+                            }
+                            @else{
+                                @if ($axis == x){
+                                    // Example: .m-x-sm-1
+                                    .#{$type-abbr}-#{$axis}-#{$grid}-#{$i}{
+                                        #{$type}-left: $space-size !important;
+                                        #{$type}-right: $space-size !important;
+                                    }
+                                }
+                                @else{
+                                    // Example: .m-y-sm-1
+                                    .#{$type-abbr}-#{$axis}-#{$grid}-#{$i}{
+                                        #{$type}-top: $space-size !important;
+                                        #{$type}-bottom: $space-size !important;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,35 @@
+.modal {
+	z-index: 1100;
+}
+
+.modal-backdrop {
+	z-index: 1099;
+}
+
+.modal-center{
+	@media (min-width: 992px){
+		text-align: center;
+		.modal-dialog{
+			width: 100%;
+			-webkit-animation: fadeIn;
+			animation: fadeIn;
+			animation-duration: .3s;
+			display: inline-block;
+			text-align: left;
+			vertical-align: middle;
+		}
+		&:before {
+			content: '';
+			display: inline-block;
+			height: 100%;
+			vertical-align: middle;
+			margin-right: -4px;
+		}
+	}
+}
+
+@media (min-width: 992px){
+	.modal-md-custom {
+		max-width: 450px;
+	}
+}

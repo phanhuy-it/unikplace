@@ -1,0 +1,20 @@
+extends common/layout.pug
+block custom
+	-
+		let pageName = 'Result'
+		let pageFileName = path.basename(`${website + string2slug(pageName)}.html`)
+
+block meta-title
+	title #{pageName} | #{projectName}
+
+block content
+	.result-bg
+		.container
+			.section.mb-0.game-result-fail.d-flex.align-items-center.justify-content-center.flex-column
+				h5.text-center.w-100.m-b-8 Currently there is no 3D design that fits your input, please try again!
+				p.text-center.mb-0
+					a.btn.btn-brand(href="game-1.html").px-5 Get another lucky design
+
+
+block script
+	script.

@@ -1,0 +1,24 @@
+@mixin progress-variant($array) {
+    @each $name in map-keys($array){
+        $hex: map-get($array, $name);
+        &.progress-#{$name}{
+            .progress-bar{
+                background-color: $hex;
+                @if ($name == 'yellow'){
+                    color: $neutral-0;
+                }
+                @else{
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+.progress{
+    border-radius: $border-theme;
+    background-color: $neutral-4;
+    height: 8px;
+    @include progress-variant($semantics);
+    @include progress-variant($socials);
+}

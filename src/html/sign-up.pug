@@ -1,0 +1,45 @@
+extends common/layout.pug
+block custom
+	-
+		let pageName = 'Sign Up'
+		let pageFileName = path.basename(`${website + string2slug(pageName)}.html`)
+
+block meta-title
+	title #{pageName} | #{projectName}
+
+block content
+	.section.section-sign-in
+		.container-fluid
+			.row.align-items-center
+				.d-none.d-md-block.col-md-5.col-lg-6.order-md-1-i.content-bg
+					img(src="assets/images/bg/bg-login@2x.jpg")/
+
+				.col-md-7.col-lg-6.content-form.p-y-8
+					a(href="index.html")
+						img.logo-img(src="assets/images/logo/logo@2x.png")/.m-b-8
+					.h4.m-b-5.font-weight-semi Sign up to Unik Place
+					.h6.m-b-8.font-weight-semi Find new ideas to try
+
+					.w-100.mx-auto(style="max-width: 360px;")
+						.form-group
+							input.form-control(type="text" placeholder="Username")/
+						.form-group
+							input.form-control(type="email" placeholder="Email")/
+						.form-group
+							input.form-control(type="password" placeholder="Password")/
+						.form-group
+							input.form-control(type="text" placeholder="Zip Code")/
+
+						
+						button.btn.btn-brand.btn-block Sign Up
+
+
+
+block script
+	script.
+		$(window).bind('load resize', function() {
+			if (window.innerWidth >= 768){
+				var bgHeight = window.innerHeight > $('.section-sign-in .content-form').outerHeight() ? window.innerHeight : $('.section-sign-in .content-form').outerHeight();
+				$('.section-sign-in .content-bg img').height(bgHeight);
+			}
+		});

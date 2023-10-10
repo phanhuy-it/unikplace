@@ -1,0 +1,36 @@
+@mixin flex-center-x($display: flex){
+	display: $display;
+	justify-content: center;
+}
+
+@mixin flex-center-y($display: flex){
+	display: $display;
+	align-items: center;
+}
+
+@mixin flex-center($display: flex){
+	display: $display;
+	justify-content: center;
+	align-items: center;
+}
+
+@mixin flex-between($display: flex){
+	display: $display;
+	justify-content: space-between;
+}
+
+.flex-center-x{
+	@include flex-center-x;
+}
+
+.flex-center-y{
+	@include flex-center-y;
+}
+
+.flex-center{
+	@include flex-center;
+}
+
+.flex-between{
+	@include flex-center;
+}

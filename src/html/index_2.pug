@@ -1,0 +1,193 @@
+extends common/layout_2.pug
+block custom
+	-
+		let pageName = 'Home'
+		let pageFile = 'index'
+		let pageFileName = path.basename(`${website + pageFile}.html`)
+
+block meta-title
+	title #{pageName} | #{projectName}
+
+block content
+	.section.section-banner
+		.banner-img
+			img(src="assets/images/banner/banner.jpg")/
+		.banner-container.container
+			.text-center
+				.banner-title The largest 3D design library for beauty industry
+				p.text-white Can't find a idea for your salon? No problem, we have 1000+ ideas for you
+		a(href=".section-home-gallery" data-offset-top="48").chevron-btn.scroll-to-element
+			img(src="assets/images/icons/chevron-bottom.svg")/
+
+	.section.section-home-gallery
+		.container
+			.section-heading
+				div
+					.section-decor-title Great Ideas
+					.section-title Here are some ideas we pick for you
+				.section-bg
+					img(src="assets/images/logo/logo-shape.png")/
+		
+		.gallery-grid--1
+			.container-fluid
+				.row.gallery-grid--1-row
+
+					//- PC + SP
+					.col-6.col-lg-4
+						.item.vertical-item
+							+gallery-content-overlay('assets/images/gallery/gallery-v-1.jpg', 'assets/images/gallery/gallery-v-1.jpg')
+								
+					//- PC
+					.col-lg-8.d-none.d-lg-block
+						.sub-item
+							.row
+								- for (var j = 1; j < 5; j++)
+									.col-lg-6.col-6
+										.item
+											+gallery-content-overlay(`assets/images/gallery/gallery-h-${j}.jpg`, `assets/images/gallery/gallery-h-${j}.jpg`)
+					
+					//- SP
+					.col-6.d-lg-none
+						.sub-item
+							.row
+								- for (var j = 1; j < 3; j++)
+									.col-12
+										.item
+											+gallery-content-overlay(`assets/images/gallery/gallery-h-${j}.jpg`, `assets/images/gallery/gallery-h-${j}.jpg`)
+
+					//- SP
+					.col-12.d-lg-none
+						.sub-item
+							.row
+								- for (var j = 3; j < 5; j++)
+									.col-6
+										.item
+											+gallery-content-overlay(`assets/images/gallery/gallery-h-${j}.jpg`, `assets/images/gallery/gallery-h-${j}.jpg`)
+
+
+
+					//- PC
+					.col-lg-8.d-none.d-lg-block
+						.sub-item
+							.row
+								- for (var j = 5; j < 9; j++)
+									.col-lg-6.col-6
+										.item
+											+gallery-content-overlay(`assets/images/gallery/gallery-h-${j}.jpg`, `assets/images/gallery/gallery-h-${j}.jpg`)
+
+					//- SP
+					.col-6.d-lg-none
+						.sub-item
+							.row
+								- for (var j = 5; j < 7; j++)
+									.col-12
+										.item
+											+gallery-content-overlay(`assets/images/gallery/gallery-h-${j}.jpg`, `assets/images/gallery/gallery-h-${j}.jpg`)
+
+					//- PC + SP
+					.col-6.col-lg-4
+						.item.vertical-item
+							+gallery-content-overlay('assets/images/gallery/gallery-v-2.jpg', 'assets/images/gallery/gallery-v-2.jpg')
+
+					//- PC
+					.col-12.d-lg-none
+						.sub-item
+							.row
+								- for (var j = 7; j < 9; j++)
+									.col-6
+										.item
+											+gallery-content-overlay(`assets/images/gallery/gallery-h-${j}.jpg`, `assets/images/gallery/gallery-h-${j}.jpg`)
+
+					.col-lg-12.px-0.blur-content
+						.row.mx-0
+							- for (var j = 1; j <= 3; j++)
+								- var hide = j > 1 ? 'd-lg-none-i' : ''
+								.col-lg-4
+									.item(class=hide)
+										+gallery-content-overlay(`assets/images/gallery/gallery-h-${j}.jpg`, `assets/images/gallery/gallery-h-${j}.jpg`)
+						.content
+							div
+								.title Want to see more? <br> Click below to sign in or register a FREE account
+								.clearfix.w-100
+									//- a.btn.btn-brand(href="javascript:void(0)" data-toggle="modal" data-target="#loginPopup").mr-3 Sign In
+									a.btn.btn-brand(href="javascript:void(0)" data-toggle="modal" data-target="#loginPopup") Sign In
+
+	//- +pswp-custom
+
+	//- -
+	//- 	let imageDataSrc = [
+	//- 		'assets/images/gallery/gallery-v-1.jpg',
+	//- 		'assets/images/gallery/gallery-h-1.jpg',
+	//- 		'assets/images/gallery/gallery-h-2.jpg',
+	//- 		'assets/images/gallery/gallery-h-3.jpg',
+	//- 		'assets/images/gallery/gallery-h-4.jpg',
+	//- 		'assets/images/gallery/gallery-h-5.jpg',
+	//- 		'assets/images/gallery/gallery-h-6.jpg',
+	//- 		'assets/images/gallery/gallery-h-7.jpg',
+	//- 		'assets/images/gallery/gallery-h-8.jpg',
+	//- 		'assets/images/gallery/gallery-v-2.jpg',
+	//- 	]
+	//- 	let imageData = []
+	//- each item, index in imageDataSrc
+	//- 	-
+	//- 		imageData.push(
+	//- 			`{
+	//- 				src: '${item}',
+	//- 				w: ${getImageSize(item)[0]},
+	//- 				h: ${getImageSize(item)[1]},
+	//- 				pid: 'home-gallery-${index}',
+	//- 				thumbnailTitle: 'Modern Nail Salon ${index+1}',
+	//- 				galleryTitle: 'Gallery ${index+1}',
+	//- 				categoryTitle: 'Nail Salon ${index+1}',
+	//- 				title : {
+	//- 					thumbnail: 'Modern Nail Salon ${index+1}',
+	//- 					gallery: 'Gallery ${index+1}',
+	//- 					category: 'Nail Salon ${index+1}',
+	//- 				},
+	//- 				colors: {
+	//- 					0 : ['assets/images/color/color-1.png', 'assets/images/gallery/gallery-h-${getRandomRangeInt(1,5)}.jpg'],
+	//- 					1 : ['assets/images/color/color-2.png', 'assets/images/gallery/gallery-h-${getRandomRangeInt(1,5)}.jpg'],
+	//- 					2 : ['assets/images/color/color-3.png', 'assets/images/gallery/gallery-h-${getRandomRangeInt(1,5)}.jpg'],
+	//- 					3 : ['assets/images/color/color-4.png', 'assets/images/gallery/gallery-h-${getRandomRangeInt(1,5)}.jpg'],
+	//- 					4 : ['assets/images/color/color-5.png', 'assets/images/gallery/gallery-h-${getRandomRangeInt(1,5)}.jpg']
+	//- 				}
+	//- 			}`
+	//- 		)
+
+block script
+	script.
+		console.log('trinhle developer');
+		//- if(window.innerWidth >= 992) {
+		//- 	document.querySelectorAll('.section-home-gallery .gallery-grid--1-row > div:not(.d-lg-none) .item .item-thumbnail a[data-action="popup-zoom-in"]').forEach((el, i)=> el.setAttribute('data-img-index', i));
+		//- 	document.querySelectorAll('.section-home-gallery .gallery-grid--1-row > div:not(.d-lg-none) .item > .item-content-overlay a[data-action="popup-zoom-in"]').forEach((el, i)=> el.setAttribute('data-img-index', i));
+		//- } else {
+		//- 	document.querySelectorAll('.section-home-gallery .gallery-grid--1-row > div:not(.d-lg-block) .item .item-thumbnail a[data-action="popup-zoom-in"]').forEach((el, i)=> el.setAttribute('data-img-index', i));
+		//- 	document.querySelectorAll('.section-home-gallery .gallery-grid--1-row > div:not(.d-lg-block) .item > .item-content-overlay a[data-action="popup-zoom-in"]').forEach((el, i)=> el.setAttribute('data-img-index', i));
+		//- }
+
+		//- let imageData = [!{imageData}];
+		let sectionBanner = $('.section-banner'),
+			sectionBannerImg = sectionBanner.find('.banner-img img');
+
+		
+		$(document).ready(function(){
+			theme.homeTransparentHeader();
+			//- theme.photoswipeInit('.section-home-gallery', '.item .item-thumbnail a[data-action="popup-zoom-in"]', imageData);
+			//- theme.photoswipeInit('.section-home-gallery', '.item > .item-content-overlay a[data-action="popup-zoom-in"]', imageData);
+
+			if (window.innerWidth > 991 && window.innerHeight > 768){
+				sectionBannerImg.height(window.innerHeight);
+			}
+
+			if (window.innerWidth <= 768){
+				sectionBannerImg.height(window.innerHeight - mobileNav.outerHeight(true));
+			}
+
+			$('.section-home-gallery .item').hover(function() {
+
+			}, function() {
+				if($(this).find('.dropdown-menu').hasClass('show')) {
+					$(this).find('.dropdown-menu.show').removeClass('show');
+				}
+			});
+		});

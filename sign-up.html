@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Sign Up | Unikplace</title>
+    <!-- CSS-->
+    <link rel="shortcut icon" href="assets/images/logo/logo-shape.png">
+    <link rel="stylesheet" type="text/css" href="assets/plugins/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/plugins/remixicon/fonts/remixicon.css">
+    <link rel="stylesheet" type="text/css" href="assets/plugins/photoswipe/dist/photoswipe.css">
+    <link rel="stylesheet" type="text/css" href="assets/plugins/photoswipe/dist/default-skin/default-skin.css">
+    <link rel="stylesheet" type="text/css" href="assets/plugins/animate.css/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.min.css">
+  </head>
+  <body>
+    <!-- Content Page-->
+    <div class="content-page mt-0 pt-0">
+      <div class="section section-sign-in">
+        <div class="container-fluid">
+          <div class="row align-items-center">
+            <div class="d-none d-md-block col-md-5 col-lg-6 order-md-1-i content-bg"><img src="assets/images/bg/bg-login@2x.jpg"/></div>
+            <div class="col-md-7 col-lg-6 content-form p-y-8"><a href="index.html"><img class="logo-img" src="assets/images/logo/logo@2x.png"/>
+                <div class="m-b-8"></div></a>
+              <div class="h4 m-b-5 font-weight-semi">Sign up to Unik Place</div>
+              <div class="h6 m-b-8 font-weight-semi">Find new ideas to try</div>
+              <div class="w-100 mx-auto" style="max-width: 360px;">
+                <div class="form-group">
+                  <input class="form-control" type="text" placeholder="Username"/>
+                </div>
+                <div class="form-group">
+                  <input class="form-control" type="email" placeholder="Email"/>
+                </div>
+                <div class="form-group">
+                  <input class="form-control" type="password" placeholder="Password"/>
+                </div>
+                <div class="form-group">
+                  <input class="form-control" type="text" placeholder="Zip Code"/>
+                </div>
+                <button class="btn btn-brand btn-block">Sign Up</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Javascript-->
+    <script src="assets/plugins/jquery/dist/jquery.min.js"></script>
+    <script src="assets/plugins/popper.js/dist/umd/popper.min.js"></script>
+    <script src="assets/plugins/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="assets/plugins/photoswipe/dist/photoswipe.min.js"></script>
+    <script src="assets/plugins/photoswipe/dist/photoswipe-ui-default.min.js"></script>
+    <script src="assets/js/style.min.js"></script>
+    <script>
+      // On load
+      const theme = new Theme();
+      document.addEventListener('DOMContentLoaded', (event)=> {
+      	// $(".page-loader").fadeOut(400, ()=> $(".page-loader").remove());
+      
+      	theme.init();
+      
+      	window.onresize = (event)=> {
+      		theme.navigationCofig();
+      	};
+      });
+    </script>
+    <script>
+      $(window).bind('load resize', function() {
+      	if (window.innerWidth >= 768){
+      		var bgHeight = window.innerHeight > $('.section-sign-in .content-form').outerHeight() ? window.innerHeight : $('.section-sign-in .content-form').outerHeight();
+      		$('.section-sign-in .content-bg img').height(bgHeight);
+      	}
+      });
+    </script>
+  </body>
+</html>

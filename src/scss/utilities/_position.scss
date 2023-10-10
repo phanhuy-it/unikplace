@@ -1,0 +1,23 @@
+@mixin pos-f($value: 0){
+	position: absolute;
+	top: #{$value + 'px'};
+	left: #{$value + 'px'};
+	right: #{$value + 'px'};
+	bottom: #{$value + 'px'};
+}
+
+@mixin pos-center-y{
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+@mixin pos-center-x{
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+@mixin pos-center{
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}

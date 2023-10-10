@@ -1,0 +1,28 @@
+footer.footer
+    .container
+        .row
+            .col-lg-6
+                .footer-block
+                    .logo-img
+                        img(src="assets/images/logo/logo@3x.png")
+                    .description At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque.
+            .col-lg-6.d-flex
+                .footer-block.mr-5.ml-auto
+                    .footer-block-title Contact
+                    .footer-block-link
+                        ul
+                            each item in ['About']
+                                li.nav-link
+                                    a(href="#")= item
+                .footer-block.f-social
+                    .footer-block-title Social
+                    .footer-block-link
+                        ul.d-flex.social-icons
+                            li
+                                a(href="#") <i class="ri-facebook-box-fill"></i>
+                            li
+                                a(href="#") <i class="ri-linkedin-fill"></i>
+                            li
+                                a(href="#") <i class="ri-instagram-fill"></i>
+                            li
+                                a(href="#") <i class="ri-twitter-fill"></i>

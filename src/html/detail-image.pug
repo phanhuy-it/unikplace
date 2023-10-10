@@ -1,0 +1,373 @@
+extends common/layout.pug
+block custom
+	-
+		let pageName = 'Gallery Detail'
+		let pageFileName = path.basename(`${website + string2slug(pageName)}.html`)
+		let furnitureList = [
+			{
+				title: 'Desk',
+				price: '$23.234'
+			},
+			{
+				title: 'Lamp',
+				price: '$23.234'
+			},
+			{
+				title: 'Sofa',
+				price: '$23.234'
+			},
+			{
+				title: 'Wall Painting',
+				price: '$23.234'
+			},
+		]
+
+block meta-title
+	title #{pageName} | #{projectName}
+
+block content
+	.section.section-gallery-detail
+		.gallery-wrapper
+			a(href="detail-image2.html").control-detail-post.prev-chervon
+				<i class="ri-arrow-left-s-line"></i>
+			a(href="detail-image2.html").control-detail-post.next-chervon
+				<i class="ri-arrow-right-s-line"></i>
+			.gallery-thumbnail-container
+				.slider-wrapper
+					.gallery-main-thumbnail.custom-visual-thumbnail
+						.thumbnail
+							img(src="assets/images/gallery/gallery-v-1.jpg")/
+							a(href="assets/images/gallery/gallery-v-1.jpg" data-action="popup-zoom-in" class="fullscreen-btn")
+
+							a(href="javascript:void(0)" data-toggle="modal" data-target=".mobile-tag-modal-pc" style="right: 15%; top: 45%;").tag-popup
+								i.icon.ri-price-tag-3-fill
+							a(href="javascript:void(0)" data-toggle="modal" data-target=".mobile-tag-modal-pc" style="right: 55%; top: 35%;").tag-popup
+								i.icon.ri-price-tag-3-fill
+					.gallery-main-thumbnail.custom-visual-thumbnail
+						.thumbnail
+							img(src=`assets/images/gallery/gallery-h-1.jpg`)/
+							a(href="assets/images/gallery/gallery-h-1.jpg" data-action="popup-zoom-in" class="fullscreen-btn")
+
+							a(href="javascript:void(0)" data-toggle="modal" data-target=".mobile-tag-modal-pc" style="right: 15%; top: 45%;").tag-popup
+								i.icon.ri-price-tag-3-fill
+							a(href="javascript:void(0)" data-toggle="modal" data-target=".mobile-tag-modal-pc" style="right: 55%; top: 35%;").tag-popup
+								i.icon.ri-price-tag-3-fill
+					.gallery-main-thumbnail.custom-visual-thumbnail
+						.thumbnail
+							img(src="assets/images/gallery/gallery-v-2.jpg")/
+							a(href="assets/images/gallery/gallery-v-2.jpg" data-action="popup-zoom-in" class="fullscreen-btn")
+							
+							a(href="javascript:void(0)" data-toggle="modal" data-target=".mobile-tag-modal-pc" style="right: 15%; top: 45%;").tag-popup
+								i.icon.ri-price-tag-3-fill
+					- for (var x = 2; x <= 9; x++)
+						.gallery-main-thumbnail.custom-visual-thumbnail
+							.thumbnail
+								img(src=`assets/images/gallery/gallery-h-${x}.jpg`)/
+								a(href="assets/images/gallery/gallery-h-${x}.jpg" data-action="popup-zoom-in" class="fullscreen-btn")
+
+								a(href="javascript:void(0)" data-toggle="modal" data-target=".mobile-tag-modal-pc" style="right: 15%; top: 45%;").tag-popup
+									i.icon.ri-price-tag-3-fill
+			.gallery-small-thumbnail
+				.container
+					.slider-wrapper
+						a(href="javascript:void(0);" data-index=0).item
+							img(src=`assets/images/gallery/gallery-v-1.jpg`).thumbnail/
+						a(href="javascript:void(0);" data-index=1).item
+							img(src=`assets/images/gallery/gallery-h-1.jpg`).thumbnail/
+						a(href="javascript:void(0);" data-index=2).item
+							img(src=`assets/images/gallery/gallery-v-2.jpg`).thumbnail/
+						- for (var x = 2; x <= 9; x++)
+							a(href="javascript:void(0);" data-index=(x+1)).item
+								img(src=`assets/images/gallery/gallery-h-${x}.jpg`).thumbnail/
+			+pswp-custom
+
+		.container
+			.row.mt-5.justify-content-center
+				.col-lg-8
+					.gallery-content.m-b-5
+						.d-flex.justify-content-between.align-items-center
+							div
+								.gallery-title Morden Nail Salon Morden Nail Salon Morden Nail Salon
+								a(href="#").gallery-category Nail Salon
+
+							// CTA
+							.d-lg-none-i.flex-shrink-0.ml-3
+								button.btn.btn-outline-brand
+									i.ri-heart-fill
+									| Whishlist 
+									span.badge.badge-brand.badge-notify 32
+								| 
+								.dropdown.d-inline
+									a(href="#" data-toggle="dropdown").btn.btn-outline-brand
+										i.ri-share-fill
+										| Share 
+										span.badge.badge-brand.badge-notify 43
+									.dropdown-menu
+										a(href="#").dropdown-item.text-link
+											i.ri-facebook-box-fill
+											| Facebook
+										a(href="#").dropdown-item.text-link
+											i.ri-pinterest-fill
+											| Pinterest
+										a(href="#").dropdown-item.text-link
+											i.ri-mail-fill
+											| Mail
+								|  
+								a.btn.btn-outline-brand(href="#comment-container")
+									i.ri-question-answer-fill
+									| Comment
+									span.badge.badge-brand.badge-notify 26
+
+							// Mobile CTA
+							.d-lg-none.flex-shrink-0
+								button.btn.btn-outline-brand.btn-just-icon
+									i.ri-heart-fill
+									span.badge.badge-brand.badge-notify 32
+								|  
+								.dropdown.d-inline
+									a(href="#" data-toggle="dropdown").btn.btn-outline-brand.btn-just-icon
+										i.ri-share-fill
+										span.badge.badge-brand.badge-notify 43
+									.dropdown-menu.dropdown-menu-right
+										a(href="#").dropdown-item.text-link
+											i.ri-facebook-box-fill
+											| Facebook
+										a(href="#").dropdown-item.text-link
+											i.ri-pinterest-fill
+											| Pinterest
+										a(href="#").dropdown-item.text-link
+											i.ri-mail-fill
+											| Mail
+								|  
+								a.btn.btn-outline-brand.btn-just-icon(href="#comment-container")
+									i.ri-question-answer-fill
+									span.badge.badge-brand.badge-notify 26
+
+					//- hr.divide.m-y-5
+					//- div
+					//- 	.m-b-5
+					//- 		.h6.title-heading Select Color
+					//- 		.choose-color-wrapper
+					//- 			.item-multi(data-hover-img="assets/images/gallery/gallery-h-5.jpg")
+					//- 				div(style="background-color: #C3F689;")
+					//- 				div(style="background-color: #7AB634;")
+					//- 			.item-multi(data-hover-img="assets/images/gallery/gallery-h-5.jpg")
+					//- 				div(style="background-color: #7EC4FF;")
+					//- 				div(style="background-color: #6760EC;")
+					//- 			.item-multi(data-hover-img="assets/images/gallery/gallery-h-1.jpg")
+					//- 				div(style="background-color: #f1b770;")
+					//- 				div(style="background-color: #c38a43;")
+					//- 			.item-multi(data-hover-img="assets/images/gallery/gallery-h-1.jpg")
+					//- 				div(style="background-color: #FFC4C4;")
+					//- 				div(style="background-color: #D58A8A;")
+					//- 			.item-multi(data-hover-img="assets/images/gallery/gallery-h-2.jpg")
+					//- 				div(style="background-color: #FFE783;")
+					//- 				div(style="background-color: #BAA347;")
+
+					hr.divide
+					div
+						.mb-4
+							.h6.title-heading Furniture List
+							| Click on products bellow to shop
+						.furniture-list.mb-2
+							.item
+								.item-content
+									.item-info
+										.thumbnail.mr-2
+											img(src="assets/images/furniture-thumbnail/furniture-1.jpg")/
+										.title Mordern Desk
+									.item-info
+										.mr-2 $32,423 ~ $34,432
+										button.btn.btn-outline-brand.btn-sm(data-action="toggle-list").d-lg-none-i
+											i.ri-file-list-line
+											| View List
+										button.btn.btn-outline-brand.btn-sm(data-action="toggle-list").btn-just-icon.d-lg-none
+											i.ri-file-list-line
+
+								.subitem(style="display: none;")
+									each item, index in ['unikkom', 'unikplace', 'amazon', 'bestbuy']
+										.item
+											.item-content
+												.item-info
+													.thumbnail.mr-2
+														img(src="assets/images/furniture-thumbnail/furniture-1.jpg")/
+													.title=item
+												.item-info
+													.mr-2 $32,423
+													a(href="#" target="_blank").btn.btn-outline-brand.btn-sm.d-lg-none-i
+														i.ri-file-list-line
+														| Shop Now
+													a(href="#" target="_blank").btn.btn-outline-brand.btn-sm(data-action="toggle-list").btn-just-icon.d-lg-none
+														i.ri-shopping-cart-2-line
+							
+							each item, index in furnitureList
+								.item
+									.item-content
+										.item-info
+											.thumbnail.mr-2
+												img(src=`assets/images/furniture-thumbnail/furniture-${index+2}.jpg`)/
+											.title=item.title
+										.item-info
+											.mr-2=item.price
+											a(href="#" target="_blank").btn.btn-outline-brand.btn-sm.d-lg-none-i
+												i.ri-file-list-line
+												| Shop Now
+											a(href="#" target="_blank").btn.btn-outline-brand.btn-sm(data-action="toggle-list").btn-just-icon.d-lg-none
+												i.ri-shopping-cart-2-line
+					
+					hr.divide
+
+					.comment-box#comment-container
+						.mb-4
+							.h6.title-heading Comments
+						.comment-box-content.m-b-lg-5-i
+							.wrap-comment-scroll(style="max-height: 450px").m-b-6
+								+comment-message('assets/images/user/user-1.jpg', 'Olishia Farmer', 'I love this design', false, false)
+								+comment-message('assets/images/user/user-2.jpg', 'Ariana Barros', 'Yep, me too', true, false)
+								.item(class=replyClass)
+									.user-box
+										.avatar-img
+											img(src='assets/images/user/user-5.jpg')/
+										.username='Tiger Nixon'
+									.comment-content.flex-wrap
+										.w-100.d-flex.flex-wrap
+											.message-box(class=activeClass)='I absolute agree with you @Ohta Kin'
+										.comment-box-reply-message
+											.avatar-img.mr-2
+												img(src='assets/images/user/user-1.jpg')/
+											.comment-textarea
+												textarea.form-control(rows=2 placeholder="Write a reply...")
+												.button-action
+													a(href="#").btn.btn-just-icon.btn-only-white.btn-sm
+														i.ri-send-plane-2-fill
+								+comment-message('assets/images/user/user-3.jpg', 'Ohta Kin', 'In my opinion, I like the design minimalist', false, false)
+								+comment-message('assets/images/user/user-4.jpg', 'John Blue', 'I absolute agree with you @Ohta Kin', false, true)
+								+comment-message('assets/images/user/user-5.jpg', 'Tiger Nixon John Tiger', 'Would you like to see another design? I will send you ', false, true)
+							.comment-box-reply-message
+								.avatar-img.mr-2
+									img(src='assets/images/user/user-1.jpg')/
+								.comment-textarea
+									textarea.form-control(rows=2 placeholder="Write a comment...")
+									.button-action
+										a(href="#").btn.btn-just-icon.btn-only-white.btn-sm
+											i.ri-send-plane-2-fill
+	-
+		let imageDataSrc = [
+			'assets/images/gallery/gallery-v-1.jpg',
+			'assets/images/gallery/gallery-h-1.jpg',
+			'assets/images/gallery/gallery-v-2.jpg',
+			'assets/images/gallery/gallery-h-2.jpg',
+			'assets/images/gallery/gallery-h-3.jpg',
+			'assets/images/gallery/gallery-h-4.jpg',
+		]
+		let imageData = []
+	each item, index in imageDataSrc
+		-
+			//- imageData.push(
+			//- 	`{
+			//- 		src: '${item}',
+			//- 		w: ${getImageSize(item)[0]},
+			//- 		h: ${getImageSize(item)[1]},
+			//- 		pid: 'home-gallery-${index}',
+			//- 		thumbnailTitle: 'Modern Nail Salon ${index+1}',
+			//- 		galleryTitle: 'Gallery ${index+1}',
+			//- 		categoryTitle: 'Nail Salon ${index+1}',
+			//- 		title : {
+			//- 			thumbnail: 'Modern Nail Salon ${index+1}',
+			//- 			gallery: 'Gallery ${index+1}',
+			//- 			category: 'Nail Salon ${index+1}',
+			//- 		},
+			//- 		colors: {
+			//- 			0 : ['assets/images/color/color-1.png', 'assets/images/gallery/gallery-h-${getRandomRangeInt(1,5)}.jpg'],
+			//- 			1 : ['assets/images/color/color-2.png', 'assets/images/gallery/gallery-h-${getRandomRangeInt(1,5)}.jpg'],
+			//- 			2 : ['assets/images/color/color-3.png', 'assets/images/gallery/gallery-h-${getRandomRangeInt(1,5)}.jpg'],
+			//- 			3 : ['assets/images/color/color-4.png', 'assets/images/gallery/gallery-h-${getRandomRangeInt(1,5)}.jpg'],
+			//- 			4 : ['assets/images/color/color-5.png', 'assets/images/gallery/gallery-h-${getRandomRangeInt(1,5)}.jpg']
+			//- 		}
+			//- 	}`
+			//- )
+			imageData.push(
+				`{
+					src: '${item}',
+					w: ${getImageSize(item)[0]},
+					h: ${getImageSize(item)[1]},
+					pid: 'home-gallery-${index}',
+					thumbnailTitle: 'Modern Nail Salon ${index+1}',
+					galleryTitle: 'Gallery ${index+1}',
+					categoryTitle: 'Nail Salon ${index+1}',
+					title : {
+						thumbnail: 'Modern Nail Salon ${index+1}',
+						gallery: 'Gallery ${index+1}',
+						category: 'Nail Salon ${index+1}',
+					}
+				}`
+			)
+block script
+	script.
+		document.querySelectorAll('.gallery-main-thumbnail a[data-action="popup-zoom-in"]').forEach((el, i)=> el.setAttribute('data-img-index', i));
+
+		let imageData = [!{imageData}];
+		
+		document.addEventListener('DOMContentLoaded', (event)=> {
+			var pswp = theme.photoswipeInit('.gallery-thumbnail-container', '.gallery-main-thumbnail a[data-action="popup-zoom-in"]', imageData);
+		});
+
+		
+	script.
+		var prev = '<div class="prev-chervon"><i class="ri-arrow-left-s-line"></i></div>',
+		next = '<div class="next-chervon"><i class="ri-arrow-right-s-line"></i></div>';
+
+		function SetSlideSize(element) {
+			var get_img_w = element[0]['naturalWidth'];
+			var get_img_h = element[0]['naturalHeight'];
+			var img_ratio = get_img_w / get_img_h;
+			var _w = window.innerWidth ? window.innerWidth : $(window).width();
+			if(img_ratio > 1) {
+				var set_height = _w / 4 * 3;
+				$('.section-gallery-detail .gallery-main-thumbnail.custom-visual-thumbnail .thumbnail').height(set_height);
+			} else {
+				var set_height = _w / 3 * 4;
+				$('.section-gallery-detail .gallery-main-thumbnail.custom-visual-thumbnail .thumbnail').height(set_height);
+			}
+		}
+
+		$(document).ready(function(){
+			$('.section-gallery-detail .gallery-small-thumbnail .slider-wrapper').slick({
+				slidesToShow: 5,
+				slidesToScroll: 1,
+				variableWidth: true,
+				prevArrow: prev,
+				nextArrow: next,
+				draggable: false,
+				touchMove: false
+			});
+
+			var full_slide = $('.section-gallery-detail .gallery-thumbnail-container .slider-wrapper').slick({
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				draggable: false,
+				touchMove: false,
+				arrows: false,
+				fade: true,
+			});
+			full_slide.on('beforeChange', function(event, slick, currentSlide, nextSlide){
+				SetSlideSize($('[data-slick-index="'+nextSlide+'"] .thumbnail img'));
+			});
+
+			SetSlideSize($('.section-gallery-detail .gallery-main-thumbnail.custom-visual-thumbnail.slick-current .thumbnail img'));
+
+			$('.gallery-small-thumbnail a.item').on('click', function(e){
+				e.preventDefault();
+				$('.section-gallery-detail .gallery-thumbnail-container .slider-wrapper').slick('slickGoTo', this.getAttribute('data-index'));
+			})
+
+			// Hover Color Box
+			$('.item-multi').on('mouseover', function(){
+				$(this).closest('.choose-color-wrapper').find('.item-multi').removeClass('active');
+				$(this).addClass('active');
+			});
+		});
+		$(window).bind('load resize', function() {
+			"use strict";
+			SetSlideSize($('.section-gallery-detail .gallery-main-thumbnail.custom-visual-thumbnail.slick-current .thumbnail img'));
+		});

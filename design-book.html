@@ -1,0 +1,1391 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Your Place | Unikplace</title>
+    <!-- CSS-->
+    <link rel="shortcut icon" href="assets/images/logo/logo-shape.png">
+    <link rel="stylesheet" type="text/css" href="assets/plugins/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/plugins/remixicon/fonts/remixicon.css">
+    <link rel="stylesheet" type="text/css" href="assets/plugins/photoswipe/dist/photoswipe.css">
+    <link rel="stylesheet" type="text/css" href="assets/plugins/photoswipe/dist/default-skin/default-skin.css">
+    <link rel="stylesheet" type="text/css" href="assets/plugins/animate.css/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.min.css">
+  </head>
+  <body>
+    <!-- Header-->
+    <header class="header is-sticky is-light">
+      <div class="container-fluid">
+        <div class="main-nav row">
+          <div class="nav-left col-lg-6">
+            <div id="hambuger"><span></span><span></span><span></span><span></span></div><a class="logo" href="index.html"><img class="logo-dark" src="assets/images/logo/logo-w@3x.png"><img class="logo-light" src="assets/images/logo/logo@2x.png"></a>
+            <div class="search-box">
+              <form action="javascript:void(0);">
+                <div class="input-group input-group-custom">
+                  <input class="form-control" type="text" placeholder="Search.."/>
+                  <div class="input-group-append">
+                    <button class="btn"><i class="ri-search-line"></i></button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="search-box-mobile"><a href="#"><i class="ri-search-line"></i></a></div>
+          </div>
+          <div class="nav-right col-lg-6">
+            <ul class="nav-menu">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="gallery.html">Gallery</a></li>
+              <li><a href="design-book.html">Your Place</a></li>
+              <li class="vertical-divide"></li>
+              <li class="no-border-line show-sp"><a class="btn-brand btn btn-sm customize-btn" href="game-1.html">Start your design</a></li>
+            </ul>
+            <ul class="profile-box">
+              <li class="dropdown notification-list"><a class="noti-btn" href="#" data-toggle="dropdown"><i class="ri-notification-2-fill"></i><span class="count-noti">99+</span></a>
+                <div class="dropdown-menu dropdown-menu-right notification-list-box"><a class="unread">
+                    <div class="content">You are now a SUPER USER and can see up to 1000 designs</div></a><a class="unread"><b>Neque porro quisquam est </b>
+                    <div class="content">Brielle Williamson and 38 people also added your picture to their Wishlist. Neque porro quisquam est qui dolorem ipsum quia dolor Neque porro quisquam est qui dolorem ipsum quia dolor</div></a><a>
+                    <div class="content"><b>John Due</b> replied on your comment</div></a><a>
+                    <div class="content"><b>John Due</b> replied on your comment</div></a><a>
+                    <div class="content"><b>John Due</b> replied on your comment</div></a>
+                </div>
+              </li>
+              <li class="dropdown user-box hide-sp"><a class="not-icon" href="#" data-toggle="dropdown">
+                  <div class="avatar-img"><img src="assets/images/user/13.jpg"/></div></a>
+                <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item" href="profile.html">Profile</a><a class="dropdown-item" href="index_2.html">Log Out</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="search-box-mobile-content">
+            <div class="input-group input-group-custom">
+              <input class="form-control form-control-lg rounded-0" type="text" placeholder="Search.."/>
+              <div class="input-group-append">
+                <button class="btn close-search-box"><i class="ri-close-line"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="mobile-navigation">
+      <ul>
+        <li class="active"><a href="index.html"><i class="icon ri-home-3-line"></i><span>Home</span></a></li>
+        <li><a href="gallery.html"><i class="icon ri-layout-line"></i><span>Gallery</span></a></li>
+        <li><a href="design-book.html"><i class="icon ri-palette-line"></i><span>Your Place</span></a></li>
+        <li class="dropdown user-box"><a href="#" data-toggle="dropdown"><i class="icon ri-user-3-fill"></i><span>Profile</span></a>
+          <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item" href="profile.html">Profile</a><a class="dropdown-item" href="index_2.html">Log Out</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <!-- Content Page-->
+    <div class="content-page">
+      <div class="container p-t-7 p-t-sm-9">
+        <div class="m-b-5">
+          <nav class="breadcrumb-wrapper breadcrumb-inline justify-content-center mb-0">
+            <div class="breadcrumb-title d-inline-block mx-0">Your Place</div>
+          </nav>
+        </div>
+        <div class="m-b-3">
+          <ul class="nav nav-tabs-underline justify-content-center d-md-none" id="design-book-tabs">
+            <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#lucky-content">Your design(s)</a></li>
+            <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#wishlist-content">Collection</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="m-b-12 tab-content">
+        <div class="tab-pane fade show active" id="lucky-content">
+          <div class="container-fluid">
+            <h5 class="text-center d-md-none-i m-t-9 mb-0">Your design(s)</h5>
+            <div class="design-book-wrapper p-t-8">
+              <div class="row px-2">
+                <div class="col-sm-6 col-lg-4 px-4 py-3">
+                  <div class="item is-gallery">
+                    <div class="decor-bg" style="background-image: url(assets/images/gallery/gallery-h-1.jpg)"></div>
+                    <div class="wrapper"><a class="item-list" href="detail-album.html">
+                        <div class="item-thumbnail custom-thumbnail">
+                          <div class="thumbnail">
+                            <div class="wrap-thumbnail-tag"><img src="assets/images/gallery/gallery-v-1.jpg"/>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="item-thumbnail custom-thumbnail">
+                          <div class="thumbnail">
+                            <div class="wrap-thumbnail-tag"><img src="assets/images/gallery/gallery-h-2.jpg"/>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="item-thumbnail custom-thumbnail">
+                          <div class="thumbnail">
+                            <div class="wrap-thumbnail-tag"><img src="assets/images/gallery/gallery-h-3.jpg"/>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="item-thumbnail custom-thumbnail">
+                          <div class="thumbnail">
+                            <div class="wrap-thumbnail-tag"><img src="assets/images/gallery/dummy.jpg"/>
+                            </div>
+                          </div>
+                        </div></a>
+                      <div class="item-content-overlay d-lg-none-i">
+                        <div class="content-flex">
+                          <div class="item-left"><a class="title d-block" href="detail-album.html">Morden Nail Salon</a><a class="category" href="#">Nail Salon</a></div>
+                          <div class="item-right">
+                            <div class="btn-list flex-center-y">
+                              <div class="dropup d-inline-flex">
+                                <div class="wrap-button m-r-3" data-toggle="dropdown">
+                                  <button class="btn btn-just-icon btn-white" data-toggle="tooltip" title="1,5k"><i class="ri-share-line"></i></button>
+                                </div>
+                                <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item text-body" href="#"><i class="ri-facebook-box-fill"></i>Facebook</a><a class="dropdown-item text-body" href="#"><i class="ri-pinterest-fill"></i>Pinterest</a><a class="dropdown-item text-body" href="#"><i class="ri-mail-fill"></i>Mail</a></div>
+                              </div><a class="btn btn-just-icon btn-white" href="detail-album.html#comment-container" data-toggle="tooltip" title="32"><i class="ri-discuss-line"></i></a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Button Action-->
+                    <div class="item-content-overlay placement-bottom d-lg-none" style="left: auto;">
+                      <div class="content-flex justify-content-end">
+                        <div class="item-right">
+                          <div class="dropup">
+                            <button class="btn btn-just-icon btn-white" data-toggle="dropdown"><i class="ri-more-line"></i></button>
+                            <div class="dropdown-menu dropdown-menu-right p-0" style="min-width: 1px;">
+                              <div class="js-action-mobile"><a class="text-body dropdown-item text-link p-2 p-x-4" href="#"><i class="ri-heart-fill mr-0"></i><span class="badge badge-brand badge-notify">32</span></a>
+                                <div class="dropleft">
+                                  <button class="text-body dropdown-item text-link p-2 p-x-4" data-toggle="dropdown"><i class="ri-share-fill mr-0"></i><span class="badge badge-brand badge-notify">1,2k</span></button>
+                                  <div class="dropdown-menu dropdown-menu-right p-0 m-0 d-flex" style="height: 38px;min-width: 1px;"><a class="dropdown-item text-body p-2" href="#"><i class="ri-facebook-box-fill"></i></a><a class="dropdown-item text-body p-2" href="#"><i class="ri-pinterest-fill"></i></a><a class="dropdown-item text-body p-2" href="#"><i class="ri-mail-fill"></i></a></div>
+                                </div><a class="text-body dropdown-item text-link p-2 p-x-4" href="detail-image.html#comment-container"><i class="ri-discuss-line mr-0"></i><span class="badge badge-brand badge-notify">106</span></a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-block text-center mt-3"><a class="text-body font-weight-semi" href="detail-album.html">Album 1</a></div>
+                </div>
+                <div class="col-sm-6 col-lg-4 px-4 py-3">
+                  <div class="item is-gallery">
+                    <div class="decor-bg" style="background-image: url(assets/images/gallery/gallery-h-2.jpg)"></div>
+                    <div class="wrapper"><a class="item-list" href="detail-album.html">
+                        <div class="item-thumbnail custom-thumbnail">
+                          <div class="thumbnail">
+                            <div class="wrap-thumbnail-tag"><img src="assets/images/gallery/gallery-v-1.jpg"/>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="item-thumbnail custom-thumbnail">
+                          <div class="thumbnail">
+                            <div class="wrap-thumbnail-tag"><img src="assets/images/gallery/gallery-h-2.jpg"/>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="item-thumbnail custom-thumbnail">
+                          <div class="thumbnail">
+                            <div class="wrap-thumbnail-tag"><img src="assets/images/gallery/gallery-h-3.jpg"/>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="item-thumbnail custom-thumbnail">
+                          <div class="thumbnail">
+                            <div class="wrap-thumbnail-tag"><img src="assets/images/gallery/gallery-h-4.jpg"/>
+                            </div>
+                          </div>
+                        </div></a>
+                      <div class="item-content-overlay d-lg-none-i">
+                        <div class="content-flex">
+                          <div class="item-left"><a class="title d-block" href="detail-album.html">Morden Nail Salon</a><a class="category" href="#">Nail Salon</a></div>
+                          <div class="item-right">
+                            <div class="btn-list flex-center-y">
+                              <div class="dropup d-inline-flex">
+                                <div class="wrap-button m-r-3" data-toggle="dropdown">
+                                  <button class="btn btn-just-icon btn-white" data-toggle="tooltip" title="1,5k"><i class="ri-share-line"></i></button>
+                                </div>
+                                <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item text-body" href="#"><i class="ri-facebook-box-fill"></i>Facebook</a><a class="dropdown-item text-body" href="#"><i class="ri-pinterest-fill"></i>Pinterest</a><a class="dropdown-item text-body" href="#"><i class="ri-mail-fill"></i>Mail</a></div>
+                              </div><a class="btn btn-just-icon btn-white" href="detail-album.html#comment-container" data-toggle="tooltip" title="32"><i class="ri-discuss-line"></i></a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Button Action-->
+                    <div class="item-content-overlay placement-bottom d-lg-none" style="left: auto;">
+                      <div class="content-flex justify-content-end">
+                        <div class="item-right">
+                          <div class="dropup">
+                            <button class="btn btn-just-icon btn-white" data-toggle="dropdown"><i class="ri-more-line"></i></button>
+                            <div class="dropdown-menu dropdown-menu-right p-0" style="min-width: 1px;">
+                              <div class="js-action-mobile"><a class="text-body dropdown-item text-link p-2 p-x-4" href="#"><i class="ri-heart-fill mr-0"></i><span class="badge badge-brand badge-notify">32</span></a>
+                                <div class="dropleft">
+                                  <button class="text-body dropdown-item text-link p-2 p-x-4" data-toggle="dropdown"><i class="ri-share-fill mr-0"></i><span class="badge badge-brand badge-notify">1,2k</span></button>
+                                  <div class="dropdown-menu dropdown-menu-right p-0 m-0 d-flex" style="height: 38px;min-width: 1px;"><a class="dropdown-item text-body p-2" href="#"><i class="ri-facebook-box-fill"></i></a><a class="dropdown-item text-body p-2" href="#"><i class="ri-pinterest-fill"></i></a><a class="dropdown-item text-body p-2" href="#"><i class="ri-mail-fill"></i></a></div>
+                                </div><a class="text-body dropdown-item text-link p-2 p-x-4" href="detail-image.html#comment-container"><i class="ri-discuss-line mr-0"></i><span class="badge badge-brand badge-notify">106</span></a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-block text-center mt-3"><a class="text-body font-weight-semi" href="detail-album.html">Album 2</a></div>
+                </div>
+                <div class="col-sm-6 col-lg-4 px-4 py-3">
+                  <div class="item is-gallery">
+                    <div class="decor-bg" style="background-image: url(assets/images/gallery/gallery-h-3.jpg)"></div>
+                    <div class="wrapper"><a class="item-list" href="detail-album.html">
+                        <div class="item-thumbnail custom-thumbnail">
+                          <div class="thumbnail">
+                            <div class="wrap-thumbnail-tag"><img src="assets/images/gallery/gallery-v-1.jpg"/>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="item-thumbnail custom-thumbnail">
+                          <div class="thumbnail">
+                            <div class="wrap-thumbnail-tag"><img src="assets/images/gallery/gallery-h-2.jpg"/>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="item-thumbnail custom-thumbnail">
+                          <div class="thumbnail">
+                            <div class="wrap-thumbnail-tag"><img src="assets/images/gallery/gallery-h-3.jpg"/>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="item-thumbnail custom-thumbnail">
+                          <div class="thumbnail">
+                            <div class="wrap-thumbnail-tag"><img src="assets/images/gallery/gallery-h-4.jpg"/>
+                            </div>
+                          </div>
+                        </div></a>
+                      <div class="item-content-overlay d-lg-none-i">
+                        <div class="content-flex">
+                          <div class="item-left"><a class="title d-block" href="detail-album.html">Morden Nail Salon</a><a class="category" href="#">Nail Salon</a></div>
+                          <div class="item-right">
+                            <div class="btn-list flex-center-y">
+                              <div class="dropup d-inline-flex">
+                                <div class="wrap-button m-r-3" data-toggle="dropdown">
+                                  <button class="btn btn-just-icon btn-white" data-toggle="tooltip" title="1,5k"><i class="ri-share-line"></i></button>
+                                </div>
+                                <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item text-body" href="#"><i class="ri-facebook-box-fill"></i>Facebook</a><a class="dropdown-item text-body" href="#"><i class="ri-pinterest-fill"></i>Pinterest</a><a class="dropdown-item text-body" href="#"><i class="ri-mail-fill"></i>Mail</a></div>
+                              </div><a class="btn btn-just-icon btn-white" href="detail-album.html#comment-container" data-toggle="tooltip" title="32"><i class="ri-discuss-line"></i></a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Button Action-->
+                    <div class="item-content-overlay placement-bottom d-lg-none" style="left: auto;">
+                      <div class="content-flex justify-content-end">
+                        <div class="item-right">
+                          <div class="dropup">
+                            <button class="btn btn-just-icon btn-white" data-toggle="dropdown"><i class="ri-more-line"></i></button>
+                            <div class="dropdown-menu dropdown-menu-right p-0" style="min-width: 1px;">
+                              <div class="js-action-mobile"><a class="text-body dropdown-item text-link p-2 p-x-4" href="#"><i class="ri-heart-fill mr-0"></i><span class="badge badge-brand badge-notify">32</span></a>
+                                <div class="dropleft">
+                                  <button class="text-body dropdown-item text-link p-2 p-x-4" data-toggle="dropdown"><i class="ri-share-fill mr-0"></i><span class="badge badge-brand badge-notify">1,2k</span></button>
+                                  <div class="dropdown-menu dropdown-menu-right p-0 m-0 d-flex" style="height: 38px;min-width: 1px;"><a class="dropdown-item text-body p-2" href="#"><i class="ri-facebook-box-fill"></i></a><a class="dropdown-item text-body p-2" href="#"><i class="ri-pinterest-fill"></i></a><a class="dropdown-item text-body p-2" href="#"><i class="ri-mail-fill"></i></a></div>
+                                </div><a class="text-body dropdown-item text-link p-2 p-x-4" href="detail-image.html#comment-container"><i class="ri-discuss-line mr-0"></i><span class="badge badge-brand badge-notify">106</span></a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-block text-center mt-3"><a class="text-body font-weight-semi" href="detail-album.html">Album 3</a></div>
+                </div>
+                <div class="col-sm-6 col-lg-4 px-4 py-3">
+                  <div class="item is-gallery">
+                    <div class="decor-bg" style="background-image: url(assets/images/gallery/gallery-h-4.jpg)"></div>
+                    <div class="wrapper"><a class="item-list" href="detail-album.html">
+                        <div class="item-thumbnail custom-thumbnail">
+                          <div class="thumbnail">
+                            <div class="wrap-thumbnail-tag"><img src="assets/images/gallery/gallery-v-1.jpg"/>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="item-thumbnail custom-thumbnail">
+                          <div class="thumbnail">
+                            <div class="wrap-thumbnail-tag"><img src="assets/images/gallery/gallery-h-2.jpg"/>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="item-thumbnail custom-thumbnail">
+                          <div class="thumbnail">
+                            <div class="wrap-thumbnail-tag"><img src="assets/images/gallery/gallery-h-3.jpg"/>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="item-thumbnail custom-thumbnail">
+                          <div class="thumbnail">
+                            <div class="wrap-thumbnail-tag"><img src="assets/images/gallery/gallery-h-4.jpg"/>
+                            </div>
+                          </div>
+                        </div></a>
+                      <div class="item-content-overlay d-lg-none-i">
+                        <div class="content-flex">
+                          <div class="item-left"><a class="title d-block" href="detail-album.html">Morden Nail Salon</a><a class="category" href="#">Nail Salon</a></div>
+                          <div class="item-right">
+                            <div class="btn-list flex-center-y">
+                              <div class="dropup d-inline-flex">
+                                <div class="wrap-button m-r-3" data-toggle="dropdown">
+                                  <button class="btn btn-just-icon btn-white" data-toggle="tooltip" title="1,5k"><i class="ri-share-line"></i></button>
+                                </div>
+                                <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item text-body" href="#"><i class="ri-facebook-box-fill"></i>Facebook</a><a class="dropdown-item text-body" href="#"><i class="ri-pinterest-fill"></i>Pinterest</a><a class="dropdown-item text-body" href="#"><i class="ri-mail-fill"></i>Mail</a></div>
+                              </div><a class="btn btn-just-icon btn-white" href="detail-album.html#comment-container" data-toggle="tooltip" title="32"><i class="ri-discuss-line"></i></a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Button Action-->
+                    <div class="item-content-overlay placement-bottom d-lg-none" style="left: auto;">
+                      <div class="content-flex justify-content-end">
+                        <div class="item-right">
+                          <div class="dropup">
+                            <button class="btn btn-just-icon btn-white" data-toggle="dropdown"><i class="ri-more-line"></i></button>
+                            <div class="dropdown-menu dropdown-menu-right p-0" style="min-width: 1px;">
+                              <div class="js-action-mobile"><a class="text-body dropdown-item text-link p-2 p-x-4" href="#"><i class="ri-heart-fill mr-0"></i><span class="badge badge-brand badge-notify">32</span></a>
+                                <div class="dropleft">
+                                  <button class="text-body dropdown-item text-link p-2 p-x-4" data-toggle="dropdown"><i class="ri-share-fill mr-0"></i><span class="badge badge-brand badge-notify">1,2k</span></button>
+                                  <div class="dropdown-menu dropdown-menu-right p-0 m-0 d-flex" style="height: 38px;min-width: 1px;"><a class="dropdown-item text-body p-2" href="#"><i class="ri-facebook-box-fill"></i></a><a class="dropdown-item text-body p-2" href="#"><i class="ri-pinterest-fill"></i></a><a class="dropdown-item text-body p-2" href="#"><i class="ri-mail-fill"></i></a></div>
+                                </div><a class="text-body dropdown-item text-link p-2 p-x-4" href="detail-image.html#comment-container"><i class="ri-discuss-line mr-0"></i><span class="badge badge-brand badge-notify">106</span></a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-block text-center mt-3"><a class="text-body font-weight-semi" href="detail-album.html">Album 4</a></div>
+                </div>
+                <div class="col-sm-6 col-lg-4 px-4 py-3">
+                  <div class="item is-gallery">
+                    <div class="decor-bg" style="background-image: url(assets/images/gallery/gallery-h-5.jpg)"></div>
+                    <div class="wrapper"><a class="item-list" href="detail-album.html">
+                        <div class="item-thumbnail custom-thumbnail">
+                          <div class="thumbnail">
+                            <div class="wrap-thumbnail-tag"><img src="assets/images/gallery/gallery-v-1.jpg"/>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="item-thumbnail custom-thumbnail">
+                          <div class="thumbnail">
+                            <div class="wrap-thumbnail-tag"><img src="assets/images/gallery/gallery-h-2.jpg"/>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="item-thumbnail custom-thumbnail">
+                          <div class="thumbnail">
+                            <div class="wrap-thumbnail-tag"><img src="assets/images/gallery/gallery-h-3.jpg"/>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="item-thumbnail custom-thumbnail">
+                          <div class="thumbnail">
+                            <div class="wrap-thumbnail-tag"><img src="assets/images/gallery/gallery-h-4.jpg"/>
+                            </div>
+                          </div>
+                        </div></a>
+                      <div class="item-content-overlay d-lg-none-i">
+                        <div class="content-flex">
+                          <div class="item-left"><a class="title d-block" href="detail-album.html">Morden Nail Salon</a><a class="category" href="#">Nail Salon</a></div>
+                          <div class="item-right">
+                            <div class="btn-list flex-center-y">
+                              <div class="dropup d-inline-flex">
+                                <div class="wrap-button m-r-3" data-toggle="dropdown">
+                                  <button class="btn btn-just-icon btn-white" data-toggle="tooltip" title="1,5k"><i class="ri-share-line"></i></button>
+                                </div>
+                                <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item text-body" href="#"><i class="ri-facebook-box-fill"></i>Facebook</a><a class="dropdown-item text-body" href="#"><i class="ri-pinterest-fill"></i>Pinterest</a><a class="dropdown-item text-body" href="#"><i class="ri-mail-fill"></i>Mail</a></div>
+                              </div><a class="btn btn-just-icon btn-white" href="detail-album.html#comment-container" data-toggle="tooltip" title="32"><i class="ri-discuss-line"></i></a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Button Action-->
+                    <div class="item-content-overlay placement-bottom d-lg-none" style="left: auto;">
+                      <div class="content-flex justify-content-end">
+                        <div class="item-right">
+                          <div class="dropup">
+                            <button class="btn btn-just-icon btn-white" data-toggle="dropdown"><i class="ri-more-line"></i></button>
+                            <div class="dropdown-menu dropdown-menu-right p-0" style="min-width: 1px;">
+                              <div class="js-action-mobile"><a class="text-body dropdown-item text-link p-2 p-x-4" href="#"><i class="ri-heart-fill mr-0"></i><span class="badge badge-brand badge-notify">32</span></a>
+                                <div class="dropleft">
+                                  <button class="text-body dropdown-item text-link p-2 p-x-4" data-toggle="dropdown"><i class="ri-share-fill mr-0"></i><span class="badge badge-brand badge-notify">1,2k</span></button>
+                                  <div class="dropdown-menu dropdown-menu-right p-0 m-0 d-flex" style="height: 38px;min-width: 1px;"><a class="dropdown-item text-body p-2" href="#"><i class="ri-facebook-box-fill"></i></a><a class="dropdown-item text-body p-2" href="#"><i class="ri-pinterest-fill"></i></a><a class="dropdown-item text-body p-2" href="#"><i class="ri-mail-fill"></i></a></div>
+                                </div><a class="text-body dropdown-item text-link p-2 p-x-4" href="detail-image.html#comment-container"><i class="ri-discuss-line mr-0"></i><span class="badge badge-brand badge-notify">106</span></a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-block text-center mt-3"><a class="text-body font-weight-semi" href="detail-album.html">Album 5</a></div>
+                </div>
+                <div class="col-sm-6 col-lg-4 px-4 py-3">
+                  <div class="item is-gallery">
+                    <div class="decor-bg" style="background-image: url(assets/images/gallery/gallery-h-6.jpg)"></div>
+                    <div class="wrapper"><a class="item-list" href="detail-album.html">
+                        <div class="item-thumbnail custom-thumbnail">
+                          <div class="thumbnail">
+                            <div class="wrap-thumbnail-tag"><img src="assets/images/gallery/gallery-v-1.jpg"/>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="item-thumbnail custom-thumbnail">
+                          <div class="thumbnail">
+                            <div class="wrap-thumbnail-tag"><img src="assets/images/gallery/gallery-h-2.jpg"/>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="item-thumbnail custom-thumbnail">
+                          <div class="thumbnail">
+                            <div class="wrap-thumbnail-tag"><img src="assets/images/gallery/gallery-h-3.jpg"/>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="item-thumbnail custom-thumbnail">
+                          <div class="thumbnail">
+                            <div class="wrap-thumbnail-tag"><img src="assets/images/gallery/gallery-h-4.jpg"/>
+                            </div>
+                          </div>
+                        </div></a>
+                      <div class="item-content-overlay d-lg-none-i">
+                        <div class="content-flex">
+                          <div class="item-left"><a class="title d-block" href="detail-album.html">Morden Nail Salon</a><a class="category" href="#">Nail Salon</a></div>
+                          <div class="item-right">
+                            <div class="btn-list flex-center-y">
+                              <div class="dropup d-inline-flex">
+                                <div class="wrap-button m-r-3" data-toggle="dropdown">
+                                  <button class="btn btn-just-icon btn-white" data-toggle="tooltip" title="1,5k"><i class="ri-share-line"></i></button>
+                                </div>
+                                <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item text-body" href="#"><i class="ri-facebook-box-fill"></i>Facebook</a><a class="dropdown-item text-body" href="#"><i class="ri-pinterest-fill"></i>Pinterest</a><a class="dropdown-item text-body" href="#"><i class="ri-mail-fill"></i>Mail</a></div>
+                              </div><a class="btn btn-just-icon btn-white" href="detail-album.html#comment-container" data-toggle="tooltip" title="32"><i class="ri-discuss-line"></i></a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Button Action-->
+                    <div class="item-content-overlay placement-bottom d-lg-none" style="left: auto;">
+                      <div class="content-flex justify-content-end">
+                        <div class="item-right">
+                          <div class="dropup">
+                            <button class="btn btn-just-icon btn-white" data-toggle="dropdown"><i class="ri-more-line"></i></button>
+                            <div class="dropdown-menu dropdown-menu-right p-0" style="min-width: 1px;">
+                              <div class="js-action-mobile"><a class="text-body dropdown-item text-link p-2 p-x-4" href="#"><i class="ri-heart-fill mr-0"></i><span class="badge badge-brand badge-notify">32</span></a>
+                                <div class="dropleft">
+                                  <button class="text-body dropdown-item text-link p-2 p-x-4" data-toggle="dropdown"><i class="ri-share-fill mr-0"></i><span class="badge badge-brand badge-notify">1,2k</span></button>
+                                  <div class="dropdown-menu dropdown-menu-right p-0 m-0 d-flex" style="height: 38px;min-width: 1px;"><a class="dropdown-item text-body p-2" href="#"><i class="ri-facebook-box-fill"></i></a><a class="dropdown-item text-body p-2" href="#"><i class="ri-pinterest-fill"></i></a><a class="dropdown-item text-body p-2" href="#"><i class="ri-mail-fill"></i></a></div>
+                                </div><a class="text-body dropdown-item text-link p-2 p-x-4" href="detail-image.html#comment-container"><i class="ri-discuss-line mr-0"></i><span class="badge badge-brand badge-notify">106</span></a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-block text-center mt-3"><a class="text-body font-weight-semi" href="detail-album.html">Album 6</a></div>
+                </div>
+                <div class="col-sm-6 col-lg-4 px-4 py-3">
+                  <div class="item is-gallery">
+                    <div class="decor-bg" style="background-image: url(assets/images/gallery/gallery-h-7.jpg)"></div>
+                    <div class="wrapper"><a class="item-list" href="detail-album.html">
+                        <div class="item-thumbnail custom-thumbnail">
+                          <div class="thumbnail">
+                            <div class="wrap-thumbnail-tag"><img src="assets/images/gallery/gallery-v-1.jpg"/>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="item-thumbnail custom-thumbnail">
+                          <div class="thumbnail">
+                            <div class="wrap-thumbnail-tag"><img src="assets/images/gallery/gallery-h-2.jpg"/>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="item-thumbnail custom-thumbnail">
+                          <div class="thumbnail">
+                            <div class="wrap-thumbnail-tag"><img src="assets/images/gallery/gallery-h-3.jpg"/>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="item-thumbnail custom-thumbnail">
+                          <div class="thumbnail">
+                            <div class="wrap-thumbnail-tag"><img src="assets/images/gallery/gallery-h-4.jpg"/>
+                            </div>
+                          </div>
+                        </div></a>
+                      <div class="item-content-overlay d-lg-none-i">
+                        <div class="content-flex">
+                          <div class="item-left"><a class="title d-block" href="detail-album.html">Morden Nail Salon</a><a class="category" href="#">Nail Salon</a></div>
+                          <div class="item-right">
+                            <div class="btn-list flex-center-y">
+                              <div class="dropup d-inline-flex">
+                                <div class="wrap-button m-r-3" data-toggle="dropdown">
+                                  <button class="btn btn-just-icon btn-white" data-toggle="tooltip" title="1,5k"><i class="ri-share-line"></i></button>
+                                </div>
+                                <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item text-body" href="#"><i class="ri-facebook-box-fill"></i>Facebook</a><a class="dropdown-item text-body" href="#"><i class="ri-pinterest-fill"></i>Pinterest</a><a class="dropdown-item text-body" href="#"><i class="ri-mail-fill"></i>Mail</a></div>
+                              </div><a class="btn btn-just-icon btn-white" href="detail-album.html#comment-container" data-toggle="tooltip" title="32"><i class="ri-discuss-line"></i></a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Button Action-->
+                    <div class="item-content-overlay placement-bottom d-lg-none" style="left: auto;">
+                      <div class="content-flex justify-content-end">
+                        <div class="item-right">
+                          <div class="dropup">
+                            <button class="btn btn-just-icon btn-white" data-toggle="dropdown"><i class="ri-more-line"></i></button>
+                            <div class="dropdown-menu dropdown-menu-right p-0" style="min-width: 1px;">
+                              <div class="js-action-mobile"><a class="text-body dropdown-item text-link p-2 p-x-4" href="#"><i class="ri-heart-fill mr-0"></i><span class="badge badge-brand badge-notify">32</span></a>
+                                <div class="dropleft">
+                                  <button class="text-body dropdown-item text-link p-2 p-x-4" data-toggle="dropdown"><i class="ri-share-fill mr-0"></i><span class="badge badge-brand badge-notify">1,2k</span></button>
+                                  <div class="dropdown-menu dropdown-menu-right p-0 m-0 d-flex" style="height: 38px;min-width: 1px;"><a class="dropdown-item text-body p-2" href="#"><i class="ri-facebook-box-fill"></i></a><a class="dropdown-item text-body p-2" href="#"><i class="ri-pinterest-fill"></i></a><a class="dropdown-item text-body p-2" href="#"><i class="ri-mail-fill"></i></a></div>
+                                </div><a class="text-body dropdown-item text-link p-2 p-x-4" href="detail-image.html#comment-container"><i class="ri-discuss-line mr-0"></i><span class="badge badge-brand badge-notify">106</span></a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-block text-center mt-3"><a class="text-body font-weight-semi" href="detail-album.html">Album 7</a></div>
+                </div>
+                <div class="col-sm-6 col-lg-4 px-4 py-3">
+                  <div class="item is-gallery">
+                    <div class="decor-bg" style="background-image: url(assets/images/gallery/gallery-h-8.jpg)"></div>
+                    <div class="wrapper"><a class="item-list" href="detail-album.html">
+                        <div class="item-thumbnail custom-thumbnail">
+                          <div class="thumbnail">
+                            <div class="wrap-thumbnail-tag"><img src="assets/images/gallery/gallery-v-1.jpg"/>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="item-thumbnail custom-thumbnail">
+                          <div class="thumbnail">
+                            <div class="wrap-thumbnail-tag"><img src="assets/images/gallery/gallery-h-2.jpg"/>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="item-thumbnail custom-thumbnail">
+                          <div class="thumbnail">
+                            <div class="wrap-thumbnail-tag"><img src="assets/images/gallery/gallery-h-3.jpg"/>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="item-thumbnail custom-thumbnail">
+                          <div class="thumbnail">
+                            <div class="wrap-thumbnail-tag"><img src="assets/images/gallery/gallery-h-4.jpg"/>
+                            </div>
+                          </div>
+                        </div></a>
+                      <div class="item-content-overlay d-lg-none-i">
+                        <div class="content-flex">
+                          <div class="item-left"><a class="title d-block" href="detail-album.html">Morden Nail Salon</a><a class="category" href="#">Nail Salon</a></div>
+                          <div class="item-right">
+                            <div class="btn-list flex-center-y">
+                              <div class="dropup d-inline-flex">
+                                <div class="wrap-button m-r-3" data-toggle="dropdown">
+                                  <button class="btn btn-just-icon btn-white" data-toggle="tooltip" title="1,5k"><i class="ri-share-line"></i></button>
+                                </div>
+                                <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item text-body" href="#"><i class="ri-facebook-box-fill"></i>Facebook</a><a class="dropdown-item text-body" href="#"><i class="ri-pinterest-fill"></i>Pinterest</a><a class="dropdown-item text-body" href="#"><i class="ri-mail-fill"></i>Mail</a></div>
+                              </div><a class="btn btn-just-icon btn-white" href="detail-album.html#comment-container" data-toggle="tooltip" title="32"><i class="ri-discuss-line"></i></a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Button Action-->
+                    <div class="item-content-overlay placement-bottom d-lg-none" style="left: auto;">
+                      <div class="content-flex justify-content-end">
+                        <div class="item-right">
+                          <div class="dropup">
+                            <button class="btn btn-just-icon btn-white" data-toggle="dropdown"><i class="ri-more-line"></i></button>
+                            <div class="dropdown-menu dropdown-menu-right p-0" style="min-width: 1px;">
+                              <div class="js-action-mobile"><a class="text-body dropdown-item text-link p-2 p-x-4" href="#"><i class="ri-heart-fill mr-0"></i><span class="badge badge-brand badge-notify">32</span></a>
+                                <div class="dropleft">
+                                  <button class="text-body dropdown-item text-link p-2 p-x-4" data-toggle="dropdown"><i class="ri-share-fill mr-0"></i><span class="badge badge-brand badge-notify">1,2k</span></button>
+                                  <div class="dropdown-menu dropdown-menu-right p-0 m-0 d-flex" style="height: 38px;min-width: 1px;"><a class="dropdown-item text-body p-2" href="#"><i class="ri-facebook-box-fill"></i></a><a class="dropdown-item text-body p-2" href="#"><i class="ri-pinterest-fill"></i></a><a class="dropdown-item text-body p-2" href="#"><i class="ri-mail-fill"></i></a></div>
+                                </div><a class="text-body dropdown-item text-link p-2 p-x-4" href="detail-image.html#comment-container"><i class="ri-discuss-line mr-0"></i><span class="badge badge-brand badge-notify">106</span></a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-block text-center mt-3"><a class="text-body font-weight-semi" href="detail-album.html">Album 8</a></div>
+                </div>
+                <div class="col-sm-6 col-lg-4 px-4 py-3">
+                  <div class="item is-gallery">
+                    <div class="decor-bg" style="background-image: url(assets/images/gallery/gallery-h-9.jpg)"></div>
+                    <div class="wrapper"><a class="item-list" href="detail-album.html">
+                        <div class="item-thumbnail custom-thumbnail">
+                          <div class="thumbnail">
+                            <div class="wrap-thumbnail-tag"><img src="assets/images/gallery/gallery-v-1.jpg"/>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="item-thumbnail custom-thumbnail">
+                          <div class="thumbnail">
+                            <div class="wrap-thumbnail-tag"><img src="assets/images/gallery/gallery-h-2.jpg"/>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="item-thumbnail custom-thumbnail">
+                          <div class="thumbnail">
+                            <div class="wrap-thumbnail-tag"><img src="assets/images/gallery/gallery-h-3.jpg"/>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="item-thumbnail custom-thumbnail">
+                          <div class="thumbnail">
+                            <div class="wrap-thumbnail-tag"><img src="assets/images/gallery/gallery-h-4.jpg"/>
+                            </div>
+                          </div>
+                        </div></a>
+                      <div class="item-content-overlay d-lg-none-i">
+                        <div class="content-flex">
+                          <div class="item-left"><a class="title d-block" href="detail-album.html">Morden Nail Salon</a><a class="category" href="#">Nail Salon</a></div>
+                          <div class="item-right">
+                            <div class="btn-list flex-center-y">
+                              <div class="dropup d-inline-flex">
+                                <div class="wrap-button m-r-3" data-toggle="dropdown">
+                                  <button class="btn btn-just-icon btn-white" data-toggle="tooltip" title="1,5k"><i class="ri-share-line"></i></button>
+                                </div>
+                                <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item text-body" href="#"><i class="ri-facebook-box-fill"></i>Facebook</a><a class="dropdown-item text-body" href="#"><i class="ri-pinterest-fill"></i>Pinterest</a><a class="dropdown-item text-body" href="#"><i class="ri-mail-fill"></i>Mail</a></div>
+                              </div><a class="btn btn-just-icon btn-white" href="detail-album.html#comment-container" data-toggle="tooltip" title="32"><i class="ri-discuss-line"></i></a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Button Action-->
+                    <div class="item-content-overlay placement-bottom d-lg-none" style="left: auto;">
+                      <div class="content-flex justify-content-end">
+                        <div class="item-right">
+                          <div class="dropup">
+                            <button class="btn btn-just-icon btn-white" data-toggle="dropdown"><i class="ri-more-line"></i></button>
+                            <div class="dropdown-menu dropdown-menu-right p-0" style="min-width: 1px;">
+                              <div class="js-action-mobile"><a class="text-body dropdown-item text-link p-2 p-x-4" href="#"><i class="ri-heart-fill mr-0"></i><span class="badge badge-brand badge-notify">32</span></a>
+                                <div class="dropleft">
+                                  <button class="text-body dropdown-item text-link p-2 p-x-4" data-toggle="dropdown"><i class="ri-share-fill mr-0"></i><span class="badge badge-brand badge-notify">1,2k</span></button>
+                                  <div class="dropdown-menu dropdown-menu-right p-0 m-0 d-flex" style="height: 38px;min-width: 1px;"><a class="dropdown-item text-body p-2" href="#"><i class="ri-facebook-box-fill"></i></a><a class="dropdown-item text-body p-2" href="#"><i class="ri-pinterest-fill"></i></a><a class="dropdown-item text-body p-2" href="#"><i class="ri-mail-fill"></i></a></div>
+                                </div><a class="text-body dropdown-item text-link p-2 p-x-4" href="detail-image.html#comment-container"><i class="ri-discuss-line mr-0"></i><span class="badge badge-brand badge-notify">106</span></a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-block text-center mt-3"><a class="text-body font-weight-semi" href="detail-album.html">Album 9</a></div>
+                </div>
+              </div>
+            </div>
+            <div class="pagination"><span class="sum btn btn-sm btn-brand">Page 1 of 10</span><a class="arrow prev btn btn-sm" href="#">Prev</a><span class="page btn btn-sm btn-brand">1</span><a class="page btn btn-sm" href="#">2</a><a class="arrow next btn btn-sm" href="#">Next</a></div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="wishlist-content">
+          <div class="container-fluid">
+            <h5 class="text-center d-md-none-i m-t-12 mb-0">Collection</h5>
+            <div class="design-book-wrapper p-t-8">
+              <div class="row px-2">
+                <div class="col-sm-6 col-lg-4 px-4 py-3">
+                  <div class="item">
+                    <div class="decor-bg" style="background-image: url(assets/images/gallery/gallery-h-2.jpg)"></div>
+                    <!-- Thumbnail-->
+                    <div class="item-thumbnail custom-thumbnail">
+                      <div class="thumbnail">
+                        <div class="wrap-thumbnail-tag"><a href="detail-image.html"><img src="assets/images/gallery/gallery-h-1.jpg"/></a><a class="tag-popup d-lg-none-i" href="javascript:void(0)" data-toggle="modal" data-target=".mobile-tag-modal-pc" style="right: 15%; top: 45%;"><i class="icon ri-price-tag-3-fill"></i></a>
+                          <div class="tag-popup-mobile d-lg-none"><a class="tag-popup" href="javascript:void(0)" data-toggle="modal" data-target=".mobile-tag-modal"><i class="icon mr-1 mr-sm-2 ri-price-tag-3-fill"></i>12</a></div>
+                        </div>
+                      </div>
+                      <div class="item-content-overlay d-lg-none-i">
+                        <div class="content-flex">
+                          <div class="item-left"><a class="title d-block" href="detail-image.html">Morden Nail Salon</a><a class="category" href="#">Nail Salon</a></div>
+                          <div class="item-right">
+                            <div class="btn-list flex-center-y"><a class="btn btn-just-icon btn-white" href="#" data-toggle="tooltip" title="34"><i class="ri-heart-line"></i></a>
+                              <div class="dropup d-inline-flex">
+                                <div class="wrap-button m-r-3" data-toggle="dropdown">
+                                  <button class="btn btn-just-icon btn-white" data-toggle="tooltip" title="1,5k"><i class="ri-share-line"></i></button>
+                                </div>
+                                <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item text-body" href="#"><i class="ri-facebook-box-fill"></i>Facebook</a><a class="dropdown-item text-body" href="#"><i class="ri-pinterest-fill"></i>Pinterest</a><a class="dropdown-item text-body" href="#"><i class="ri-mail-fill"></i>Mail</a></div>
+                              </div><a class="btn btn-just-icon btn-white" href="detail-image.html#comment-container" data-toggle="tooltip" title="32"><i class="ri-discuss-line"></i></a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Button Action-->
+                      <div class="item-content-overlay placement-bottom d-lg-none" style="left: auto;">
+                        <div class="content-flex justify-content-end">
+                          <div class="item-right">
+                            <div class="dropup">
+                              <button class="btn btn-just-icon btn-white" data-toggle="dropdown"><i class="ri-more-line"></i></button>
+                              <div class="dropdown-menu dropdown-menu-right p-0" style="min-width: 1px;">
+                                <div class="js-action-mobile"><a class="text-body dropdown-item text-link p-2 p-x-4" href="#"><i class="ri-heart-fill mr-0"></i><span class="badge badge-brand badge-notify">32</span></a>
+                                  <div class="dropleft">
+                                    <button class="text-body dropdown-item text-link p-2 p-x-4" data-toggle="dropdown"><i class="ri-share-fill mr-0"></i><span class="badge badge-brand badge-notify">1,2k</span></button>
+                                    <div class="dropdown-menu dropdown-menu-right p-0 m-0 d-flex" style="height: 38px;min-width: 1px;"><a class="dropdown-item text-body p-2" href="#"><i class="ri-facebook-box-fill"></i></a><a class="dropdown-item text-body p-2" href="#"><i class="ri-pinterest-fill"></i></a><a class="dropdown-item text-body p-2" href="#"><i class="ri-mail-fill"></i></a></div>
+                                  </div><a class="text-body dropdown-item text-link p-2 p-x-4" href="detail-image.html#comment-container"><i class="ri-discuss-line mr-0"></i><span class="badge badge-brand badge-notify">106</span></a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 px-4 py-3">
+                  <div class="item">
+                    <div class="decor-bg" style="background-image: url(assets/images/gallery/gallery-h-2.jpg)"></div>
+                    <!-- Thumbnail-->
+                    <div class="item-thumbnail custom-thumbnail">
+                      <div class="thumbnail">
+                        <div class="wrap-thumbnail-tag"><a href="detail-image.html"><img src="assets/images/gallery/gallery-h-2.jpg"/></a><a class="tag-popup d-lg-none-i" href="javascript:void(0)" data-toggle="modal" data-target=".mobile-tag-modal-pc" style="right: 15%; top: 45%;"><i class="icon ri-price-tag-3-fill"></i></a>
+                          <div class="tag-popup-mobile d-lg-none"><a class="tag-popup" href="javascript:void(0)" data-toggle="modal" data-target=".mobile-tag-modal"><i class="icon mr-1 mr-sm-2 ri-price-tag-3-fill"></i>12</a></div>
+                        </div>
+                      </div>
+                      <div class="item-content-overlay d-lg-none-i">
+                        <div class="content-flex">
+                          <div class="item-left"><a class="title d-block" href="detail-image.html">Morden Nail Salon</a><a class="category" href="#">Nail Salon</a></div>
+                          <div class="item-right">
+                            <div class="btn-list flex-center-y"><a class="btn btn-just-icon btn-white" href="#" data-toggle="tooltip" title="34"><i class="ri-heart-line"></i></a>
+                              <div class="dropup d-inline-flex">
+                                <div class="wrap-button m-r-3" data-toggle="dropdown">
+                                  <button class="btn btn-just-icon btn-white" data-toggle="tooltip" title="1,5k"><i class="ri-share-line"></i></button>
+                                </div>
+                                <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item text-body" href="#"><i class="ri-facebook-box-fill"></i>Facebook</a><a class="dropdown-item text-body" href="#"><i class="ri-pinterest-fill"></i>Pinterest</a><a class="dropdown-item text-body" href="#"><i class="ri-mail-fill"></i>Mail</a></div>
+                              </div><a class="btn btn-just-icon btn-white" href="detail-image.html#comment-container" data-toggle="tooltip" title="32"><i class="ri-discuss-line"></i></a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Button Action-->
+                      <div class="item-content-overlay placement-bottom d-lg-none" style="left: auto;">
+                        <div class="content-flex justify-content-end">
+                          <div class="item-right">
+                            <div class="dropup">
+                              <button class="btn btn-just-icon btn-white" data-toggle="dropdown"><i class="ri-more-line"></i></button>
+                              <div class="dropdown-menu dropdown-menu-right p-0" style="min-width: 1px;">
+                                <div class="js-action-mobile"><a class="text-body dropdown-item text-link p-2 p-x-4" href="#"><i class="ri-heart-fill mr-0"></i><span class="badge badge-brand badge-notify">32</span></a>
+                                  <div class="dropleft">
+                                    <button class="text-body dropdown-item text-link p-2 p-x-4" data-toggle="dropdown"><i class="ri-share-fill mr-0"></i><span class="badge badge-brand badge-notify">1,2k</span></button>
+                                    <div class="dropdown-menu dropdown-menu-right p-0 m-0 d-flex" style="height: 38px;min-width: 1px;"><a class="dropdown-item text-body p-2" href="#"><i class="ri-facebook-box-fill"></i></a><a class="dropdown-item text-body p-2" href="#"><i class="ri-pinterest-fill"></i></a><a class="dropdown-item text-body p-2" href="#"><i class="ri-mail-fill"></i></a></div>
+                                  </div><a class="text-body dropdown-item text-link p-2 p-x-4" href="detail-image.html#comment-container"><i class="ri-discuss-line mr-0"></i><span class="badge badge-brand badge-notify">106</span></a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 px-4 py-3">
+                  <div class="item">
+                    <div class="decor-bg" style="background-image: url(assets/images/gallery/gallery-h-2.jpg)"></div>
+                    <!-- Thumbnail-->
+                    <div class="item-thumbnail custom-thumbnail">
+                      <div class="thumbnail">
+                        <div class="wrap-thumbnail-tag"><a href="detail-image.html"><img src="assets/images/gallery/gallery-h-3.jpg"/></a><a class="tag-popup d-lg-none-i" href="javascript:void(0)" data-toggle="modal" data-target=".mobile-tag-modal-pc" style="right: 15%; top: 45%;"><i class="icon ri-price-tag-3-fill"></i></a>
+                          <div class="tag-popup-mobile d-lg-none"><a class="tag-popup" href="javascript:void(0)" data-toggle="modal" data-target=".mobile-tag-modal"><i class="icon mr-1 mr-sm-2 ri-price-tag-3-fill"></i>12</a></div>
+                        </div>
+                      </div>
+                      <div class="item-content-overlay d-lg-none-i">
+                        <div class="content-flex">
+                          <div class="item-left"><a class="title d-block" href="detail-image.html">Morden Nail Salon</a><a class="category" href="#">Nail Salon</a></div>
+                          <div class="item-right">
+                            <div class="btn-list flex-center-y"><a class="btn btn-just-icon btn-white" href="#" data-toggle="tooltip" title="34"><i class="ri-heart-line"></i></a>
+                              <div class="dropup d-inline-flex">
+                                <div class="wrap-button m-r-3" data-toggle="dropdown">
+                                  <button class="btn btn-just-icon btn-white" data-toggle="tooltip" title="1,5k"><i class="ri-share-line"></i></button>
+                                </div>
+                                <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item text-body" href="#"><i class="ri-facebook-box-fill"></i>Facebook</a><a class="dropdown-item text-body" href="#"><i class="ri-pinterest-fill"></i>Pinterest</a><a class="dropdown-item text-body" href="#"><i class="ri-mail-fill"></i>Mail</a></div>
+                              </div><a class="btn btn-just-icon btn-white" href="detail-image.html#comment-container" data-toggle="tooltip" title="32"><i class="ri-discuss-line"></i></a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Button Action-->
+                      <div class="item-content-overlay placement-bottom d-lg-none" style="left: auto;">
+                        <div class="content-flex justify-content-end">
+                          <div class="item-right">
+                            <div class="dropup">
+                              <button class="btn btn-just-icon btn-white" data-toggle="dropdown"><i class="ri-more-line"></i></button>
+                              <div class="dropdown-menu dropdown-menu-right p-0" style="min-width: 1px;">
+                                <div class="js-action-mobile"><a class="text-body dropdown-item text-link p-2 p-x-4" href="#"><i class="ri-heart-fill mr-0"></i><span class="badge badge-brand badge-notify">32</span></a>
+                                  <div class="dropleft">
+                                    <button class="text-body dropdown-item text-link p-2 p-x-4" data-toggle="dropdown"><i class="ri-share-fill mr-0"></i><span class="badge badge-brand badge-notify">1,2k</span></button>
+                                    <div class="dropdown-menu dropdown-menu-right p-0 m-0 d-flex" style="height: 38px;min-width: 1px;"><a class="dropdown-item text-body p-2" href="#"><i class="ri-facebook-box-fill"></i></a><a class="dropdown-item text-body p-2" href="#"><i class="ri-pinterest-fill"></i></a><a class="dropdown-item text-body p-2" href="#"><i class="ri-mail-fill"></i></a></div>
+                                  </div><a class="text-body dropdown-item text-link p-2 p-x-4" href="detail-image.html#comment-container"><i class="ri-discuss-line mr-0"></i><span class="badge badge-brand badge-notify">106</span></a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 px-4 py-3">
+                  <div class="item">
+                    <div class="decor-bg" style="background-image: url(assets/images/gallery/gallery-h-2.jpg)"></div>
+                    <!-- Thumbnail-->
+                    <div class="item-thumbnail custom-thumbnail">
+                      <div class="thumbnail">
+                        <div class="wrap-thumbnail-tag"><a href="detail-image.html"><img src="assets/images/gallery/gallery-h-4.jpg"/></a><a class="tag-popup d-lg-none-i" href="javascript:void(0)" data-toggle="modal" data-target=".mobile-tag-modal-pc" style="right: 15%; top: 45%;"><i class="icon ri-price-tag-3-fill"></i></a>
+                          <div class="tag-popup-mobile d-lg-none"><a class="tag-popup" href="javascript:void(0)" data-toggle="modal" data-target=".mobile-tag-modal"><i class="icon mr-1 mr-sm-2 ri-price-tag-3-fill"></i>12</a></div>
+                        </div>
+                      </div>
+                      <div class="item-content-overlay d-lg-none-i">
+                        <div class="content-flex">
+                          <div class="item-left"><a class="title d-block" href="detail-image.html">Morden Nail Salon</a><a class="category" href="#">Nail Salon</a></div>
+                          <div class="item-right">
+                            <div class="btn-list flex-center-y"><a class="btn btn-just-icon btn-white" href="#" data-toggle="tooltip" title="34"><i class="ri-heart-line"></i></a>
+                              <div class="dropup d-inline-flex">
+                                <div class="wrap-button m-r-3" data-toggle="dropdown">
+                                  <button class="btn btn-just-icon btn-white" data-toggle="tooltip" title="1,5k"><i class="ri-share-line"></i></button>
+                                </div>
+                                <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item text-body" href="#"><i class="ri-facebook-box-fill"></i>Facebook</a><a class="dropdown-item text-body" href="#"><i class="ri-pinterest-fill"></i>Pinterest</a><a class="dropdown-item text-body" href="#"><i class="ri-mail-fill"></i>Mail</a></div>
+                              </div><a class="btn btn-just-icon btn-white" href="detail-image.html#comment-container" data-toggle="tooltip" title="32"><i class="ri-discuss-line"></i></a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Button Action-->
+                      <div class="item-content-overlay placement-bottom d-lg-none" style="left: auto;">
+                        <div class="content-flex justify-content-end">
+                          <div class="item-right">
+                            <div class="dropup">
+                              <button class="btn btn-just-icon btn-white" data-toggle="dropdown"><i class="ri-more-line"></i></button>
+                              <div class="dropdown-menu dropdown-menu-right p-0" style="min-width: 1px;">
+                                <div class="js-action-mobile"><a class="text-body dropdown-item text-link p-2 p-x-4" href="#"><i class="ri-heart-fill mr-0"></i><span class="badge badge-brand badge-notify">32</span></a>
+                                  <div class="dropleft">
+                                    <button class="text-body dropdown-item text-link p-2 p-x-4" data-toggle="dropdown"><i class="ri-share-fill mr-0"></i><span class="badge badge-brand badge-notify">1,2k</span></button>
+                                    <div class="dropdown-menu dropdown-menu-right p-0 m-0 d-flex" style="height: 38px;min-width: 1px;"><a class="dropdown-item text-body p-2" href="#"><i class="ri-facebook-box-fill"></i></a><a class="dropdown-item text-body p-2" href="#"><i class="ri-pinterest-fill"></i></a><a class="dropdown-item text-body p-2" href="#"><i class="ri-mail-fill"></i></a></div>
+                                  </div><a class="text-body dropdown-item text-link p-2 p-x-4" href="detail-image.html#comment-container"><i class="ri-discuss-line mr-0"></i><span class="badge badge-brand badge-notify">106</span></a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 px-4 py-3">
+                  <div class="item">
+                    <div class="decor-bg" style="background-image: url(assets/images/gallery/gallery-h-2.jpg)"></div>
+                    <!-- Thumbnail-->
+                    <div class="item-thumbnail custom-thumbnail">
+                      <div class="thumbnail">
+                        <div class="wrap-thumbnail-tag"><a href="detail-image.html"><img src="assets/images/gallery/gallery-h-5.jpg"/></a><a class="tag-popup d-lg-none-i" href="javascript:void(0)" data-toggle="modal" data-target=".mobile-tag-modal-pc" style="right: 15%; top: 45%;"><i class="icon ri-price-tag-3-fill"></i></a>
+                          <div class="tag-popup-mobile d-lg-none"><a class="tag-popup" href="javascript:void(0)" data-toggle="modal" data-target=".mobile-tag-modal"><i class="icon mr-1 mr-sm-2 ri-price-tag-3-fill"></i>12</a></div>
+                        </div>
+                      </div>
+                      <div class="item-content-overlay d-lg-none-i">
+                        <div class="content-flex">
+                          <div class="item-left"><a class="title d-block" href="detail-image.html">Morden Nail Salon</a><a class="category" href="#">Nail Salon</a></div>
+                          <div class="item-right">
+                            <div class="btn-list flex-center-y"><a class="btn btn-just-icon btn-white" href="#" data-toggle="tooltip" title="34"><i class="ri-heart-line"></i></a>
+                              <div class="dropup d-inline-flex">
+                                <div class="wrap-button m-r-3" data-toggle="dropdown">
+                                  <button class="btn btn-just-icon btn-white" data-toggle="tooltip" title="1,5k"><i class="ri-share-line"></i></button>
+                                </div>
+                                <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item text-body" href="#"><i class="ri-facebook-box-fill"></i>Facebook</a><a class="dropdown-item text-body" href="#"><i class="ri-pinterest-fill"></i>Pinterest</a><a class="dropdown-item text-body" href="#"><i class="ri-mail-fill"></i>Mail</a></div>
+                              </div><a class="btn btn-just-icon btn-white" href="detail-image.html#comment-container" data-toggle="tooltip" title="32"><i class="ri-discuss-line"></i></a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Button Action-->
+                      <div class="item-content-overlay placement-bottom d-lg-none" style="left: auto;">
+                        <div class="content-flex justify-content-end">
+                          <div class="item-right">
+                            <div class="dropup">
+                              <button class="btn btn-just-icon btn-white" data-toggle="dropdown"><i class="ri-more-line"></i></button>
+                              <div class="dropdown-menu dropdown-menu-right p-0" style="min-width: 1px;">
+                                <div class="js-action-mobile"><a class="text-body dropdown-item text-link p-2 p-x-4" href="#"><i class="ri-heart-fill mr-0"></i><span class="badge badge-brand badge-notify">32</span></a>
+                                  <div class="dropleft">
+                                    <button class="text-body dropdown-item text-link p-2 p-x-4" data-toggle="dropdown"><i class="ri-share-fill mr-0"></i><span class="badge badge-brand badge-notify">1,2k</span></button>
+                                    <div class="dropdown-menu dropdown-menu-right p-0 m-0 d-flex" style="height: 38px;min-width: 1px;"><a class="dropdown-item text-body p-2" href="#"><i class="ri-facebook-box-fill"></i></a><a class="dropdown-item text-body p-2" href="#"><i class="ri-pinterest-fill"></i></a><a class="dropdown-item text-body p-2" href="#"><i class="ri-mail-fill"></i></a></div>
+                                  </div><a class="text-body dropdown-item text-link p-2 p-x-4" href="detail-image.html#comment-container"><i class="ri-discuss-line mr-0"></i><span class="badge badge-brand badge-notify">106</span></a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 px-4 py-3">
+                  <div class="item">
+                    <div class="decor-bg" style="background-image: url(assets/images/gallery/gallery-h-2.jpg)"></div>
+                    <!-- Thumbnail-->
+                    <div class="item-thumbnail custom-thumbnail">
+                      <div class="thumbnail">
+                        <div class="wrap-thumbnail-tag"><a href="detail-image.html"><img src="assets/images/gallery/gallery-h-6.jpg"/></a><a class="tag-popup d-lg-none-i" href="javascript:void(0)" data-toggle="modal" data-target=".mobile-tag-modal-pc" style="right: 15%; top: 45%;"><i class="icon ri-price-tag-3-fill"></i></a>
+                          <div class="tag-popup-mobile d-lg-none"><a class="tag-popup" href="javascript:void(0)" data-toggle="modal" data-target=".mobile-tag-modal"><i class="icon mr-1 mr-sm-2 ri-price-tag-3-fill"></i>12</a></div>
+                        </div>
+                      </div>
+                      <div class="item-content-overlay d-lg-none-i">
+                        <div class="content-flex">
+                          <div class="item-left"><a class="title d-block" href="detail-image.html">Morden Nail Salon</a><a class="category" href="#">Nail Salon</a></div>
+                          <div class="item-right">
+                            <div class="btn-list flex-center-y"><a class="btn btn-just-icon btn-white" href="#" data-toggle="tooltip" title="34"><i class="ri-heart-line"></i></a>
+                              <div class="dropup d-inline-flex">
+                                <div class="wrap-button m-r-3" data-toggle="dropdown">
+                                  <button class="btn btn-just-icon btn-white" data-toggle="tooltip" title="1,5k"><i class="ri-share-line"></i></button>
+                                </div>
+                                <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item text-body" href="#"><i class="ri-facebook-box-fill"></i>Facebook</a><a class="dropdown-item text-body" href="#"><i class="ri-pinterest-fill"></i>Pinterest</a><a class="dropdown-item text-body" href="#"><i class="ri-mail-fill"></i>Mail</a></div>
+                              </div><a class="btn btn-just-icon btn-white" href="detail-image.html#comment-container" data-toggle="tooltip" title="32"><i class="ri-discuss-line"></i></a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Button Action-->
+                      <div class="item-content-overlay placement-bottom d-lg-none" style="left: auto;">
+                        <div class="content-flex justify-content-end">
+                          <div class="item-right">
+                            <div class="dropup">
+                              <button class="btn btn-just-icon btn-white" data-toggle="dropdown"><i class="ri-more-line"></i></button>
+                              <div class="dropdown-menu dropdown-menu-right p-0" style="min-width: 1px;">
+                                <div class="js-action-mobile"><a class="text-body dropdown-item text-link p-2 p-x-4" href="#"><i class="ri-heart-fill mr-0"></i><span class="badge badge-brand badge-notify">32</span></a>
+                                  <div class="dropleft">
+                                    <button class="text-body dropdown-item text-link p-2 p-x-4" data-toggle="dropdown"><i class="ri-share-fill mr-0"></i><span class="badge badge-brand badge-notify">1,2k</span></button>
+                                    <div class="dropdown-menu dropdown-menu-right p-0 m-0 d-flex" style="height: 38px;min-width: 1px;"><a class="dropdown-item text-body p-2" href="#"><i class="ri-facebook-box-fill"></i></a><a class="dropdown-item text-body p-2" href="#"><i class="ri-pinterest-fill"></i></a><a class="dropdown-item text-body p-2" href="#"><i class="ri-mail-fill"></i></a></div>
+                                  </div><a class="text-body dropdown-item text-link p-2 p-x-4" href="detail-image.html#comment-container"><i class="ri-discuss-line mr-0"></i><span class="badge badge-brand badge-notify">106</span></a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 px-4 py-3">
+                  <div class="item">
+                    <div class="decor-bg" style="background-image: url(assets/images/gallery/gallery-h-2.jpg)"></div>
+                    <!-- Thumbnail-->
+                    <div class="item-thumbnail custom-thumbnail">
+                      <div class="thumbnail">
+                        <div class="wrap-thumbnail-tag"><a href="detail-image.html"><img src="assets/images/gallery/gallery-h-7.jpg"/></a><a class="tag-popup d-lg-none-i" href="javascript:void(0)" data-toggle="modal" data-target=".mobile-tag-modal-pc" style="right: 15%; top: 45%;"><i class="icon ri-price-tag-3-fill"></i></a>
+                          <div class="tag-popup-mobile d-lg-none"><a class="tag-popup" href="javascript:void(0)" data-toggle="modal" data-target=".mobile-tag-modal"><i class="icon mr-1 mr-sm-2 ri-price-tag-3-fill"></i>12</a></div>
+                        </div>
+                      </div>
+                      <div class="item-content-overlay d-lg-none-i">
+                        <div class="content-flex">
+                          <div class="item-left"><a class="title d-block" href="detail-image.html">Morden Nail Salon</a><a class="category" href="#">Nail Salon</a></div>
+                          <div class="item-right">
+                            <div class="btn-list flex-center-y"><a class="btn btn-just-icon btn-white" href="#" data-toggle="tooltip" title="34"><i class="ri-heart-line"></i></a>
+                              <div class="dropup d-inline-flex">
+                                <div class="wrap-button m-r-3" data-toggle="dropdown">
+                                  <button class="btn btn-just-icon btn-white" data-toggle="tooltip" title="1,5k"><i class="ri-share-line"></i></button>
+                                </div>
+                                <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item text-body" href="#"><i class="ri-facebook-box-fill"></i>Facebook</a><a class="dropdown-item text-body" href="#"><i class="ri-pinterest-fill"></i>Pinterest</a><a class="dropdown-item text-body" href="#"><i class="ri-mail-fill"></i>Mail</a></div>
+                              </div><a class="btn btn-just-icon btn-white" href="detail-image.html#comment-container" data-toggle="tooltip" title="32"><i class="ri-discuss-line"></i></a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Button Action-->
+                      <div class="item-content-overlay placement-bottom d-lg-none" style="left: auto;">
+                        <div class="content-flex justify-content-end">
+                          <div class="item-right">
+                            <div class="dropup">
+                              <button class="btn btn-just-icon btn-white" data-toggle="dropdown"><i class="ri-more-line"></i></button>
+                              <div class="dropdown-menu dropdown-menu-right p-0" style="min-width: 1px;">
+                                <div class="js-action-mobile"><a class="text-body dropdown-item text-link p-2 p-x-4" href="#"><i class="ri-heart-fill mr-0"></i><span class="badge badge-brand badge-notify">32</span></a>
+                                  <div class="dropleft">
+                                    <button class="text-body dropdown-item text-link p-2 p-x-4" data-toggle="dropdown"><i class="ri-share-fill mr-0"></i><span class="badge badge-brand badge-notify">1,2k</span></button>
+                                    <div class="dropdown-menu dropdown-menu-right p-0 m-0 d-flex" style="height: 38px;min-width: 1px;"><a class="dropdown-item text-body p-2" href="#"><i class="ri-facebook-box-fill"></i></a><a class="dropdown-item text-body p-2" href="#"><i class="ri-pinterest-fill"></i></a><a class="dropdown-item text-body p-2" href="#"><i class="ri-mail-fill"></i></a></div>
+                                  </div><a class="text-body dropdown-item text-link p-2 p-x-4" href="detail-image.html#comment-container"><i class="ri-discuss-line mr-0"></i><span class="badge badge-brand badge-notify">106</span></a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 px-4 py-3">
+                  <div class="item">
+                    <div class="decor-bg" style="background-image: url(assets/images/gallery/gallery-h-2.jpg)"></div>
+                    <!-- Thumbnail-->
+                    <div class="item-thumbnail custom-thumbnail">
+                      <div class="thumbnail">
+                        <div class="wrap-thumbnail-tag"><a href="detail-image.html"><img src="assets/images/gallery/gallery-h-8.jpg"/></a><a class="tag-popup d-lg-none-i" href="javascript:void(0)" data-toggle="modal" data-target=".mobile-tag-modal-pc" style="right: 15%; top: 45%;"><i class="icon ri-price-tag-3-fill"></i></a>
+                          <div class="tag-popup-mobile d-lg-none"><a class="tag-popup" href="javascript:void(0)" data-toggle="modal" data-target=".mobile-tag-modal"><i class="icon mr-1 mr-sm-2 ri-price-tag-3-fill"></i>12</a></div>
+                        </div>
+                      </div>
+                      <div class="item-content-overlay d-lg-none-i">
+                        <div class="content-flex">
+                          <div class="item-left"><a class="title d-block" href="detail-image.html">Morden Nail Salon</a><a class="category" href="#">Nail Salon</a></div>
+                          <div class="item-right">
+                            <div class="btn-list flex-center-y"><a class="btn btn-just-icon btn-white" href="#" data-toggle="tooltip" title="34"><i class="ri-heart-line"></i></a>
+                              <div class="dropup d-inline-flex">
+                                <div class="wrap-button m-r-3" data-toggle="dropdown">
+                                  <button class="btn btn-just-icon btn-white" data-toggle="tooltip" title="1,5k"><i class="ri-share-line"></i></button>
+                                </div>
+                                <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item text-body" href="#"><i class="ri-facebook-box-fill"></i>Facebook</a><a class="dropdown-item text-body" href="#"><i class="ri-pinterest-fill"></i>Pinterest</a><a class="dropdown-item text-body" href="#"><i class="ri-mail-fill"></i>Mail</a></div>
+                              </div><a class="btn btn-just-icon btn-white" href="detail-image.html#comment-container" data-toggle="tooltip" title="32"><i class="ri-discuss-line"></i></a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Button Action-->
+                      <div class="item-content-overlay placement-bottom d-lg-none" style="left: auto;">
+                        <div class="content-flex justify-content-end">
+                          <div class="item-right">
+                            <div class="dropup">
+                              <button class="btn btn-just-icon btn-white" data-toggle="dropdown"><i class="ri-more-line"></i></button>
+                              <div class="dropdown-menu dropdown-menu-right p-0" style="min-width: 1px;">
+                                <div class="js-action-mobile"><a class="text-body dropdown-item text-link p-2 p-x-4" href="#"><i class="ri-heart-fill mr-0"></i><span class="badge badge-brand badge-notify">32</span></a>
+                                  <div class="dropleft">
+                                    <button class="text-body dropdown-item text-link p-2 p-x-4" data-toggle="dropdown"><i class="ri-share-fill mr-0"></i><span class="badge badge-brand badge-notify">1,2k</span></button>
+                                    <div class="dropdown-menu dropdown-menu-right p-0 m-0 d-flex" style="height: 38px;min-width: 1px;"><a class="dropdown-item text-body p-2" href="#"><i class="ri-facebook-box-fill"></i></a><a class="dropdown-item text-body p-2" href="#"><i class="ri-pinterest-fill"></i></a><a class="dropdown-item text-body p-2" href="#"><i class="ri-mail-fill"></i></a></div>
+                                  </div><a class="text-body dropdown-item text-link p-2 p-x-4" href="detail-image.html#comment-container"><i class="ri-discuss-line mr-0"></i><span class="badge badge-brand badge-notify">106</span></a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 px-4 py-3">
+                  <div class="item">
+                    <div class="decor-bg" style="background-image: url(assets/images/gallery/gallery-h-2.jpg)"></div>
+                    <!-- Thumbnail-->
+                    <div class="item-thumbnail custom-thumbnail">
+                      <div class="thumbnail">
+                        <div class="wrap-thumbnail-tag"><a href="detail-image.html"><img src="assets/images/gallery/gallery-h-9.jpg"/></a><a class="tag-popup d-lg-none-i" href="javascript:void(0)" data-toggle="modal" data-target=".mobile-tag-modal-pc" style="right: 15%; top: 45%;"><i class="icon ri-price-tag-3-fill"></i></a>
+                          <div class="tag-popup-mobile d-lg-none"><a class="tag-popup" href="javascript:void(0)" data-toggle="modal" data-target=".mobile-tag-modal"><i class="icon mr-1 mr-sm-2 ri-price-tag-3-fill"></i>12</a></div>
+                        </div>
+                      </div>
+                      <div class="item-content-overlay d-lg-none-i">
+                        <div class="content-flex">
+                          <div class="item-left"><a class="title d-block" href="detail-image.html">Morden Nail Salon</a><a class="category" href="#">Nail Salon</a></div>
+                          <div class="item-right">
+                            <div class="btn-list flex-center-y"><a class="btn btn-just-icon btn-white" href="#" data-toggle="tooltip" title="34"><i class="ri-heart-line"></i></a>
+                              <div class="dropup d-inline-flex">
+                                <div class="wrap-button m-r-3" data-toggle="dropdown">
+                                  <button class="btn btn-just-icon btn-white" data-toggle="tooltip" title="1,5k"><i class="ri-share-line"></i></button>
+                                </div>
+                                <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item text-body" href="#"><i class="ri-facebook-box-fill"></i>Facebook</a><a class="dropdown-item text-body" href="#"><i class="ri-pinterest-fill"></i>Pinterest</a><a class="dropdown-item text-body" href="#"><i class="ri-mail-fill"></i>Mail</a></div>
+                              </div><a class="btn btn-just-icon btn-white" href="detail-image.html#comment-container" data-toggle="tooltip" title="32"><i class="ri-discuss-line"></i></a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Button Action-->
+                      <div class="item-content-overlay placement-bottom d-lg-none" style="left: auto;">
+                        <div class="content-flex justify-content-end">
+                          <div class="item-right">
+                            <div class="dropup">
+                              <button class="btn btn-just-icon btn-white" data-toggle="dropdown"><i class="ri-more-line"></i></button>
+                              <div class="dropdown-menu dropdown-menu-right p-0" style="min-width: 1px;">
+                                <div class="js-action-mobile"><a class="text-body dropdown-item text-link p-2 p-x-4" href="#"><i class="ri-heart-fill mr-0"></i><span class="badge badge-brand badge-notify">32</span></a>
+                                  <div class="dropleft">
+                                    <button class="text-body dropdown-item text-link p-2 p-x-4" data-toggle="dropdown"><i class="ri-share-fill mr-0"></i><span class="badge badge-brand badge-notify">1,2k</span></button>
+                                    <div class="dropdown-menu dropdown-menu-right p-0 m-0 d-flex" style="height: 38px;min-width: 1px;"><a class="dropdown-item text-body p-2" href="#"><i class="ri-facebook-box-fill"></i></a><a class="dropdown-item text-body p-2" href="#"><i class="ri-pinterest-fill"></i></a><a class="dropdown-item text-body p-2" href="#"><i class="ri-mail-fill"></i></a></div>
+                                  </div><a class="text-body dropdown-item text-link p-2 p-x-4" href="detail-image.html#comment-container"><i class="ri-discuss-line mr-0"></i><span class="badge badge-brand badge-notify">106</span></a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="pagination"><span class="sum btn btn-sm btn-brand">Page 1 of 10</span><a class="arrow prev btn btn-sm" href="#">Prev</a><span class="page btn btn-sm btn-brand">1</span><a class="page btn btn-sm" href="#">2</a><a class="arrow next btn btn-sm" href="#">Next</a></div>
+          </div>
+        </div>
+      </div>
+      <!-- Footer-->
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="footer-block">
+                <div class="logo-img"><img src="assets/images/logo/logo@3x.png"></div>
+                <div class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque.</div>
+              </div>
+            </div>
+            <div class="col-lg-6 d-flex">
+              <div class="footer-block mr-5 ml-auto">
+                <div class="footer-block-title">Contact</div>
+                <div class="footer-block-link">
+                  <ul>
+                    <li class="nav-link"><a href="#">About</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="footer-block f-social">
+                <div class="footer-block-title">Social</div>
+                <div class="footer-block-link">
+                  <ul class="d-flex social-icons">
+                    <li><a href="#"><i class="ri-facebook-box-fill"></i></a></li>
+                    <li><a href="#"><i class="ri-linkedin-fill"></i></a></li>
+                    <li><a href="#"><i class="ri-instagram-fill"></i></a></li>
+                    <li><a href="#"><i class="ri-twitter-fill"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <div class="mobile-tag-modal modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-md-custom" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="h5 title-heading mb-0">Furniture List</div>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+          </div>
+          <div class="modal-body section-gallery-detail">
+            <div class="furniture-list mb-2">
+              <div class="item">
+                <div class="item-content">
+                  <div class="item-info">
+                    <div class="thumbnail mr-2"><img src="assets/images/furniture-thumbnail/furniture-1.jpg"/></div>
+                    <div class="title">Mordern Desk</div>
+                  </div>
+                  <div class="item-info">
+                    <div class="mr-2">$32,423 ~ $34,432</div>
+                    <button class="btn btn-outline-brand btn-sm d-lg-none-i" data-action="toggle-list"><i class="ri-file-list-line"></i>View List</button>
+                    <button class="btn btn-outline-brand btn-sm btn-just-icon d-lg-none" data-action="toggle-list"><i class="ri-file-list-line"></i></button>
+                  </div>
+                </div>
+                <div class="subitem" style="display: none;">
+                  <div class="item">
+                    <div class="item-content">
+                      <div class="item-info">
+                        <div class="thumbnail mr-2"><img src="assets/images/furniture-thumbnail/furniture-1.jpg"/></div>
+                        <div class="title">unikkom</div>
+                      </div>
+                      <div class="item-info">
+                        <div class="mr-2">$32,423</div><a class="btn btn-outline-brand btn-sm d-lg-none-i" href="#" target="_blank"><i class="ri-file-list-line"></i>Shop Now</a><a class="btn btn-outline-brand btn-sm btn-just-icon d-lg-none" href="#" target="_blank" data-action="toggle-list"><i class="ri-shopping-cart-2-line"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="item-content">
+                      <div class="item-info">
+                        <div class="thumbnail mr-2"><img src="assets/images/furniture-thumbnail/furniture-1.jpg"/></div>
+                        <div class="title">unikplace</div>
+                      </div>
+                      <div class="item-info">
+                        <div class="mr-2">$32,423</div><a class="btn btn-outline-brand btn-sm d-lg-none-i" href="#" target="_blank"><i class="ri-file-list-line"></i>Shop Now</a><a class="btn btn-outline-brand btn-sm btn-just-icon d-lg-none" href="#" target="_blank" data-action="toggle-list"><i class="ri-shopping-cart-2-line"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="item-content">
+                      <div class="item-info">
+                        <div class="thumbnail mr-2"><img src="assets/images/furniture-thumbnail/furniture-1.jpg"/></div>
+                        <div class="title">amazon</div>
+                      </div>
+                      <div class="item-info">
+                        <div class="mr-2">$32,423</div><a class="btn btn-outline-brand btn-sm d-lg-none-i" href="#" target="_blank"><i class="ri-file-list-line"></i>Shop Now</a><a class="btn btn-outline-brand btn-sm btn-just-icon d-lg-none" href="#" target="_blank" data-action="toggle-list"><i class="ri-shopping-cart-2-line"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="item-content">
+                      <div class="item-info">
+                        <div class="thumbnail mr-2"><img src="assets/images/furniture-thumbnail/furniture-1.jpg"/></div>
+                        <div class="title">bestbuy</div>
+                      </div>
+                      <div class="item-info">
+                        <div class="mr-2">$32,423</div><a class="btn btn-outline-brand btn-sm d-lg-none-i" href="#" target="_blank"><i class="ri-file-list-line"></i>Shop Now</a><a class="btn btn-outline-brand btn-sm btn-just-icon d-lg-none" href="#" target="_blank" data-action="toggle-list"><i class="ri-shopping-cart-2-line"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="item-content">
+                  <div class="item-info">
+                    <div class="thumbnail mr-2"><img src="assets/images/furniture-thumbnail/furniture-2.jpg"/></div>
+                    <div class="title">Desk</div>
+                  </div>
+                  <div class="item-info">
+                    <div class="mr-2">$23.234</div><a class="btn btn-outline-brand btn-sm d-lg-none-i" href="#" target="_blank"><i class="ri-file-list-line"></i>Shop Now</a><a class="btn btn-outline-brand btn-sm btn-just-icon d-lg-none" href="#" target="_blank" data-action="toggle-list"><i class="ri-shopping-cart-2-line"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="item-content">
+                  <div class="item-info">
+                    <div class="thumbnail mr-2"><img src="assets/images/furniture-thumbnail/furniture-3.jpg"/></div>
+                    <div class="title">Lamp</div>
+                  </div>
+                  <div class="item-info">
+                    <div class="mr-2">$23.234</div><a class="btn btn-outline-brand btn-sm d-lg-none-i" href="#" target="_blank"><i class="ri-file-list-line"></i>Shop Now</a><a class="btn btn-outline-brand btn-sm btn-just-icon d-lg-none" href="#" target="_blank" data-action="toggle-list"><i class="ri-shopping-cart-2-line"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="item-content">
+                  <div class="item-info">
+                    <div class="thumbnail mr-2"><img src="assets/images/furniture-thumbnail/furniture-4.jpg"/></div>
+                    <div class="title">Sofa</div>
+                  </div>
+                  <div class="item-info">
+                    <div class="mr-2">$23.234</div><a class="btn btn-outline-brand btn-sm d-lg-none-i" href="#" target="_blank"><i class="ri-file-list-line"></i>Shop Now</a><a class="btn btn-outline-brand btn-sm btn-just-icon d-lg-none" href="#" target="_blank" data-action="toggle-list"><i class="ri-shopping-cart-2-line"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="item-content">
+                  <div class="item-info">
+                    <div class="thumbnail mr-2"><img src="assets/images/furniture-thumbnail/furniture-5.jpg"/></div>
+                    <div class="title">Wall Painting</div>
+                  </div>
+                  <div class="item-info">
+                    <div class="mr-2">$23.234</div><a class="btn btn-outline-brand btn-sm d-lg-none-i" href="#" target="_blank"><i class="ri-file-list-line"></i>Shop Now</a><a class="btn btn-outline-brand btn-sm btn-just-icon d-lg-none" href="#" target="_blank" data-action="toggle-list"><i class="ri-shopping-cart-2-line"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mobile-tag-modal-pc modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-md-custom" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="section-gallery-detail">
+              <div class="furniture-list">
+                <div class="item">
+                  <div class="item-content">
+                    <div class="item-info">
+                      <div class="thumbnail medium mr-3"><img src="assets/images/furniture-thumbnail/furniture-1.jpg"/></div>
+                      <h5 class="mb-0 title">Mordern Desk</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+          </div>
+          <div class="modal-body section-gallery-detail">
+            <div class="furniture-list mb-2">
+              <div class="item">
+                <div class="item-content">
+                  <div class="item-info">
+                    <div class="thumbnail mr-3"><img src="assets/images/furniture-thumbnail/furniture-1.jpg"/></div>
+                    <div class="title">unikkom</div>
+                  </div>
+                  <div class="item-info">
+                    <div class="mr-3">$32,423</div><a class="btn btn-outline-brand btn-sm d-lg-none-i" href="#" target="_blank"><i class="ri-file-list-line"></i>Shop Now</a><a class="btn btn-outline-brand btn-sm btn-just-icon d-lg-none" href="#" target="_blank" data-action="toggle-list"><i class="ri-shopping-cart-2-line"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="item-content">
+                  <div class="item-info">
+                    <div class="thumbnail mr-3"><img src="assets/images/furniture-thumbnail/furniture-1.jpg"/></div>
+                    <div class="title">unikplace</div>
+                  </div>
+                  <div class="item-info">
+                    <div class="mr-3">$32,423</div><a class="btn btn-outline-brand btn-sm d-lg-none-i" href="#" target="_blank"><i class="ri-file-list-line"></i>Shop Now</a><a class="btn btn-outline-brand btn-sm btn-just-icon d-lg-none" href="#" target="_blank" data-action="toggle-list"><i class="ri-shopping-cart-2-line"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="item-content">
+                  <div class="item-info">
+                    <div class="thumbnail mr-3"><img src="assets/images/furniture-thumbnail/furniture-1.jpg"/></div>
+                    <div class="title">amazon</div>
+                  </div>
+                  <div class="item-info">
+                    <div class="mr-3">$32,423</div><a class="btn btn-outline-brand btn-sm d-lg-none-i" href="#" target="_blank"><i class="ri-file-list-line"></i>Shop Now</a><a class="btn btn-outline-brand btn-sm btn-just-icon d-lg-none" href="#" target="_blank" data-action="toggle-list"><i class="ri-shopping-cart-2-line"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="item-content">
+                  <div class="item-info">
+                    <div class="thumbnail mr-3"><img src="assets/images/furniture-thumbnail/furniture-1.jpg"/></div>
+                    <div class="title">bestbuy</div>
+                  </div>
+                  <div class="item-info">
+                    <div class="mr-3">$32,423</div><a class="btn btn-outline-brand btn-sm d-lg-none-i" href="#" target="_blank"><i class="ri-file-list-line"></i>Shop Now</a><a class="btn btn-outline-brand btn-sm btn-just-icon d-lg-none" href="#" target="_blank" data-action="toggle-list"><i class="ri-shopping-cart-2-line"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Javascript-->
+    <script src="assets/plugins/jquery/dist/jquery.min.js"></script>
+    <script src="assets/plugins/popper.js/dist/umd/popper.min.js"></script>
+    <script src="assets/plugins/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="assets/plugins/photoswipe/dist/photoswipe.min.js"></script>
+    <script src="assets/plugins/photoswipe/dist/photoswipe-ui-default.min.js"></script>
+    <script src="assets/js/style.min.js"></script>
+    <script>
+      // On load
+      const theme = new Theme();
+      document.addEventListener('DOMContentLoaded', (event)=> {
+      	// $(".page-loader").fadeOut(400, ()=> $(".page-loader").remove());
+      
+      	theme.init();
+      
+      	window.onresize = (event)=> {
+      		theme.navigationCofig();
+      	};
+      });
+    </script>
+    <script>
+      //- document.querySelectorAll('#wishlist-content .design-book-wrapper .item .item-content-overlay.d-lg-none-i a[data-action="popup-zoom-in"]').forEach((el, i)=> el.setAttribute('data-img-index', i));
+      //- document.querySelectorAll('#wishlist-content .design-book-wrapper .item .item-content-overlay.d-lg-none a[data-action="popup-zoom-in"]').forEach((el, i)=> el.setAttribute('data-img-index', i));
+      
+      //- document.querySelectorAll('#lucky-content .design-book-wrapper .item .item-content-overlay.d-lg-none-i a[data-action="popup-zoom-in"]').forEach((el, i)=> el.setAttribute('data-img-index', i));
+      //- document.querySelectorAll('#lucky-content .design-book-wrapper .item .item-content-overlay.d-lg-none a[data-action="popup-zoom-in"]').forEach((el, i)=> el.setAttribute('data-img-index', i));
+      
+      let imageData = [];
+      var prev = '<div class="prev-chervon"><i class="ri-arrow-left-s-line"></i></div>',
+      	next = '<div class="next-chervon"><i class="ri-arrow-right-s-line"></i></div>';
+      	
+      $(document).ready(function(){
+      	//- theme.photoswipeInit('#lucky-content .design-book-wrapper', '.item .item-content-overlay a[data-action="popup-zoom-in"]', imageData);
+      	//- theme.photoswipeInit('#wishlist-content .design-book-wrapper', '.item .item-content-overlay a[data-action="popup-zoom-in"]', imageData);
+      	
+      	var hash = location.hash;
+      	if ( hash && $('.nav-link[href="'+hash+'"]').length > 0 ) {
+      		$('.nav-link[href="'+hash+'"]').trigger('click');
+      		$('html,body').animate({ scrollTop: 0 }, 0);
+      	}
+      
+      	$('.design-book-wrapper .item').hover(function() {
+      
+      	}, function() {
+      		if($(this).find('.dropdown-menu').hasClass('show')) {
+      			$(this).find('.dropdown-menu.show').removeClass('show');
+      		}
+      	});
+      });
+    </script>
+  </body>
+</html>

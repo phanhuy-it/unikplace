@@ -1,0 +1,28 @@
+-
+	let projectName = 'Unikplace'
+	let website = 'http://localhost:3000/'
+
+-
+	const getRandomRangeInt = (min, max)=> {
+		min = Math.ceil(min);
+		max = Math.floor(max);
+		return Math.floor(Math.random() * (max - min + 1)) + min;
+	}
+
+	const string2slug = (str)=> {
+		str = str.toLowerCase();
+		str = str.split(' ');
+		str.forEach((el, i)=> {
+			el == '&' ? el = 'and' : el;
+		});
+		str = `${str.join('-')}`;
+		return str;
+	}
+
+	//- Get Image Size
+	function getImageSize(file){
+		let dimensions = imageSize(file);
+		let w = dimensions.width
+		let h = dimensions.height
+		return [w,h];
+	}

@@ -1,0 +1,90 @@
+.footer{
+    padding-top: 32px;
+    padding-bottom: 32px;
+    @media (max-width: 991px) {
+        display: none;
+    }
+    .logo-img{
+        img{
+            width: 100%;
+            max-width: 126px;
+        }
+    }
+    .footer-block {
+        .logo-img{
+            margin-bottom: 24px;
+            + .description{
+                font-size: $h6;
+                line-height: 24px;
+            }
+        }
+        &-title{
+            font-weight: $font-weight-semi;
+            font-size: $h6;
+            margin-bottom: 24px;
+        }
+        &-link{
+            ul{
+                list-style-type: none;
+                padding-left: 0;
+                margin-bottom: 0;
+                li {
+                    a{
+                        display: inline-block;
+                        text-decoration: none;
+                        color: $neutral-0;
+                        margin-bottom: 8px;
+                    }
+                    &.nav-link {
+                        position: relative;
+                        top: 3px;
+                    }
+                }
+                &.social-icons {
+                    li {
+                        font-size: 36px;
+                        margin: 0 12px 0 0;
+                        .ri-facebook-box-fill {
+                            color: #1B3E79
+                        }
+                        .ri-linkedin-fill {
+                            color: #0074B2
+                        }
+                        .ri-instagram-fill {
+                            color: #DA2086
+                        }
+                        .ri-twitter-fill {
+                            color: #009DE8
+                        }
+                    }
+                }
+            }
+        }
+        &.small-gallery{
+            .item{
+                display: block;
+                @include aspect-ratio(1, 1, thumbnail);
+                .thumbnail{
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        object-position: center;
+                    }
+                }
+            }
+            .small-gallery-content{
+                display: flex;
+                flex-wrap: wrap;
+                .item{
+                    $width: 100/3;
+                    width: #{$width - 4 + '%'};
+                    margin-bottom: 8px;
+                    &:not(:last-child){
+                        margin-right: 8px;
+                    }
+                }
+            }
+        }
+    }
+}

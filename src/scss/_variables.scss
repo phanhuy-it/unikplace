@@ -1,0 +1,142 @@
+// Colors
+$brand: 						#114357 				!default;
+$brand-1: 						#f29492 				!default;
+
+
+// Semantic
+$blue: 							#2196F3 				!default;
+$green: 						#4CAF50 				!default;
+$orange: 						#ff9800 				!default;
+$red: 							#F44336 				!default;
+$yellow: 						#ffc107 				!default;
+
+
+// Neutral
+$neutral-0: 						#454545 				!default;
+$neutral-1: 						#87969d 				!default;
+$neutral-2: 						#B9C1CE 				!default;
+$neutral-3: 						#D7DBE3 				!default;
+$neutral-4: 						#F5F6F8 				!default;
+
+
+// Heading
+$h1: 							40px					!default;
+$h2: 							32px					!default;
+$h3: 							28px					!default;
+$h4: 							24px					!default;
+$h5: 							20px					!default;
+$h6: 							16px					!default;
+
+
+// Social
+$twitter: 						#55acee					  !default;
+$facebook: 						#4466ae					  !default;
+$google: 						#dd4b39					  !default;
+$dribbble: 						#ea4c89					  !default;
+$behance: 						#1769ff					  !default;
+$linkedin: 						#0077B5					  !default;
+$pinterest: 					#cc2127					  !default;
+$youtube: 						#e52d27					  !default;
+$tumblr: 						#35465c					  !default;
+$github-alt: 					#333333					  !default;
+$reddit: 						#ff4500					  !default;
+
+// Body Background
+$bg-body: #f3f6f8;
+
+
+// Border
+$border-theme:                  6px							!default;
+$border-rounded:                30px						!default;
+$border-color:                	#E5E5E5     				!default;
+
+// Input
+$input-height:					40px						!default;
+$input-border-color:			$border-color				!default;
+
+$input-bg:                		white						!default;
+$input-color:                	$neutral-0					!default;
+$input-color-active:			$brand						!default;
+
+$input-placeholder:				$neutral-2					!default;
+
+$input-disabled:				$neutral-2					!default;
+$input-disabled-bg:				$neutral-4					!default;
+
+
+// Checkbox & Radio
+$custom-control-size: 20px									!default;
+
+// Button
+$button-md:						$input-height				!default;
+
+// Spacing
+$space: 						(2, 4, 8, 12, 16, 20, 24, 32, 40, 48, 60, 100, 120, 160, 200, 240, 320, 400, 600)!default;
+$space-types:       			(margin: m, padding: p)		!default;
+$space-axis:  					(x, y)						!default;
+
+
+// Fonts
+@import url(https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,900);
+$font-primary: 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+
+$font-size-base: 14px;
+
+$font-weight-light:             300         !default;
+$font-weight-normal:            400         !default;
+$font-weight-medium:            500         !default;
+$font-weight-semi:              600         !default;
+$font-weight-bold:              700         !default;
+
+
+// Directions
+$directions: (
+    top: t,
+    left: l,
+    right: r,
+    bottom: b
+)!default;
+
+// Breakpoint
+$grid-breakpoints: (
+	xs: 0,
+	sm: 576px,
+	md: 768px,
+	lg: 992px,
+	xl: 1200px
+)!default;
+
+// Neutrals
+$neutral-s: ( 
+	neutral-0: $neutral-0,
+	neutral-1: $neutral-1,
+	neutral-2: $neutral-2,
+	neutral-3: $neutral-3,
+	neutral-4: $neutral-4
+)!default;
+
+// Semantics
+$semantics: (
+	'brand': $brand,
+	'blue': $blue,
+	'green': $green,
+	'orange': $orange,
+	'red': $red,
+	'yellow': $yellow 
+)!default;
+
+// Social
+$socials: (
+	'facebook': $facebook,
+	'google': $google,
+)!default;
+
+// Headings
+$headings: (
+	h1: $h1,
+	h2: $h2,
+	h3: $h3,
+	h4: $h4,
+	h5: $h5,
+	h6: $h6
+)!default;

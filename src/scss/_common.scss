@@ -1,0 +1,23 @@
+body{
+	font-family: $font-primary;
+	font-size: $font-size-base;
+}
+
+.content-page{
+	margin-top: 60px;
+	padding-top: 0;
+	@media (max-width: 991px) {
+		margin-top: 51px;
+	}
+}
+
+hr{
+	&.divide{
+		margin-top: 32px;
+		margin-bottom: 32px;
+		&.small-space {
+			margin-top: 16px;
+			margin-bottom: 16px;
+		}
+	}
+}

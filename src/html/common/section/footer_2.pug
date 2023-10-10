@@ -1,0 +1,118 @@
+footer.footer
+    .container
+        .row
+            .col-lg-6
+                .footer-block
+                    .logo-img
+                        img(src="assets/images/logo/logo@3x.png")
+                    .description At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque.
+            .col-lg-6.d-flex
+                .footer-block.mr-5.ml-auto
+                    .footer-block-title Contact
+                    .footer-block-link
+                        ul
+                            each item in ['About']
+                                li.nav-link
+                                    a(href="#")= item
+                .footer-block.f-social
+                    .footer-block-title Social
+                    .footer-block-link
+                        ul.d-flex.social-icons
+                            li
+                                a(href="#") <i class="ri-facebook-box-fill"></i>
+                            li
+                                a(href="#") <i class="ri-linkedin-fill"></i>
+                            li
+                                a(href="#") <i class="ri-instagram-fill"></i>
+                            li
+                                a(href="#") <i class="ri-twitter-fill"></i>
+            //- .col-lg-3
+            //-     .footer-block.small-gallery
+            //-         .footer-block-title Trending Design
+            //-         .footer-block-link
+            //-             .small-gallery-content
+            //-                 - for (var x = 0; x < 6; x++)
+            //-                     a(href="#").item
+            //-                         .thumbnail
+            //-                             img(src="assets/images/gallery/gallery-v-1.jpg")/
+
+.modal.fade#loginPopup(tabindex="-1" role="dialog" aria-labelledby="loginPopup" aria-hidden="true")
+    .modal-dialog.modal-dialog-centered.modal-lg(role="document")(style="max-width: 600px;")
+        .modal-content.section-sign-in
+            .modal-header
+                .h5.title-heading.mb-0 Please login to use this feature!
+                button.close(type="button" data-dismiss="modal" aria-label="Close")
+                    span(aria-hidden="true") ×
+            .modal-body.content-form.py-3.py-md-5
+                a(href="index.html")
+                    img.logo-img(src="assets/images/logo/logo@2x.png")/.m-b-3
+                .h4.m-b-3.font-weight-semi Welcome to Unik Place
+                .h6.m-b-6.font-weight-semi Find new ideas to try
+
+                .w-100.mx-auto(style="max-width: 360px;")
+                    .form-group.not-valid
+                        input.form-control(type="text" placeholder="Username or Email")/
+                        <span data-field="email" data-validation="arc-validation" style=""><span class="message">The email field is required.</span></span>
+                    .form-group
+                        input.form-control(type="password" placeholder="Password")/
+                    button.btn.btn-brand.btn-block(disabled="disabled") Sign In
+                    .m-y-5 or 
+                        a(href="javascript:void(0)" data-toggle="modal" data-target="#signupPopup") Create a New Account
+                        span  | 
+                        a(href="javascript:void(0)" data-toggle="modal" data-target="#resetPopup") Forgot Password
+                    button.btn.btn-facebook.btn-block
+                        i.ri-facebook-box-fill
+                        | Sign In with Facebook
+                    button.btn.btn-google.btn-block
+                        i.ri-google-fill
+                        | Sign In with Google
+            //- .modal-footer
+                button.btn.btn-secondary(type="button" data-dismiss="modal") Close
+                button.btn.btn-brand(type="button") Save changes
+
+.modal.fade#signupPopup(tabindex="-1" role="dialog" aria-labelledby="loginPopup" aria-hidden="true")
+    .modal-dialog.modal-dialog-centered.modal-lg(role="document")(style="max-width: 600px;")
+        .modal-content.section-sign-in
+            .modal-header
+                .h5.title-heading.mb-0 Please login to use this feature!
+                button.close(type="button" data-dismiss="modal" aria-label="Close")
+                    span(aria-hidden="true") ×
+            .modal-body.content-form.py-3.py-md-5
+                a(href="index.html")
+                    img.logo-img(src="assets/images/logo/logo@2x.png")/.m-b-3
+                .h4.m-b-3.font-weight-semi Sign up to Unik Place
+                .h6.m-b-6.font-weight-semi Find new ideas to try
+
+                .w-100.mx-auto(style="max-width: 360px;")
+                    .form-group
+                        input.form-control(type="text" placeholder="Username")/
+                    .form-group
+                        input.form-control(type="email" placeholder="Email")/
+                    .form-group
+                        input.form-control(type="password" placeholder="Password")/
+                    .form-group
+                        input.form-control(type="password" placeholder="Password Confirmation")/
+                    .form-group
+                        input.form-control(type="text" placeholder="Zip Code")/
+                    button.btn.btn-brand.btn-block Sign Up
+                    .m-t-5 Have an Account? 
+                        a(href="javascript:void(0)" data-toggle="modal" data-target="#loginPopup") Sign in
+
+
+.modal.fade#resetPopup(tabindex="-1" role="dialog" aria-labelledby="resetPopup" aria-hidden="true")
+    .modal-dialog.modal-dialog-centered.modal-lg(role="document")(style="max-width: 600px;")
+        .modal-content.section-sign-in
+            .modal-header
+                .h5.title-heading.mb-0 Please login to use this feature!
+                button.close(type="button" data-dismiss="modal" aria-label="Close")
+                    span(aria-hidden="true") ×
+            .modal-body.content-form.py-3.py-md-5
+                a(href="index.html")
+                    img.logo-img(src="assets/images/logo/logo@2x.png")/.m-b-3
+                .h4.m-b-3.font-weight-semi Sign up to Unik Place
+                .h6.m-b-6.font-weight-semi Find new ideas to try
+
+                .w-100.mx-auto(style="max-width: 360px;")
+                    .form-group
+                        input.form-control(type="email" placeholder="Email")/
+                    button.btn.btn-brand.btn-block Reset your password

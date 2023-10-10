@@ -1,0 +1,28 @@
+@each $name in map-keys($semantics){
+    $hex: map-get($semantics, $name);
+    .badge-#{$name}{
+        background-color: $hex;
+        border-color: $hex;
+        @if ($name == 'yellow'){
+            color: $neutral-0;
+        }
+        @else{
+            color: white;
+        }
+    }
+    .badge-outline-#{$name}{
+    }
+}
+
+.badge-notify{
+    position: absolute!important;
+    right: 0;
+    top: 0;
+}
+
+.btn{
+    .badge-notify{
+        top: -6px;
+        right: 4px;
+    }
+}

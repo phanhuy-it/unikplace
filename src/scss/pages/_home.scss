@@ -1,0 +1,44 @@
+.section-banner{
+    position: relative;
+    .banner{
+        &-img{
+            position: relative;
+            &::before{
+                content: '';
+                @include pos-f;
+                background-color: rgba(black, .6);
+            }
+            img{
+                width: 100%;
+                @media (max-width: 576px) {
+                    height: 450px;
+                    object-fit: cover;
+                }
+            }
+        }
+        &-container{
+            position: absolute;
+            @include pos-center;
+        }
+        &-title{
+            font-size: $h2;
+            font-weight: $font-weight-bold;
+            color: white;
+            margin-bottom: 24px;
+            @media (max-width: 576px) {
+                font-size: $h4;
+            }
+        }
+    }
+    .chevron-btn{
+        position: absolute;
+        bottom: 32px;
+        left: 0;
+        right: 0;
+        text-align: center;
+        animation: bounce 2s ease infinite;
+        img{
+            width: 32px;
+        }
+    }
+}
